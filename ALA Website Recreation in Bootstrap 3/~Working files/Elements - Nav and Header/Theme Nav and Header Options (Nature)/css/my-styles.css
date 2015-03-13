@@ -1,0 +1,414 @@
+/* Nature Theme
+================================= */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+body {
+  background-color:#e0e0e0;
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+}
+.navbar-default {background-color:#f4f4f4;border-width:0;z-index:5;}
+.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > li:hover > a {border:0 solid #4285f4;border-bottom-width:2px;/*font-weight:800;*/background-color:transparent;}
+.navbar-default .dropdown-menu {background-color:#ffffff;}
+.navbar-default .dropdown-menu li > a {padding-left:30px;}
+
+.header {background-color:#ffffff;border-width:0;}
+.header .navbar-collapse {background-color:#ffffff;}
+.btn,.form-control,.panel,.list-group,.well {border-radius:1px;box-shadow:0 0 0;}
+.form-control {border-color:#d7d7d7;}
+.btn-primary {border-color:transparent;}
+.btn-primary,.label-primary,.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {background-color:#4285f4;}
+.btn-plus {background-color:#ffffff;border-width:1px;border-color:#dddddd;box-shadow:1px 1px 0 #999999;border-radius:3px;color:#666666;text-shadow:0 0 1px #bbbbbb;}
+.well,.panel {border-color:#d2d2d2;box-shadow:0 1px 0 #cfcfcf;border-radius:3px;}
+.btn-success,.label-success,.progress-bar-success{background-color:#65b045;}
+.btn-info,.label-info,.progress-bar-info{background-color:#a0c3ff;border-color:#a0c3ff;}
+.btn-danger,.label-danger,.progress-bar-danger{background-color:#dd4b39;}
+.btn-warning,.label-warning,.progress-bar-warning{background-color:#f4b400;color:#444444;}
+
+hr {border-color:#ececec;}
+button {
+ outline: 0;
+}
+textarea {
+ resize: none;
+ outline: 0;
+}
+.panel .btn i,.btn span{
+ color:#666666;
+}
+.panel .panel-heading {
+ background-color:#ffffff;
+ font-weight:700;
+ font-size:16px;
+ color:#262626;
+ border-color:#ffffff;
+}
+.panel .panel-heading a {
+ font-weight:400;
+ font-size:11px;
+}
+.panel .panel-default {
+ border-color:#cccccc;
+}
+.panel .panel-thumbnail {
+ padding:0;
+}
+.panel .img-circle {
+ width:50px;
+ height:50px;
+}
+.list-group-item:first-child,.list-group-item:last-child {
+ border-radius:0;
+}
+
+.modal-dialog {
+ width: 450px;
+}
+.modal-footer {
+ border-width:0;
+}
+.dropdown-menu {
+ background-color:#f4f4f4;
+ border-color:#f0f0f0;
+ border-radius:0;
+ margin-top:-1px;
+}
+/* end theme */
+
+/* template layout*/
+#subnav {
+ position:fixed;
+ width:100%;
+}
+
+@media (max-width: 768px) {
+ #subnav {
+  padding-top: 6px;
+ }
+}
+
+#main {
+ padding: 40px 0;
+}
+
+/* Typography
+================================= */
+
+h1 {
+font-weight: 200;
+margin-bottom: 30px;
+}
+h2, h3 {
+font-size: 1.25em;
+color: #5f5d60;
+margin-bottom: 16px;
+margin-top: 0;
+}
+
+h3,h4,h5 {
+ border:0 solid #efefef;
+ border-bottom-width:1px;
+ padding-bottom:10px;
+}
+p {
+color: #b3aeb5;
+line-height: 1.7;
+font-size: 1.1em;
+font-weight: 200;
+}
+strong {
+color: #5f5d60;
+}
+
+.lead:nth-of-type(2) {
+font-size: initial;
+margin-bottom: 20px;
+}
+.main-footer, .secondary-footer, .tertiary-footer {
+font-size: .95em;
+}
+.link-list {
+list-style-type: none;
+line-height: 1.8;
+margin: 0 0 2em 0;
+padding: 0;
+}
+.copyright {
+opacity: .8;
+font-size: .9em;
+}
+.navbar-header > a:nth-child(3) {
+  color: #F26649;
+}
+
+/* Links
+================================= */
+
+.main-footer a {
+color: #a6afb2;
+}
+.link-list .heading {
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.link-list .heading a {
+	color: #44A729;
+}
+
+footer, footer.secondary-footer {
+background-color: #fff;
+}
+
+footer.secondary-footer > div > div:nth-child(1) {
+margin-bottom: 20px;
+}
+
+
+
+
+.space-before {
+margin-top: 10px;
+}
+
+.social-footer {
+background-color: #F4F4F4;
+}
+
+img.gbif {
+max-width: 100px;
+}
+
+img.aus-govt, img.ncris {
+  max-width: 200px;
+}
+
+img.ncris {
+	margin-top: 8px;
+}
+
+div.navbar-header > a:nth-child(1) > img {
+  max-height: 20px;
+}
+
+footer p.lead {
+	color: #44A729;
+}
+
+/* Images
+================================= */
+
+#main > div > h2 {
+	margin: 0 0 .8em 0;
+}
+.panel-body img {
+	margin: 0 10px 10px 0;
+}
+.secondary-footer img {
+margin-bottom: 2em;
+}
+
+/* Button
+================================= */
+
+.btn-circle {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 13px;
+  line-height: 1.42;
+  border-radius: 50%;
+  margin-right: .4em;
+}
+
+.panel .btn i {
+	color: #fff;
+}
+
+
+/* Nav
+================================= */
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.main-footer {
+  padding: 40px 0;
+  background-color: #fff;
+}
+
+.main-footer {
+	padding: 30px 0 0 0;
+	background-color: #fff;
+	margin: 100px 0 0 0;
+}
+
+ul.footer-nav.list-inline {
+padding-top: 9px;
+}
+
+/* Jumbotron
+================================= */
+
+.option-1 {
+  background: url(../img/56400521.jpg) no-repeat center top;
+}
+
+.option-2 {
+  background: url(../img/83290897.jpg) no-repeat center top;
+}
+
+.option-3 {
+  background: url(../img/71057110.jpg) no-repeat center top;
+}
+
+.jumbotron {
+  /* Image contained in the .option classes above */
+  padding-top: 75px;
+  text-align:center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 250px;
+  width: 100%;
+
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.input-group {
+  padding-top: 10em;
+}
+
+div.jumbotron > div > div > div > input {
+  padding: 2em;
+}
+
+div.jumbotron > div > div > div > span > button {
+  padding: 1.3em;
+}
+
+
+
+/* Layout
+================================= */
+
+.container {
+/*padding: 40px 0; */
+max-width: 1100px;
+}
+
+.container footer {
+	padding: 1em 0;
+}
+
+.social-footer > div {
+  padding: 2em 0;
+}
+
+/* Social Icons
+================================= */
+
+.social a {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+}
+.social a .fa {
+  font-size: 1em;
+  padding-top: .8em;
+}
+
+/* Social Icons: Background Colours & Hovers
+================================= */
+
+li .soc-facebook {
+  background-color: #507CBE;
+}
+  li .soc-facebook:hover {
+    background-color: #4B73AE;
+  }
+
+li .soc-twitter {
+  background-color: #63CDF1;
+}
+  li .soc-twitter:hover {
+    background-color: #5CBBDC;
+  }
+
+li .soc-google-plus {
+  background-color: #4D4F54;
+}
+  li .soc-google-plus:hover {
+    background-color: #494A4F;
+  }
+
+li .soc-envelope {
+  background-color: #EF6C53;
+}
+  li .soc-envelope:hover {
+    background-color: #DA644E;
+  }
+
+
+/* Media Queries
+================================= */
+
+@media (min-width: 1200px) {
+/*Large desktop devices*/
+  /*Styles*/
+    .container {
+      width: 1100px;
+    }
+
+
+  /*End Styles*/
+}
+
+
+@media (max-width: 991px) {
+/*Small devices*/
+	/*Styles*/
+
+	/*End Styles*/
+}
+
+@media (max-width: 767px) {
+/*Extra small devices*/
+	/*Styles*/
+
+	#main {
+		padding: 0;
+	}
+	.jumbotron {
+		min-height: 165px
+	}
+	.input-group {
+		padding-top: 5.5em;
+	}
+  .container {
+    padding: 2em 1.5em;
+  }
+
+  footer.main-footer > div {
+    padding-bottom: 0;
+  }
+
+  .social-footer > div {
+  padding: 2em 1.5em;
+}
+	/*End Styles*/
+}
+}
+

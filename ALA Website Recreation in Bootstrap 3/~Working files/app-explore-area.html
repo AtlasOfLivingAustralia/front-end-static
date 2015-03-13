@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App: Explore your area</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/my-styles.css" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<!-- Navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" class="img-responsive" src="img/supporting-graphic-element-flat.png">
+        </a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand font-xsmall" href="#">The Atlas Of Living Australia</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li >
+            <a href="#">
+              Contact us
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li >
+            <a href="#">Get involved</a>
+          </li>
+
+          <li class="dropdown font-xsmall">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              ALA Apps
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Spatial portal</a></li>
+              <li ><a href="#">Occurrence search</a></li>
+              <li ><a href="#">Fish map</a></li>
+              <li ><a href="#">Regions</a></li>
+              <li ><a href="#">Explore your area</a></li>
+
+              <li class="divider"></li>
+              <li><a href="#">Record a sighting</a></li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">DigiVol</a></li>
+              <li><a href="#">Fieldcapture</a></li>
+              <li><a href="#">Soils to satellite</a></li>
+              <li><a href="#">Traits, species lists</a></li>
+
+              <li class="divider"></li>
+              <li><a href="#">Community portals</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Datasets browser</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search the Atlas"></div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <small>
+          <ul class="nav navbar-nav navbar-right">
+            <li ><a href="#">My profile</a></li>
+            <li ><a href="#">Login</a></li>
+          </ul>
+        </small>
+      </div>
+      <!-- /.navbar-collapse --> </div>
+    <!-- /.container-fluid --> </nav>
+
+
+  <!-- Container -->
+  <div class="container" id="main">
+
+  <!-- Main col -->
+  <div class="col-xs-12">
+    <h1 class="hidden">Welcome the Atlas of Living Australia</h1>
+    <h2 class="heading-medium">Explore your area</h2>
+    <div class="row">
+
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+
+            <!-- App code -->
+
+              <div class="row control-group">
+                <div class="col-xs-12 col-md-6">
+                  <form action="" method="POST" role="form">
+                    <div class="input-group">
+                      <input type="text" class="form-control input-lg" placeholder="Enter your location or address">
+                      <span class="input-group-btn">
+                        <button class="btn btn-primary btn-lg" type="button">Search</button>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="col-xs-12 col-md-6 help-text">
+                  <p>
+                    E.g. a street address, place name, postcode or GPS coordinates (as lat, long)
+                  </p>
+                </div>
+              </div>
+
+
+            <div id="locationInfo" class="row-fluid ">
+              <div class="col-md-12">
+                <div id="resultsInfo">
+                  <p>Showing records for:
+                    <span id="markerAddress">16 Clunies Ross Street, Acton ACT 2601, Australia</span></p>
+                  &nbsp;&nbsp;
+                  <a data-hasqtip="5" href="#" id="addressHelp" style="text-decoration: none">
+                    <span class="help-container">&nbsp;</span>
+                  </a>
+                </div>
+
+                <div class="row-fluid">
+                  <div id="resultsInfo">
+
+                    <div class="col-xs-6">
+                      <p><span class="pad">
+                        Display records in a
+                        <select id="radius" name="radius" class="" style="height:24px;width:auto;line-height:18px;margin-bottom:0;">
+                          <option value="1">1</option>
+                          <option value="5" selected="">5</option>
+                          <option value="10">10</option>
+                        </select>
+                        km radius
+                      </span></p>
+                    </div>
+
+                    <div class="col-xs-6">
+                      <span class="pad">
+                        <a href="#" id="viewAllRecords" class="btn btn-primary">
+                          <span class="glyphicon glyphicon-eye-open"></span>
+                          View all records
+                        </a>
+                      </span>
+                      <span class="pad">
+                        <a title="" oldtitle="Download all records OR species checklist" data-hasqtip="0" href="#download" role="button" data-toggle="modal" class="btn btn-primary tooltips">
+                          <span class="glyphicon glyphicon-cloud-download"></span>
+                          Downloads
+                        </a>
+                      </span>
+                    </div>
+
+                  </div>
+                </div>
+                <div id="dialog-confirm" title="Continue with download?" style="display: none">
+                  <p>
+                    <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+                    You are about to download a list of species found within a
+                    <span id="rad">5</span>
+                    km radius of
+                    <code>16 Clunies Ross Street, Acton ACT 2601, Australia</code>
+                    .
+                    <br>Format: tab-delimited text file (called data.xls)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12 col-md-7 data-display">
+                <div id="taxaBox">
+                  <div class="col-xs-5 col-sm-4">
+                    <table id="taxa-level-0">
+                      <thead>
+                        <tr>
+                          <th>Group</th>
+                          <th>Species</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="activeRow" title="click to view group on map">
+                          <td class="indent0">
+                            <a href="#" id="ALL_SPECIES" class="taxonBrowse" title="click to view group on map">All Species</a>
+                          </td>
+                          <td>6686</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent1">
+                            <a href="#" id="Animals" class="taxonBrowse" title="click to view group on map">Animals</a>
+                          </td>
+                          <td>2052</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent2">
+                            <a href="#" id="Mammals" class="taxonBrowse" title="click to view group on map">Mammals</a>
+                          </td>
+                          <td>32</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent2">
+                            <a href="#" id="Birds" class="taxonBrowse" title="click to view group on map">Birds</a>
+                          </td>
+                          <td>367</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent2">
+                            <a href="#" id="Reptiles" class="taxonBrowse" title="click to view group on map">Reptiles</a>
+                          </td>
+                          <td>31</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent2">
+                            <a href="#" id="Amphibians" class="taxonBrowse" title="click to view group on map">Amphibians</a>
+                          </td>
+                          <td>8</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent2">
+                            <a href="#" id="Fish" class="taxonBrowse" title="click to view group on map">Fish</a>
+                          </td>
+                          <td>1</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent2">
+                            <a href="#" id="Molluscs" class="taxonBrowse" title="click to view group on map">Molluscs</a>
+                          </td>
+                          <td>9</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent2">
+                            <a href="#" id="Arthropods" class="taxonBrowse" title="click to view group on map">Arthropods</a>
+                          </td>
+                          <td>1601</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent3">
+                            <a href="#" id="Crustaceans" class="taxonBrowse" title="click to view group on map">Crustaceans</a>
+                          </td>
+                          <td>1</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent3">
+                            <a href="#" id="Insects" class="taxonBrowse" title="click to view group on map">Insects</a>
+                          </td>
+                          <td>1549</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent1">
+                            <a href="#" id="Plants" class="taxonBrowse" title="click to view group on map">Plants</a>
+                          </td>
+                          <td>4107</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent2">
+                            <a href="#" id="Bryophytes" class="taxonBrowse" title="click to view group on map">Bryophytes</a>
+                          </td>
+                          <td>49</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent2">
+                            <a href="#" id="Gymnosperms" class="taxonBrowse" title="click to view group on map">Gymnosperms</a>
+                          </td>
+                          <td>41</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent2">
+                            <a href="#" id="FernsAndAllies" class="taxonBrowse" title="click to view group on map">FernsAndAllies</a>
+                          </td>
+                          <td>106</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent2">
+                            <a href="#" id="Angiosperms" class="taxonBrowse" title="click to view group on map">Angiosperms</a>
+                          </td>
+                          <td>3810</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent3">
+                            <a href="#" id="Monocots" class="taxonBrowse" title="click to view group on map">Monocots</a>
+                          </td>
+                          <td>758</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent3">
+                            <a href="#" id="Dicots" class="taxonBrowse" title="click to view group on map">Dicots</a>
+                          </td>
+                          <td>3052</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent1">
+                            <a href="#" id="Fungi" class="taxonBrowse" title="click to view group on map">Fungi</a>
+                          </td>
+                          <td>161</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent1">
+                            <a href="#" id="Chromista" class="taxonBrowse" title="click to view group on map">Chromista</a>
+                          </td>
+                          <td>2</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent1">
+                            <a href="#" id="Protozoa" class="taxonBrowse" title="click to view group on map">Protozoa</a>
+                          </td>
+                          <td>24</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent1">
+                            <a href="#" id="Bacteria" class="taxonBrowse" title="click to view group on map">Bacteria</a>
+                          </td>
+                          <td>0</td>
+                        </tr>
+                        <tr title="click to view group on map">
+                          <td class="indent1">
+                            <a href="#" id="Algae" class="taxonBrowse" title="click to view group on map">Algae</a>
+                          </td>
+                          <td>0</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-xs-7 col-sm-8">
+                    <table>
+                      <thead class="fixedHeader">
+                        <tr>
+                          <th class="speciesIndex">&nbsp;&nbsp;</th>
+                          <th class="sciName">
+                            <a href="0" id="speciesSort" data-sort="taxa" title="sort by taxa">Species</a>
+                            <span id="sortSeparator">:</span>
+                            <a href="0" id="commonSort" data-sort="common" title="sort by common name">Common Name</a>
+                          </th>
+                          <th class="rightCounts">
+                            <a href="0" data-sort="count" title="sort by record count">Records</a>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody style="height: 484px;" class="scrollContent">
+                        <tr>
+                          <td class="speciesIndex">1.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:afd.taxon:7e0756b3-fa55-4f36-9a4f-6910e1985d8d" class="taxonBrowse2" title="display on map" href="ARCTIINAE"> <i>ARCTIINAE</i>
+                            </a>
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:afd.taxon:7e0756b3-fa55-4f36-9a4f-6910e1985d8d">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22ARCTIINAE%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">1</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">2.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:409624" class="taxonBrowse2" title="display on map" href="Abelia x grandiflora"> <i>Abelia x grandiflora</i>
+                            </a>
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:409624">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Abelia x grandiflora%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">1</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">3.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:751409" class="taxonBrowse2" title="display on map" href="Abelmoschus ficulneus">
+                              <i>Abelmoschus ficulneus</i>
+                            </a>
+                            : Native Rosella
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:751409">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Abelmoschus ficulneus%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">1</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">4.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:751426" class="taxonBrowse2" title="display on map" href="Abelmoschus moschatus subsp. tuberosus">
+                              <i>Abelmoschus moschatus subsp. tuberosus</i>
+                            </a>
+                            : Native Rosella
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:751426">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Abelmoschus moschatus subsp. tuberosus%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">2</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">5.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:751896" class="taxonBrowse2" title="display on map" href="Abutilon theophrasti">
+                              <i>Abutilon theophrasti</i>
+                            </a>
+                            : Chigma Lantern
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:751896">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Abutilon theophrasti%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">1</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">6.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:295874" class="taxonBrowse2" title="display on map" href="Acacia acinacea">
+                              <i>Acacia acinacea</i>
+                            </a>
+                            : Gold-dust Acacia
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:295874">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Acacia acinacea%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">4</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">7.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:295882" class="taxonBrowse2" title="display on map" href="Acacia acuminata">
+                              <i>Acacia acuminata</i>
+                            </a>
+                            : Jam Wattle
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:295882">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Acacia acuminata%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">2</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">8.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:257600" class="taxonBrowse2" title="display on map" href="Acacia adsurgens">
+                              <i>Acacia adsurgens</i>
+                            </a>
+                            : Whipstick Wattle
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:257600">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Acacia adsurgens%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">1</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">9.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:254767" class="taxonBrowse2" title="display on map" href="Acacia adunca">
+                              <i>Acacia adunca</i>
+                            </a>
+                            : Cascade Wattle
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:254767">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Acacia adunca%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">6</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">10.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:295920" class="taxonBrowse2" title="display on map" href="Acacia aestivalis">
+                              <i>Acacia aestivalis</i>
+                            </a>
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:295920">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Acacia aestivalis%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">1</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">11.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:295996" class="taxonBrowse2" title="display on map" href="Acacia alcockii">
+                              <i>Acacia alcockii</i>
+                            </a>
+                            : Alcock's Wattle
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:295996">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Acacia alcockii%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">1</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">12.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:296003" class="taxonBrowse2" title="display on map" href="Acacia amblyophylla">
+                              <i>Acacia amblyophylla</i>
+                            </a>
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:296003">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Acacia amblyophylla%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">1</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">13.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:296009" class="taxonBrowse2" title="display on map" href="Acacia amoena">
+                              <i>Acacia amoena</i>
+                            </a>
+                            : Boomerang Wattle
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:296009">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Acacia amoena%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">1</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">14.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:296015" class="taxonBrowse2" title="display on map" href="Acacia ampliceps">
+                              <i>Acacia ampliceps</i>
+                            </a>
+                            : Jila Jila Bush
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:296015">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Acacia ampliceps%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">1</td>
+                        </tr>
+                        <tr>
+                          <td class="speciesIndex">15.</td>
+                          <td class="sciName">
+                            <a id="urn:lsid:biodiversity.org.au:apni.taxon:296027" class="taxonBrowse2" title="display on map" href="Acacia anceps">
+                              <i>Acacia anceps</i>
+                            </a>
+                            <div class="speciesInfo">
+                              <a title="view species page" href="http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:apni.taxon:296027">species profile</a>
+                              |
+                              <a href="/occurrences/search?q=taxon_name:%22Acacia anceps%22&amp;lat=-35.2773362&amp;lon=149.11288579999996&amp;radius=5" title="view list of records">list of records</a>
+                            </div>
+                          </td>
+                          <td class="rightCounts">1</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- .col-md-7 -->
+              <div class="col-md-5 data-display">
+                <div id="mapCanvas" style="width: 100%; height: 490px; position: relative; background-color: rgb(229, 227, 223); overflow: hidden;">
+                  <div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;">
+                    <div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default;">
+                      <div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%;">
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;">
+                          <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 1;">
+                              <div style="width: 256px; height: 256px; position: absolute; left: 175px; top: 132px;"></div>
+                              <div style="width: 256px; height: 256px; position: absolute; left: 431px; top: 132px;"></div>
+                              <div style="width: 256px; height: 256px; position: absolute; left: 175px; top: -124px;"></div>
+                              <div style="width: 256px; height: 256px; position: absolute; left: 175px; top: 388px;"></div>
+                              <div style="width: 256px; height: 256px; position: absolute; left: 431px; top: -124px;"></div>
+                              <div style="width: 256px; height: 256px; position: absolute; left: 431px; top: 388px;"></div>
+                              <div style="width: 256px; height: 256px; position: absolute; left: -81px; top: 132px;"></div>
+                              <div style="width: 256px; height: 256px; position: absolute; left: 687px; top: 132px;"></div>
+                              <div style="width: 256px; height: 256px; position: absolute; left: -81px; top: -124px;"></div>
+                              <div style="width: 256px; height: 256px; position: absolute; left: -81px; top: 388px;"></div>
+                              <div style="width: 256px; height: 256px; position: absolute; left: 687px; top: -124px;"></div>
+                              <div style="width: 256px; height: 256px; position: absolute; left: 687px; top: 388px;"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;">
+                          <div style="position: absolute; left: 0px; top: 0px; z-index: 30;">
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 1;">
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 175px; top: 132px;">
+                                <canvas style="-moz-user-select: none; position: absolute; left: 0px; top: 0px;" draggable="false" height="256" width="256"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 431px; top: 132px;">
+                                <canvas style="-moz-user-select: none; position: absolute; left: 0px; top: 0px;" draggable="false" height="256" width="256"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 175px; top: -124px;">
+                                <canvas style="-moz-user-select: none; position: absolute; left: 0px; top: 0px;" draggable="false" height="256" width="256"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 175px; top: 388px;">
+                                <canvas style="-moz-user-select: none; position: absolute; left: 0px; top: 0px;" draggable="false" height="256" width="256"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 431px; top: -124px;">
+                                <canvas style="-moz-user-select: none; position: absolute; left: 0px; top: 0px;" draggable="false" height="256" width="256"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 431px; top: 388px;">
+                                <canvas style="-moz-user-select: none; position: absolute; left: 0px; top: 0px;" draggable="false" height="256" width="256"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -81px; top: 132px;">
+                                <canvas style="-moz-user-select: none; position: absolute; left: 0px; top: 0px;" draggable="false" height="256" width="256"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 687px; top: 132px;"></div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -81px; top: -124px;"></div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -81px; top: 388px;"></div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 687px; top: -124px;"></div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 687px; top: 388px;"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;">
+                          <div style="position: absolute; left: 0px; top: 0px; z-index: -1;">
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 1;">
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 175px; top: 132px;">
+                                <canvas width="256" height="256" style="-moz-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;" draggable="false"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 431px; top: 132px;">
+                                <canvas width="256" height="256" style="-moz-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;" draggable="false"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 175px; top: -124px;">
+                                <canvas width="256" height="256" style="-moz-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;" draggable="false"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 175px; top: 388px;">
+                                <canvas width="256" height="256" style="-moz-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;" draggable="false"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 431px; top: -124px;">
+                                <canvas width="256" height="256" style="-moz-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;" draggable="false"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 431px; top: 388px;"></div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -81px; top: 132px;">
+                                <canvas width="256" height="256" style="-moz-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;" draggable="false"></canvas>
+                              </div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 687px; top: 132px;"></div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -81px; top: -124px;"></div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -81px; top: 388px;"></div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 687px; top: -124px;"></div>
+                              <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 687px; top: 388px;"></div>
+                            </div>
+                          </div>
+                          <div style="width: 22px; height: 40px; overflow: hidden; position: absolute; left: 311px; top: 205px; z-index: 245;">
+                            <img draggable="false" src="https://mts.googleapis.com/vt/icon/name=icons/spotlight/spotlight-poi.png&amp;scale=1" style="position: absolute; left: 0px; top: 0px; width: 22px; height: 40px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div>
+                        </div>
+                        <div style="position: absolute; z-index: 0; left: 0px; top: 0px;">
+                          <div style="overflow: hidden; width: 644px; height: 490px;">
+                            <img src="https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&amp;1i958289&amp;2i633980&amp;2e2&amp;3u12&amp;4m2&amp;1u644&amp;2u490&amp;5m5&amp;1e3&amp;5sen-US&amp;6sus&amp;10b1&amp;12b1&amp;token=94920" style="width: 644px; height: 490px;"></div>
+                        </div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                          <div style="position: absolute; left: 0px; top: 0px; z-index: 1;">
+                            <div style="width: 256px; height: 256px; position: absolute; left: 431px; top: -124px; opacity: 1; transition: opacity 200ms ease-out 0s;">
+                              <img draggable="false" src="https://khms1.googleapis.com/kh?v=165&amp;hl=en-US&amp;x=3745&amp;y=2476&amp;z=12&amp;token=21080" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;">
+                              <img draggable="false" src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i12!2i3745!3i2476!2m3!1e0!2sm!3i290085990!3m9!2sen-US!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"></div>
+                            <div style="width: 256px; height: 256px; position: absolute; left: 431px; top: 388px; opacity: 1; transition: opacity 200ms ease-out 0s;">
+                              <img draggable="false" src="https://khms1.googleapis.com/kh?v=165&amp;hl=en-US&amp;x=3745&amp;y=2478&amp;z=12&amp;token=115392" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;">
+                              <img draggable="false" src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i12!2i3745!3i2478!2m3!1e0!2sm!3i290086505!3m9!2sen-US!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"></div>
+                            <div style="width: 256px; height: 256px; position: absolute; left: -81px; top: 132px; opacity: 1; transition: opacity 200ms ease-out 0s;">
+                              <img draggable="false" src="https://khms1.googleapis.com/kh?v=165&amp;hl=en-US&amp;x=3743&amp;y=2477&amp;z=12&amp;token=62195" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;">
+                              <img draggable="false" src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i12!2i3743!3i2477!2m3!1e0!2sm!3i290085990!3m9!2sen-US!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"></div>
+                            <div style="width: 256px; height: 256px; position: absolute; left: -81px; top: -124px; opacity: 1; transition: opacity 200ms ease-out 0s;">
+                              <img draggable="false" src="https://khms1.googleapis.com/kh?v=165&amp;hl=en-US&amp;x=3743&amp;y=2476&amp;z=12&amp;token=15039" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;">
+                              <img draggable="false" src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i12!2i3743!3i2476!2m3!1e0!2sm!3i290085990!3m9!2sen-US!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"></div>
+                            <div style="width: 256px; height: 256px; position: absolute; left: -81px; top: 388px; opacity: 1; transition: opacity 200ms ease-out 0s;">
+                              <img draggable="false" src="https://khms1.googleapis.com/kh?v=165&amp;hl=en-US&amp;x=3743&amp;y=2478&amp;z=12&amp;token=109351" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;">
+                              <img draggable="false" src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i12!2i3743!3i2478!2m3!1e0!2sm!3i290086505!3m9!2sen-US!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"></div>
+                            <div style="width: 256px; height: 256px; position: absolute; left: 175px; top: -124px; opacity: 1; transition: opacity 200ms ease-out 0s;">
+                              <img draggable="false" src="https://khms0.googleapis.com/kh?v=165&amp;hl=en-US&amp;x=3744&amp;y=2476&amp;z=12&amp;token=83595" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;">
+                              <img draggable="false" src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i12!2i3744!3i2476!2m3!1e0!2sm!3i290085990!3m9!2sen-US!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"></div>
+                            <div style="width: 256px; height: 256px; position: absolute; left: 175px; top: 388px; opacity: 1; transition: opacity 200ms ease-out 0s;">
+                              <img draggable="false" src="https://khms0.googleapis.com/kh?v=165&amp;hl=en-US&amp;x=3744&amp;y=2478&amp;z=12&amp;token=46836" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;">
+                              <img draggable="false" src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i12!2i3744!3i2478!2m3!1e0!2sm!3i290086505!3m9!2sen-US!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"></div>
+                            <div style="width: 256px; height: 256px; position: absolute; left: 687px; top: -124px; opacity: 1; transition: opacity 200ms ease-out 0s;">
+                              <img draggable="false" src="https://khms0.googleapis.com/kh?v=165&amp;hl=en-US&amp;x=3746&amp;y=2476&amp;z=12&amp;token=89636" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;">
+                              <img draggable="false" src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i12!2i3746!3i2476!2m3!1e0!2sm!3i290046198!3m9!2sen-US!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"></div>
+                            <div style="width: 256px; height: 256px; position: absolute; left: 687px; top: 132px; opacity: 1; transition: opacity 200ms ease-out 0s;">
+                              <img draggable="false" src="https://khms0.googleapis.com/kh?v=165&amp;hl=en-US&amp;x=3746&amp;y=2477&amp;z=12&amp;token=5721" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;">
+                              <img draggable="false" src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i12!2i3746!3i2477!2m3!1e0!2sm!3i290046198!3m9!2sen-US!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"></div>
+                            <div style="width: 256px; height: 256px; position: absolute; left: 687px; top: 388px; opacity: 1; transition: opacity 200ms ease-out 0s;">
+                              <img draggable="false" src="https://khms0.googleapis.com/kh?v=165&amp;hl=en-US&amp;x=3746&amp;y=2478&amp;z=12&amp;token=52877" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;">
+                              <img draggable="false" src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i12!2i3746!3i2478!2m3!1e0!2sm!3i290046198!3m9!2sen-US!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"></div>
+                            <div style="width: 256px; height: 256px; position: absolute; left: 175px; top: 132px; opacity: 1; transition: opacity 200ms ease-out 0s;">
+                              <img draggable="false" src="https://khms0.googleapis.com/kh?v=165&amp;hl=en-US&amp;x=3744&amp;y=2477&amp;z=12&amp;token=130751" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;">
+                              <img draggable="false" src="https://mts0.googleapis.com/vt?pb=!1m4!1m3!1i12!2i3744!3i2477!2m3!1e0!2sm!3i290085990!3m9!2sen-US!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"></div>
+                            <div style="width: 256px; height: 256px; position: absolute; left: 431px; top: 132px; opacity: 1; transition: opacity 200ms ease-out 0s;">
+                              <img draggable="false" src="https://khms1.googleapis.com/kh?v=165&amp;hl=en-US&amp;x=3745&amp;y=2477&amp;z=12&amp;token=68236" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;">
+                              <img draggable="false" src="https://mts1.googleapis.com/vt?pb=!1m4!1m3!1i12!2i3745!3i2477!2m3!1e0!2sm!3i290085990!3m9!2sen-US!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" style="width: 256px; height: 256px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%;"></div>
+                      <div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%;">
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;">
+                          <div class="gmnoprint" style="width: 22px; height: 40px; overflow: hidden; position: absolute; opacity: 0.01; left: 311px; top: 205px; z-index: 245;">
+                            <img usemap="#gmimap0" draggable="false" src="https://mts.googleapis.com/vt/icon/name=icons/spotlight/spotlight-poi.png&amp;scale=1" style="position: absolute; left: 0px; top: 0px; width: 22px; height: 40px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;">
+                            <map id="gmimap0" name="gmimap0">
+                              <area style="cursor: pointer;" title="Marker Location" shape="poly" coords="8,0,5,1,4,2,3,3,2,4,2,5,1,6,1,7,0,8,0,14,1,15,1,16,2,17,2,18,3,19,3,20,4,21,5,22,5,23,6,24,7,25,7,27,8,28,8,29,9,30,9,33,10,34,10,40,11,40,11,34,12,33,12,30,13,29,13,28,14,27,14,25,15,24,16,23,16,22,17,21,18,20,18,19,19,18,19,17,20,16,20,15,21,14,21,8,20,7,20,6,19,5,19,4,18,3,17,2,16,1,14,1,13,0,8,0" log="miw"></map>
+                          </div>
+                        </div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;">
+                          <div style="z-index: -202; cursor: pointer; display: none;">
+                            <div style="width: 30px; height: 27px; overflow: hidden; position: absolute;">
+                              <img draggable="false" src="https://maps.gstatic.com/mapfiles/undo_poly.png" style="position: absolute; left: 0px; top: 0px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 90px; height: 27px;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;">
+                      <a title="Click to see this area on Google Maps" href="http://maps.google.com/maps?ll=-35.277336,149.112886&amp;z=12&amp;t=h&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" target="_blank" style="position: static; overflow: visible; float: none; display: inline;">
+                        <div style="width: 62px; height: 26px; cursor: pointer;">
+                          <img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/google_white2.png" style="position: absolute; left: 0px; top: 0px; width: 62px; height: 26px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div>
+                      </a>
+                    </div>
+                    <div style="z-index: 1000001; position: absolute; right: 166px; bottom: 0px; width: 251px;" class="gmnoprint">
+                      <div class="gm-style-cc" style="-moz-user-select: none;" draggable="false">
+                        <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                          <div style="width: 1px;"></div>
+                          <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                        </div>
+                        <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;">
+                          <a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a>
+                          <span style="">Map data ©2015 Google  Imagery ©2015 TerraMetrics</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto,Arial,sans-serif; color: rgb(34, 34, 34); box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2); z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 172px; top: 155px;">
+                      <div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div>
+                      <div style="font-size: 13px;">Map data ©2015 Google  Imagery ©2015 TerraMetrics</div>
+                      <div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;">
+                        <img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div>
+                    </div>
+                    <div style="position: absolute; right: 0px; bottom: 0px;" class="gmnoscreen">
+                      <div style="font-family: Roboto,Arial,sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2015 Google  Imagery ©2015 TerraMetrics</div>
+                    </div>
+                    <div draggable="false" style="z-index: 1000001; position: absolute; -moz-user-select: none; right: 95px; bottom: 0px;" class="gmnoprint gm-style-cc">
+                      <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                        <div style="width: 1px;"></div>
+                        <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                      </div>
+                      <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;">
+                        <a target="_blank" href="http://www.google.com/intl/en-US_US/help/terms_maps.html" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a>
+                      </div>
+                    </div>
+                    <div class="gm-style-cc" style="-moz-user-select: none; position: absolute; right: 0px; bottom: 0px;" draggable="false">
+                      <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                        <div style="width: 1px;"></div>
+                        <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                      </div>
+                      <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;">
+                        <a href="https://www.google.com/maps/@-35.2773362,149.1128858,12z/data=!3m1!1e3!10m1!1e1!13b1?source=apiv3" style="font-family: Roboto,Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;" title="Report errors in the road map or imagery to Google" target="_new">Report a map error</a>
+                      </div>
+                    </div>
+                    <div controlheight="348" controlwidth="78" draggable="false" style="margin: 5px; -moz-user-select: none; position: absolute; left: 0px; top: 0px;" class="gmnoprint">
+                      <div style="cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; width: 78px; height: 78px; position: absolute; left: 0px; top: 0px;" controlheight="80" controlwidth="78" class="gmnoprint">
+                        <div style="width: 78px; height: 78px; position: absolute; left: 0px; top: 0px;" controlheight="80" controlwidth="78" class="gmnoprint">
+                          <div style="visibility: hidden;">
+                            <svg viewBox="0 0 78 78" height="78px" width="78px" overflow="hidden" version="1.1" style="position: absolute; left: 0px; top: 0px;">
+                              <circle stroke="#f2f4f6" fill="#f2f4f6" fill-opacity="0.2" stroke-width="3" r="35" cy="39" cx="39"></circle>
+                              <g transform="rotate(0 39 39)">
+                                <rect fill="#f2f4f6" stroke-width="1" stroke="#a6a6a6" height="11" width="12" ry="4" rx="4" y="0" x="33"></rect>
+                                <polyline stroke="#000" fill="#f2f4f6" stroke-width="1.5" stroke-linejoin="bevel" points="36.5,8.5 36.5,2.5 41.5,8.5 41.5,2.5"></polyline>
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                        <div style="position: absolute; left: 10px; top: 11px;" controlheight="59" controlwidth="59" class="gmnoprint">
+                          <div style="width: 59px; height: 59px; overflow: hidden; position: relative;">
+                            <img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png" style="position: absolute; left: 0px; top: 0px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;">
+                            <div title="Pan left" style="position: absolute; left: 0px; top: 20px; width: 19.6667px; height: 19.6667px; cursor: pointer;"></div>
+                            <div title="Pan right" style="position: absolute; left: 39px; top: 20px; width: 19.6667px; height: 19.6667px; cursor: pointer;"></div>
+                            <div title="Pan up" style="position: absolute; left: 20px; top: 0px; width: 19.6667px; height: 19.6667px; cursor: pointer;"></div>
+                            <div title="Pan down" style="position: absolute; left: 20px; top: 39px; width: 19.6667px; height: 19.6667px; cursor: pointer;"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div controlheight="40" controlwidth="32" style="cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; position: absolute; left: 23px; top: 85px;">
+                        <div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px;">
+                          <img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout2.png" style="position: absolute; left: -9px; top: -102px; width: 1028px; height: 214px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div>
+                        <div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;">
+                          <img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout2.png" style="position: absolute; left: -107px; top: -102px; width: 1028px; height: 214px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div>
+                        <div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;">
+                          <img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout2.png" style="position: absolute; left: -58px; top: -102px; width: 1028px; height: 214px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div>
+                        <div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;">
+                          <img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout2.png" style="position: absolute; left: -205px; top: -102px; width: 1028px; height: 214px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div>
+                      </div>
+                      <div controlheight="0" controlwidth="0" style="opacity: 0.6; display: none; position: absolute;" class="gmnoprint">
+                        <div title="Rotate map 90 degrees" style="width: 22px; height: 22px; overflow: hidden; position: absolute; cursor: pointer;">
+                          <img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png" style="position: absolute; left: -38px; top: -360px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div>
+                      </div>
+                      <div controlheight="218" controlwidth="25" style="position: absolute; left: 27px; top: 130px;" class="gmnoprint">
+                        <div title="Zoom in" style="width: 23px; height: 24px; overflow: hidden; position: relative; cursor: pointer; z-index: 1;">
+                          <img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png" style="position: absolute; left: -17px; top: -400px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div>
+                        <div title="Click to zoom" style="width: 25px; height: 170px; overflow: hidden; position: relative; cursor: pointer; top: -4px;">
+                          <img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png" style="position: absolute; left: -17px; top: -87px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div>
+                        <div title="Drag to zoom" style="width: 21px; height: 14px; overflow: hidden; position: absolute; transition: top 0.25s ease 0s; z-index: 2; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; left: 2px; top: 84px;">
+                          <img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png" style="position: absolute; left: 0px; top: -384px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div>
+                        <div title="Zoom out" style="width: 23px; height: 23px; overflow: hidden; position: relative; cursor: pointer; top: -4px; z-index: 3;">
+                          <img draggable="false" src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png" style="position: absolute; left: -17px; top: -361px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div>
+                      </div>
+                    </div>
+                    <div style="margin: 5px; z-index: 0; position: absolute; cursor: pointer; text-align: left; width: 85px; right: 0px; top: 0px;" class="gmnoprint gm-style-mtc" id="maptype">
+                      <div title="Change map style" draggable="false" style="direction: ltr; overflow: hidden; text-align: left; position: relative; color: rgb(0, 0, 0); font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 1px 6px; border-radius: 2px; background-clip: padding-box; border: 1px solid rgba(0, 0, 0, 0.15); box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.3); font-weight: 500;">
+                        Satellite
+                        <img style="-moz-user-select: none; border: 0px none; padding: 0px; margin: -2px 0px 0px; position: absolute; right: 6px; top: 50%; width: 7px; height: 4px;" draggable="false" src="https://maps.gstatic.com/mapfiles/arrow-down.png"></div>
+                      <div style="background-color: white; z-index: -1; padding-top: 2px; background-clip: padding-box; border-width: 0px 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.3); position: relative; text-align: left; display: none;">
+                        <div title="Show street map" draggable="false" style="color: black; font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px;">Map</div>
+                        <div title="Show satellite imagery" draggable="false" style="color: black; font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px; font-weight: 500;">Satellite</div>
+                        <div style="margin: 1px 0px; border-top: 1px solid rgb(235, 235, 235);"></div>
+                        <div title="Show street map with terrain" draggable="false" style="color: rgb(0, 0, 0); font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; display: none;">
+                          <span style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;" role="checkbox">
+                            <div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;">
+                              <img draggable="false" src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div>
+                          </span>
+                          <label style="vertical-align: middle; cursor: pointer;">Terrain</label>
+                        </div>
+                        <div style="margin: 1px 0px; border-top: 1px solid rgb(235, 235, 235); display: none;"></div>
+                        <div title="Zoom in to show 45 degree view" draggable="false" style="color: rgb(184, 184, 184); font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; display: none;">
+                          <span style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(241, 241, 241); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;" role="checkbox">
+                            <div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;">
+                              <img draggable="false" src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div>
+                          </span>
+                          <label style="vertical-align: middle; cursor: pointer;">45°</label>
+                        </div>
+                        <div title="Show imagery with street names" draggable="false" style="color: rgb(0, 0, 0); font-family: Roboto,Arial,sans-serif; -moz-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap;">
+                          <span style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;" role="checkbox">
+                            <div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;">
+                              <img draggable="false" src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" style="position: absolute; left: -52px; top: -44px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div>
+                          </span>
+                          <label style="vertical-align: middle; cursor: pointer;">Labels</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="font-size:11px;width:100%;color:black;height:20px;" class="show-80">
+                  <table id="cellCountsLegend">
+                    <tbody>
+                      <tr>
+                        <td style="background-color:#000; color:white; text-align:right;">Records:&nbsp;</td>
+                        <td style="background-color:#ffff00;">1–9</td>
+                        <td style="background-color:#ffcc00;">10–49</td>
+                        <td style="background-color:#ff9900;">50–99</td>
+                        <td style="background-color:#ff6600;">100–249</td>
+                        <td style="background-color:#ff3300;">250–499</td>
+                        <td style="background-color:#cc0000;">500+</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="mapTips"> <b>Tips</b>
+                  : you can fine-tune the location of the area by dragging the red marker icon
+                </div>
+              </div><!-- .col-md-5 -->
+            </div><!-- .row-fluid -->
+
+            <div id="download" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="downloadsLabel" aria-hidden="true">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="downloadsLabel">Downloads</h3>
+              </div>
+              <div class="modal-body">
+                <p id="termsOfUseDownload">
+                  By downloading this content you are agreeing to use it in accordance with the Atlas of Living Australia
+                  <a href="http://www.ala.org.au/about/terms-of-use/#TOUusingcontent">Terms of Use</a>
+                  and any Data Provider Terms associated with the data download.
+                  <br>
+                  <br>
+                  Please provide the following details before downloading (* required):
+                </p>
+                <form id="downloadForm">
+                  <input name="searchParams" id="searchParams" value="" type="hidden">
+
+                  <input name="url" id="downloadUrl" value="http://biocache.ala.org.au/ws/occurrences/download" type="hidden">
+                  <input name="url" id="fastDownloadUrl" value="http://biocache.ala.org.au/ws/occurrences/index/download" type="hidden">
+
+                  <input name="url" id="downloadChecklistUrl" value="http://biocache.ala.org.au/ws/occurrences/facets/download" type="hidden">
+                  <input name="url" id="downloadFieldGuideUrl" value="/occurrences/fieldguide/download" type="hidden">
+                  <input name="extra" id="extraFields" value="dataResourceUid,dataResourceName.p" type="hidden">
+                  <input name="sourceTypeId" id="sourceTypeId" value="0" type="hidden">
+
+                  <fieldset>
+                    <div>
+                      <label for="email">Email</label>
+                      <input name="email" id="email" value="" size="30" type="text"></div>
+                    <div>
+                      <label for="filename">Filename</label>
+                      <input name="filename" id="filename" value="data" size="30" type="text"></div>
+                    <div>
+                      <label for="reasonTypeId" style="vertical-align: top">Download reason *</label>
+                      <select name="reasonTypeId" id="reasonTypeId">
+                        <option value="">-- select a reason --</option>
+
+                        <option value="0">conservation management/planning</option>
+
+                        <option value="1">biosecurity management, planning</option>
+
+                        <option value="2">environmental impact, site assessment</option>
+
+                        <option value="3">education</option>
+
+                        <option value="4">scientific research</option>
+
+                        <option value="5">collection management</option>
+
+                        <option value="6">other</option>
+
+                        <option value="7">ecological research</option>
+
+                        <option value="8">systematic research</option>
+
+                        <option value="9">other scientific research</option>
+
+                        <option value="10">testing</option>
+
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="filename" style="float: left;">Download type</label>
+                      <div style="display: inline-block; width: 55%; float: left; padding-left: 5px;">
+                        <input title="" oldtitle="Download the occurrence records" data-hasqtip="1" name="downloadType" value="fast" class="tooltips" checked="checked" type="radio">
+                        &nbsp;All Records
+                        <br>
+
+                        <input title="" oldtitle="Lists all species from the current search results" data-hasqtip="2" name="downloadType" value="checklist" class="tooltips" type="radio">
+                        &nbsp;Species Checklist
+                        <br>
+
+                        <input title="" oldtitle="PDF file listing species with images and distribution maps" data-hasqtip="3" name="downloadType" value="fieldGuide" class="tooltips" type="radio">&nbsp;Species Field Guide</div>
+                    </div>
+
+                    <div style="clear: both; text-align: center;">
+                      <br>
+                      <input value="Start Download" id="downloadStart" class="btn tooltips" type="submit"></div>
+
+                    <div style="margin-top:10px;"> <strong>Note</strong>
+                      : The field guide may take several minutes to prepare and download.
+                    </div>
+                    <div id="statusMsg" style="text-align: center; font-weight: bold; "></div>
+                  </fieldset>
+                </form>
+                <style type="text/css">
+                    <!-- /* style outside of HEAD is not valid HTML but is 100% compatible with all modern browsers */
+                    #downloadForm fieldset > div {
+                        padding: 5px 0;
+                    }
+                    -->
+                    </style>
+                <script type="text/javascript">
+
+                        $(document).ready(function() {
+                            // catch download submit button
+                            // Note the unbind().bind() syntax - due to Jquery ready being inside <body> tag.
+
+                            // start download button
+                            $(":input#downloadStart").unbind("click").bind("click",function(e) {
+                                e.preventDefault();
+                                var downloadType = $('input:radio[name=downloadType]:checked').val();
+
+                                if (validateForm()) {
+                                    if (downloadType == "fast") {
+                                        var downloadUrl = generateDownloadPrefix($(":input#fastDownloadUrl").val())+"&email="+$("#email").val()+"&sourceTypeId="+$("#sourceTypeId").val()+"&reasonTypeId="+
+                                                $("#reasonTypeId").val()+"&file="+$("#filename").val()+"&extra="+$(":input#extraFields").val();
+                                        //alert("downloadUrl = " + downloadUrl);
+                                        window.location.href = downloadUrl;
+                                        notifyDownloadStarted();
+                                    } else if (downloadType == "detailed") {
+                                        var downloadUrl = generateDownloadPrefix($(":input#downloadUrl").val())+"&email="+$("#email").val()+"&sourceTypeId="+$("#sourceTypeId").val()+"&reasonTypeId="+
+                                                $("#reasonTypeId").val()+"&file="+$("#filename").val()+"&extra="+$(":input#extraFields").val();
+                                        //alert("downloadUrl = " + downloadUrl);
+                                        window.location.href = downloadUrl;
+                                        notifyDownloadStarted();
+                                    } else if (downloadType == "checklist") {
+                                        var downloadUrl = generateDownloadPrefix($("input#downloadChecklistUrl").val())+"&facets=species_guid&lookup=true&file="+
+                                                $("#filename").val()+"&sourceTypeId="+$("#sourceTypeId").val()+"&reasonTypeId="+$("#reasonTypeId").val();
+                                        //alert("downloadUrl = " + downloadUrl);
+                                        window.location.href = downloadUrl;
+                                        notifyDownloadStarted();
+                                    } else if (downloadType == "fieldGuide") {
+                                        var downloadUrl = generateDownloadPrefix($("input#downloadFieldGuideUrl").val())+"&facets=species_guid"+"&sourceTypeId="+
+                                                $("#sourceTypeId").val()+"&reasonTypeId="+$("#reasonTypeId").val();
+                                        window.open(downloadUrl);
+                                        notifyDownloadStarted();
+                                    } else {
+                                        alert("download type not recognised");
+                                    }
+                                }
+                            });
+
+
+                        });
+
+                        function generateDownloadPrefix(downloadUrlPrefix) {
+                            downloadUrlPrefix = downloadUrlPrefix.replace(/\\ /g, " ");
+                            var searchParams = $(":input#searchParams").val();
+                            if (searchParams) {
+                                downloadUrlPrefix += searchParams;
+                            } else {
+                                // EYA page is JS driven
+                                downloadUrlPrefix += "?q=*:*&lat="+$('#latitude').val()+"&lon="+$('#longitude').val()+"&radius="+$('#radius').val();
+                                if (speciesGroup && speciesGroup != "ALL_SPECIES") {
+                                    downloadUrlPrefix += "&fq=species_group:" + speciesGroup;
+                                }
+                            }
+
+                            return downloadUrlPrefix;
+                        }
+
+                        function notifyDownloadStarted() {
+                            $("#statusMsg").html("Download has commenced");
+                            window.setTimeout(function() {
+                                $("#statusMsg").html("");
+                                $('#download').modal('hide');
+                            }, 2000);
+                        }
+
+                        function validateForm() {
+                            var isValid = false;
+                            var reasonId = $("#reasonTypeId option:selected").val();
+
+                            if (reasonId) {
+                                isValid = true;
+                            } else {
+                                $("#reasonTypeId").focus();
+                                $("label[for='reasonTypeId']").css("color","red");
+                                alert("Please select a \"download reason\" from the drop-down list");
+                            }
+
+                            return isValid;
+                        }
+
+                    </script>
+              </div>
+              <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+              </div>
+            </div>
+
+            <!-- End app code -->
+
+          </div><!-- End panel body -->
+        </div><!-- End panel-default -->
+      </div><!-- End col -->
+    </div><!-- End row -->
+  </div><!-- End col -->
+
+  <!-- Aside / sidebar -->
+<!--   <aside class="col-lg-3 col-md-3 col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="cta">Sharing biodiversity knowledge</h3>
+      </div>
+      <div class="panel-body">
+        <p class="lead cta">
+          Contributed by Australia’s academic, scientific, environmental communities and you.
+        </p>
+        <p class="btn btn-primary btn-lg">Get involved</p>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a href="#" class="pull-right">View all</a>
+        <h4>Blog &amp; News Updates</h4>
+      </div>
+      <div class="panel-body">
+        <div class="list-group">
+          <a href="#" class="list-group-item">
+            ALA welcomes new data provider: the University of Melbourne Herbarium (MELU)
+          </a>
+          <a href="#" class="list-group-item">ESA delegates learn about the ALA Spatial Portal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Connect with us</h4>
+      </div>
+      <div class="panel-body">
+        <ul class="social list-inline pull-left">
+          <li><a class="soc-facebook" href="#"> <i class="fa fa-facebook"></i></a></li>
+          <li><a class="soc-twitter" href="#"> <i class="fa fa-twitter"></i></a></li>
+          <li><a class="soc-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a class="soc-envelope" href="#"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </aside> -->
+
+ </div><!-- End container #main col -->
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <p class="lead">
+          The Atlas of Living Australia is a collaborative, national project that aggregates biodiversity data from multiple sources and makes it available and usable online.
+        </p>
+        <p class="lead">
+          &copy; Sharing biodiversity knowledge to shape our future.
+        </p>
+      </div>
+
+      <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+        <ul class="link-list">
+          <li class="heading"><a href="#">Citizen Science &rarr;</a></li>
+          <li><a href="#">About CS in the ALA</a></li>
+          <li><a href="#">DigiVol Portal</a></li>
+          <li><a href="#">Record a sighting</a></li>
+          <li><a href="#">Upload media</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+        <ul class="link-list">
+          <li class="heading"><a href="#">Atlas Features &rarr;</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Sandbox</a></li>
+          <li><a href="#">Digitisation guidance</a></li>
+          <li><a href="#">Atlas Mobile Apps</a></li>
+        </ul>
+      </div>
+
+      <!-- <div class="clearfix visible-xs-block visible-lg-inline-block"></div> -->
+
+      <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+        <ul class="link-list">
+          <li class="heading"><a href="#">Atlas Data &rarr;</a></li>
+          <li><a href="#">Sensitive Data</a></li>
+          <li><a href="#">Data integration</a></li>
+          <li><a href="#">Dataset upload</a></li>
+          <li><a href="#">Species list upload</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+        <ul class="link-list">
+          <li class="heading"><a href="#">Contact Us &rarr;</a></li>
+          <li><a href="#">Communications</a></li>
+          <li><a href="#">About the Atlas</a></li>
+          <li><a href="#">My Sightings</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Associated Sites</a></li>
+        </ul>
+      </div>
+
+    </div><!-- End row -->
+
+    </div><!-- End container -->
+  </footer><!-- End Main footer -->
+
+  <footer class="secondary-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+
+          <div class="row">
+            <div class="col-xs-6 col-sm-12">
+              <img class="img-responsive ncris" src="img/NCRIS-Logo_Mono.png"><!-- Logo -->
+            </div>
+
+            <div class="col-xs-6 col-sm-12">
+              <img class="img-responsive aus-govt" src="img/Aust-Govt-Initiative-stacked-64.png"><!-- Logo -->
+            </div>
+          </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <p>
+            The Atlas of Living Australia is funded by <a href="#">The Commonwealth Scientific and Industrial Research Organisation</a> (CSIRO) and is a node of the <a href="#">Global Biodiversity Information Facility (GBIF)</a>.
+          </p>
+          <div class="col-xs-6 col-sm-6">
+            <img class="img-responsive csiro" src="img/CSIRO_Solid_RGB.svg"><!-- Logo -->
+          </div>
+
+          <div class="col-xs-6 col-sm-6">
+            <img class="img-responsive gbif" src="img/GBIF_logo_short_form.gif"><!-- Logo -->
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <p>
+            This site is licensed under a <a href="#">Creative Commons Attribution 3.0 Australia License</a>.
+          </p>
+          <p><img class="img-responsive" src="img/creativecommons.png"><!-- Logo --><!-- http://placehold.it/150x50 --></p>
+          <p>
+            Provider content may be covered by other <a href="#">Terms of Use</a>.
+          </p>
+        </div>
+      </div><!-- End row -->
+
+    </div><!-- End container -->
+  </footer>
+
+  <footer class="social-footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <ul class="social list-inline">
+            <li><a class="soc-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="soc-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="soc-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a class="soc-envelope" href="#"><i class="fa fa-envelope"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-5 col-md-4">
+          <ul class="footer-nav list-inline">
+            <li ><a href="#">Contact Us</a></li>
+            <li ><a href="#">Get Involved</a></li>
+            <li ><a href="#">Explore the ALA</a></li>
+          </ul>
+        </div>
+
+      </div><!-- End row -->
+    </div><!-- End container -->
+  </footer>
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

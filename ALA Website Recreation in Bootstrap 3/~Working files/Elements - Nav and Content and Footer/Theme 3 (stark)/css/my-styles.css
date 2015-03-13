@@ -1,0 +1,180 @@
+/* Stark Theme
+================================= */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+
+
+/* Global
+================================= */
+body{-webkit-font-smoothing:antialiased;background-color:#F2F2F2;font:normal 14px Roboto,Helvetica,"Helvetica Neue",Arial,sans-serif;}
+
+#main{padding:0;}
+.container{max-width:1100px;}
+.container footer{padding:1em 0;}
+button{outline:0;}
+hr{border-color:#ececec;}
+textarea{outline:0;resize:none;}
+
+/* Navbar
+================================= */
+
+#subnav{position:fixed;width:100%;}
+#subnav{padding-top:6px;}
+.dropdown-menu{background-color:#f4f4f4;border-color:#f0f0f0;border-radius:0;margin-top:-1px;}
+.dropdown-menu li > a:hover{background-color:#fff;}
+.navbar{margin-bottom:0;}
+.navbar-default{background-color:#fff;border-width:0;z-index:5;}
+.navbar-default .dropdown-menu li > a{padding-left:30px;}
+.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > li:hover > a{background-color:transparent;border:0 solid #F26649;border-bottom-width:2px;}
+.navbar-header > a:nth-child(3){color:#F26649;}
+div.navbar-header > a:nth-child(1) > img{max-height:20px;}
+.navbar-brand{font-size:1em;padding-right:0;}
+
+/* Header
+================================= */
+
+.header {background-color:#ffffff;border-width:0;}
+.header .navbar-collapse {background-color:#ffffff;}
+
+/* Jumbotron
+================================= */
+
+.input-group{padding-top:5.5em;}
+.jumbotron{-moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;background:url(../img/71057110.jpg) no-repeat center top;background-attachment:relative;background-position:center center;background-size:cover;margin-top:-70px;min-height:250px;padding-top:75px;text-align:center;width:100%;}
+div.jumbotron > div > div > div > input{padding:2em;}
+div.jumbotron > div > div > div > span > button{padding:1.3em;}
+
+.jumbotron{min-height:165px;}
+
+/* Images (img)
+================================= */
+
+#main > div > h2{margin:0 0 .8em;}
+.panel-body img{margin:0 10px 10px 0;}
+.secondary-footer img{margin-bottom:2em;}
+img.aus-govt,img.ncris{max-width:200px;}
+img.gbif{max-width:100px;}
+img.ncris{margin-top:8px;}
+
+/* Btn (Button)
+================================= */
+
+.btn,.form-control,.panel,.list-group,.well{border-radius:1px;box-shadow:0 0 0;}
+.btn-circle{border-radius:50%;font-size:13px;height:35px;line-height:1.42;margin-right:.4em;padding:6px 0;text-align:center;width:35px;}
+.btn-danger,.label-danger,.progress-bar-danger{background-color:#dd4b39;}
+.btn-info,.label-info,.progress-bar-info{background-color:#a0c3ff;border-color:#a0c3ff;}
+.btn-plus{background-color:#fff;border-color:#ddd;border-radius:3px;border-width:1px;box-shadow:1px 1px 0 #999;color:#666;text-shadow:0 0 1px #bbb;}
+.btn-primary,.label-primary,.list-group-item.active,.list-group-item.active:hover,.list-group-item.active:focus{background-color:#4285f4;}
+.btn-primary:hover{background-color:#DA644E;border-color:#F26649;}
+.btn-success,.label-success,.progress-bar-success{background-color:#65b045;}
+.btn-warning,.label-warning,.progress-bar-warning{background-color:#f4b400;color:#444;}
+.form-control{border-color:#d7d7d7;}
+.panel .btn i{color:#fff;}
+.well,.panel{border-color:#d2d2d2;border-radius:3px;box-shadow:0 1px 0 #cfcfcf;}
+.btn-primary{background-color:#F26649;border-color:transparent;}
+
+/* Panel
+================================= */
+
+.list-group-item:first-child,.list-group-item:last-child{border-radius:0;}
+.panel .btn i,.btn span{color:#666;}
+.panel .img-circle{height:50px;width:50px;}
+.panel .panel-default{border-color:#ccc;}
+.panel .panel-heading{background-color:#fff;border-color:#fff;color:#262626;font-size:16px;font-weight:700;}
+.panel .panel-heading a{font-size:11px;font-weight:400;}
+.panel .panel-thumbnail{padding:0;}
+
+/* Modal
+================================= */
+
+.modal-dialog{width:450px;}
+.modal-footer{border-width:0;}
+
+/* Footer
+================================= */
+
+.main-footer{background-color:#fff;margin:100px 0 0;padding:30px 0 0;}
+.main-footer a{color:#637073;}
+.main-footer,.secondary-footer,.tertiary-footer{font-size:.95em;}
+.social-footer{background-color:#F2F2F2;}
+.social-footer > div{padding:2em 0;}
+footer p.lead{color:#C44D34;}
+footer,footer.secondary-footer{background-color:#fff;}
+footer.secondary-footer > div > div:nth-child(1){margin-bottom:20px;}
+ul.footer-nav.list-inline{padding-top:9px;}
+footer.main-footer > div{padding-bottom:0;}
+.container,.social-footer > div{padding:2em 1.5em;}
+
+
+/* Typography
+================================= */
+
+.copyright{font-size:.9em;opacity:.8;}
+.cta{color:#C44D34;}
+.lead:nth-of-type(2){font-size:initial;margin-bottom:20px;}
+.link-list{line-height:1.8;list-style-type:none;margin:0 0 2em;padding:0;}
+h1{font-weight:200;margin-bottom:30px;}
+h2{font-size:2.4em;}
+h2,h3{color:#5f5d60;margin-bottom:16px;margin-top:0;}
+h3{font-size:1.25em;}
+h3,h4,h5{border:0 solid #efefef;border-bottom-width:1px;padding-bottom:10px;}
+p{color:#637073;font-size:1.1em;font-weight:200;line-height:1.6em;}
+strong{color:#5f5d60;}
+
+/* Links
+================================= */
+
+.link-list .heading{font-weight:700;margin-bottom:10px;}
+a,.link-list .heading a{color:#C44D34;}
+a:hover,.link-list .heading a:hover{color:#DA644E;}
+
+
+/* Social Icons
+================================= */
+
+.social a{border-radius:50%;color:#fff;display:inline-block;height:35px;text-align:center;width:35px;}
+.social a .fa{font-size:1em;padding-top:.8em;}
+
+/* Social Icons: Background Colours & Hovers
+================================= */
+
+li .soc-envelope{background-color:#EF6C53;}
+li .soc-envelope:hover{background-color:#DA644E;}
+li .soc-facebook{background-color:#507CBE;}
+li .soc-facebook:hover{background-color:#4B73AE;}
+li .soc-google-plus{background-color:#4D4F54;}
+li .soc-google-plus:hover{background-color:#494A4F;}
+li .soc-twitter{background-color:#63CDF1;}
+li .soc-twitter:hover{background-color:#5CBBDC;}
+
+
+/* Media Queries (Mobile First Method = only add rules to modify larger views)
+================================= */
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .navbar-brand{font-size:1.25em;padding-right:15px;}
+  .input-group{padding-top:10em;}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .container{width:1100px;}
+  #main{padding:40px 0;}
+
+}

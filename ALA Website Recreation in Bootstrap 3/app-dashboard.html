@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App: Dashboard</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/my-styles.css" rel="stylesheet">
+
+  <script src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
+  <script src="js/Chart.js"></script>
+
+  <!-- FontAwesome -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" class="img-responsive" src="img/supporting-graphic-element-flat.png">
+        </a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand font-xsmall" href="#">The Atlas Of Living Australia</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li >
+            <a href="#">
+              Contact us
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li >
+            <a href="#">Get involved</a>
+          </li>
+
+          <li class="dropdown font-xsmall">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              ALA Apps
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Spatial portal</a></li>
+              <li ><a href="#">Occurrence search</a></li>
+              <li ><a href="#">Fish map</a></li>
+              <li ><a href="#">Regions</a></li>
+              <li ><a href="#">Explore your area</a></li>
+
+              <li class="divider"></li>
+              <li><a href="#">Record a sighting</a></li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">DigiVol</a></li>
+              <li><a href="#">Fieldcapture</a></li>
+              <li><a href="#">Soils to satellite</a></li>
+              <li><a href="#">Traits, species lists</a></li>
+
+              <li class="divider"></li>
+              <li><a href="#">Community portals</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Datasets browser</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search the Atlas"></div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <small>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li ><a href="#">My profile</a></li>
+            <li ><a href="#">Login</a></li> -->
+
+          <li class="dropdown font-xsmall">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              User settings
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">My profile</a></li>
+
+              <li class="divider"></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Register</a></li>
+            </ul>
+          </li>
+          </ul>
+        </small>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav><!-- End Navbar -->
+
+  <div class="container" id="main">
+    <div class="col-xs-12">
+      <h1 class="hidden">Welcome to the Atlas of Living Australia website</h1><!-- Show the H1 on each page -->
+
+      <!-- Breadcrumb -->
+      <ol class="breadcrumb">
+        <li><a class="font-xxsmall" href="#">Home</a></li>
+        <li><a class="font-xxsmall" href="#">ALA Apps</a></li>
+        <!-- <li><a class="font-xxsmall" href="#">Long page title example</a></li> -->
+        <!-- <li><a class="font-xxsmall" href="#">What a great redesign</a></li> -->
+        <li class="font-xxsmall active">Your Dashboard</li>
+      </ol>
+      <!-- End Breadcrumb -->
+      <h2 class="heading-medium">Dashboard</h2>
+
+      <!-- Main stats -->
+      <div class="main-stats row">
+        <div class="main-stats__stat col-lg-3 col-md-6 col-sm-12">
+          <div class="widget__config">
+            <a href="#"> <i class="pe-7f-refresh"></i></a>
+          </div>
+          <h3 class="stat__title heading-underlined">Total statistics</h3>
+          <div class="stat__number"><span>T</span> 51,926,383</div>
+          <div class="progress">
+            <div class="progress-bar progress-bar--skyblue" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+          </div>
+          <!-- /progress -->
+          <p class="stat__details"> <i class="fa fa-chevron-up color--skyblue"></i> <strong>27%</strong> more than last month</p>
+        </div>
+
+        <div class="main-stats__stat col-lg-3 col-md-6 col-sm-12">
+          <div class="widget__config">
+            <a href="#"> <i class="pe-7f-refresh"></i>
+            </a>
+          </div>
+          <h3 class="stat__title heading-underlined">Contributors</h3>
+          <div class="stat__number">
+            <span>C</span>
+            7,068
+          </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar--anzac" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+          </div>
+          <!-- /progress -->
+          <p class="stat__details"> <i class="fa fa-chevron-up color--anzac"></i> <strong>15%</strong>
+            more than last month
+          </p>
+        </div>
+
+        <div class="main-stats__stat col-lg-3 col-md-6 col-sm-12">
+          <div class="widget__config">
+            <a href="#"> <i class="pe-7f-refresh"></i>
+            </a>
+          </div>
+          <h3 class="stat__title heading-underlined">Contributed Records</h3>
+          <div class="stat__number">
+            <span>R</span>
+            124,057
+          </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar--green" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+          </div>
+          <!-- /progress -->
+          <p class="stat__details"> <i class="fa fa-chevron-up color--green"></i> <strong>38%</strong>
+            more than last month
+          </p>
+        </div>
+
+        <div class="main-stats__stat col-lg-3 col-md-6 col-sm-12">
+          <div class="widget__config">
+            <a href="#"> <i class="pe-7f-refresh"></i>
+            </a>
+          </div>
+          <h3 class="stat__title heading-underlined">Organisims added</h3>
+          <div class="stat__number">
+            <span>O</span>
+            2,407
+          </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar--red" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
+          </div>
+          <!-- /progress -->
+          <p class="stat__details"> <i class="fa fa-chevron-down color--red"></i> <strong>23%</strong>
+            less than last month
+          </p>
+        </div>
+      </div><!-- End main stats -->
+
+      <div class="row"><!-- Dashboard controls -->
+        <div class="col-xs-12">
+          <div class="button-toolbar row">
+            <div class="btn-group">
+              <a class="btn btn-default" disabled="disabled" href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> <span class="hidden-xs hidden-sm">Toggle grid view</span></a>
+              <a class="btn btn-default" href="#"><i class="fa fa-list-ul"></i> <span class="hidden-xs hidden-sm">Toggle list view</span></a>
+              <a class="btn btn-default" href="#"><i class="fa fa-refresh"></i> <span class="hidden-xs hidden-sm">Reset layout</span></a>
+            </div>
+
+            <div class="btn-group pull-right">
+              <a class="btn btn-default" class="#"><i class="fa fa-code"></i> <span class="hidden-xs">Show raw data</span></a>
+              <a class="btn btn-default" href="#"><i class="fa fa-arrow-down"></i> <span class="hidden-xs">Download CSV</span></a>
+            </div>
+
+          </div><!-- End dashboard controls -->
+        </div>
+      </div><!-- End Dashboard controls -->
+
+      <div id="grid-view" class="row">
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            <a href="#" class="font-xxsmall pull-right">
+              <i class="fa fa-refresh">&emsp;</i>
+              <i class="fa fa-times"></i>
+            </a>
+            <h4 class="text-uppercase heading-underlined">Data Sets</h4>
+              <div class="row">
+                <div class="panel-body">
+                  <p><small>N</small> <span class="stat__number">1,165</span> <small>data sets available.</small></p>
+                  <p class="panel-feature">Panel content. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                  <div class="list-group">
+                    <a href="#" class="list-group-item">Harvested websites <span class="pull-right"><strong>108</strong></span></a>
+                    <a href="#" class="list-group-item">Occurrence record sets <span class="pull-right"><strong>482</strong></span></a>
+                    <a href="#" class="list-group-item">Document sets <span class="pull-right"><strong>19</strong></span></a>
+                    <a href="#" class="list-group-item">Uploaded record sets <span class="pull-right"><strong>20</strong></span></a>
+                  </div>
+                  <a href="#" type="button" class="btn btn-primary btn-block">View records</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            <a href="#" class="font-xxsmall pull-right">
+              <i class="fa fa-refresh">&emsp;</i>
+              <i class="fa fa-times"></i>
+            </a>
+            <h4 class="text-uppercase heading-underlined">Basis of Records</h4>
+              <div class="row">
+                <div class="panel-body">
+                  <p><small>N</small> <span class="stat__number">8,172</span> <small>records available.</small></p>
+                  <p class="panel-feature">Panel content. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                  <div class="list-group">
+                    <a href="#" class="list-group-item">Human observation <span class="pull-right"><strong>38.34 M</strong></span></a>
+                    <a href="#" class="list-group-item">Preserved specimen <span class="pull-right"><strong>10.16 M</strong></span></a>
+                    <a href="#" class="list-group-item">Machine observation <span class="pull-right"><strong>230,462</strong></span></a>
+                    <a href="#" class="list-group-item">Genomic DNA <span class="pull-right"><strong>154,529</strong></span></a>
+                  </div>
+                  <a href="#" type="button" class="btn btn-primary btn-block">View records</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            <a href="#" class="font-xxsmall pull-right">
+              <i class="fa fa-refresh">&emsp;</i>
+              <i class="fa fa-times"></i>
+            </a>
+            <h4 class="text-uppercase heading-underlined">Collection sets</h4>
+              <div class="row">
+                <div class="panel-body">
+                  <p><small>N</small> <span class="stat__number">147</span> <small>sets available.</small></p>
+                  <p class="panel-feature">Panel content. Click on a Collection for details:</p>
+                  <img class="img-responsive" src="img/chart-example.png" alt="">
+                  <a href="#" type="button" class="btn btn-primary btn-block">View records</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-8">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            <a href="#" class="font-xxsmall pull-right">
+              <i class="fa fa-refresh">&emsp;</i>
+              <i class="fa fa-times"></i>
+            </a>
+            <h4 class="text-uppercase heading-underlined">Records and species by date</h4>
+              <div class="row">
+                <div class="panel-body">
+                  <p class="panel-feature">Panel content. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                  <img class="img-responsive" src="img/line-chart-example.png" alt="">
+                  <a href="#" type="button" class="btn btn-primary btn-block">View records</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-12 col-lg-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            <a href="#" class="font-xxsmall pull-right">
+              <i class="fa fa-refresh">&emsp;</i>
+              <i class="fa fa-times"></i>
+            </a>
+            <h4 class="text-uppercase heading-underlined">DigiVol (Volunteer portal)</h4>
+              <div class="row">
+                <div class="panel-body">
+                  <p class="panel-feature">Panel content. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                  <div class="list-group">
+                    <a href="#" class="list-group-item">Specimen labels transcribed <span class="pull-right"><strong>122,536</strong></span></a>
+                    <a href="#" class="list-group-item">Fieldnotes pages transcribed <span class="pull-right"><strong>24,739</strong></span></a>
+                    <a href="#" class="list-group-item">Volunteers <span class="pull-right"><strong>868</strong></span></a>
+
+                    <a href="#" class="list-group-item">Expeditions active <span class="pull-right"><strong>11</strong></span></a>
+                    <a href="#" class="list-group-item">Expeditions completed <span class="pull-right"><strong>224</strong></span></a>
+                    <a href="#" class="list-group-item">Total expeditions <span class="pull-right"><strong>302</strong></span></a>
+                  </div>
+                  <a href="#" type="button" class="btn btn-primary btn-block">View records</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- List view -->
+      <div id="list-view" class="row hidden">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a href="#" class="font-xxsmall pull-right">
+                <i class="fa fa-refresh">&emsp;</i>
+                <i class="fa fa-times"></i>
+              </a>
+              <h4 class="text-uppercase heading-underlined">Data Sets</h4>
+            </div>
+            <div class="panel-body">
+              <p><small>N</small> <span class="stat__number">1,165</span> <small>data sets available.</small></p>
+              <button class="btn btn-primary btn-block">View records</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a href="#" class="font-xxsmall pull-right">
+                <i class="fa fa-refresh">&emsp;</i>
+                <i class="fa fa-times"></i>
+              </a>
+              <h4 class="text-uppercase heading-underlined">Basis of records</h4>
+            </div>
+            <div class="panel-body">
+              <p><small>N</small> <span class="stat__number">8,172</span> <small>data sets available.</small></p>
+              <button class="btn btn-primary btn-block">View records</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a href="#" class="font-xxsmall pull-right">
+                <i class="fa fa-refresh">&emsp;</i>
+                <i class="fa fa-times"></i>
+              </a>
+              <h4 class="text-uppercase heading-underlined">Collection sets</h4>
+            </div>
+            <div class="panel-body">
+              <p><small>N</small> <span class="stat__number">147</span> <small>data sets available.</small></p>
+              <button class="btn btn-primary btn-block">View records</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a href="#" class="font-xxsmall pull-right">
+                <i class="fa fa-refresh">&emsp;</i>
+                <i class="fa fa-times"></i>
+              </a>
+              <h4 class="text-uppercase heading-underlined">Records and species by date</h4>
+            </div>
+            <div class="panel-body">
+              <p><small>N</small> <span class="stat__number">21.67M</span> <small>data sets available.</small></p>
+              <button class="btn btn-primary btn-block">View records</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a href="#" class="font-xxsmall pull-right">
+                <i class="fa fa-refresh">&emsp;</i>
+                <i class="fa fa-times"></i>
+              </a>
+              <h4 class="text-uppercase heading-underlined">DIGIVOL (VOLUNTEER PORTAL)</h4>
+            </div>
+            <div class="panel-body">
+              <p><small>N</small> <span class="stat__number">122,536</span> <small>data sets available.</small></p>
+              <button class="btn btn-primary btn-block">View records</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a href="#" class="font-xxsmall pull-right">
+                <i class="fa fa-refresh">&emsp;</i>
+                <i class="fa fa-times"></i>
+              </a>
+              <h4 class="text-uppercase heading-underlined">Records by date</h4>
+            </div>
+            <div class="panel-body">
+              <p><small>N</small> <span class="stat__number">10,000,000</span> <small>data sets.</small></p>
+              <button class="btn btn-primary btn-block">View records</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- End container -->
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

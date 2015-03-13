@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Content example</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/my-styles.css" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<!-- Navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" class="img-responsive" src="img/supporting-graphic-element-flat.png">
+        </a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand font-xsmall" href="#">The Atlas Of Living Australia</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li >
+            <a href="#">
+              Contact us
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li >
+            <a href="#">Get involved</a>
+          </li>
+
+          <li class="dropdown font-xsmall">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              ALA Apps
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Spatial portal</a></li>
+              <li ><a href="#">Occurrence search</a></li>
+              <li ><a href="#">Fish map</a></li>
+              <li ><a href="#">Regions</a></li>
+              <li ><a href="#">Explore your area</a></li>
+
+              <li class="divider"></li>
+              <li><a href="#">Record a sighting</a></li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">DigiVol</a></li>
+              <li><a href="#">Fieldcapture</a></li>
+              <li><a href="#">Soils to satellite</a></li>
+              <li><a href="#">Traits, species lists</a></li>
+
+              <li class="divider"></li>
+              <li><a href="#">Community portals</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Datasets browser</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search the Atlas"></div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <small>
+          <ul class="nav navbar-nav navbar-right">
+            <li ><a href="#">My profile</a></li>
+            <li ><a href="#">Login</a></li>
+          </ul>
+        </small>
+      </div>
+      <!-- /.navbar-collapse --> </div>
+    <!-- /.container-fluid --> </nav>
+
+  <div class="container" id="main">
+
+    <div class="button-toolbar row">
+      <div class="btn-group">
+        <a class="btn btn-default active" href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> <span class="hidden-xs hidden-sm">Overview</span></a>
+        <a class="btn btn-default" href="#"><i class="fa fa-exclamation-triangle"></i> <span class="hidden-xs hidden-sm">Gallery</span></a>
+        <a class="btn btn-default" href="#"><i class="fa fa-comment"></i> <span class="hidden-xs hidden-sm">Names</span></a>
+        <a class="btn btn-default" href="#"><i class="fa fa-files-o"></i> <span class="hidden-xs hidden-sm">Classification</span></a>
+        <a class="btn btn-default" href="#"><i class="fa fa-database"></i> <span class="hidden-xs hidden-sm">Records</span></a>
+        <a class="btn btn-default" href="#"><i class="fa fa-book"></i> <span class="hidden-xs hidden-sm">Literature</span></a>
+        <a class="btn btn-default" href="#"><i class="fa fa-paw"></i> <span class="hidden-xs hidden-sm">Species</span></a>
+        <a class="btn btn-default" href="#"><i class="fa fa-terminal"></i> <span class="hidden-xs hidden-sm">Data Providers</span></a>
+      </div>
+    </div>
+
+    <div id="grid-view" class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+          <a href="#" class="pull-right">
+            <i class="fa fa-refresh">&emsp;</i>
+            <i class="fa fa-times"></i>
+          </a>
+          <h4 class="text-uppercase">Records</h4>
+            <div class="row">
+              <div class="panel-body">
+                <!-- <p><small>N</small> <span class="stat__number">1,165</span> <small>data sets available.</small></p>
+                <p class="panel-feature">Panel content. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                <div class="list-group">
+                  <a href="#" class="list-group-item">Harvested websites <span class="pull-right"><strong>108</strong></span></a>
+                  <a href="#" class="list-group-item">Occurrence record sets <span class="pull-right"><strong>482</strong></span></a>
+                  <a href="#" class="list-group-item">Document sets <span class="pull-right"><strong>19</strong></span></a>
+                  <a href="#" class="list-group-item">Uploaded record sets <span class="pull-right"><strong>20</strong></span></a>
+                </div>
+                <button type="button" class="btn btn-primary btn-block">View records</button> -->
+
+<h4 class="heading-small">Occurence records</h4>
+<p>View list of all <span class="stat__number">39,769</span> occurrence records for this taxon</p>
+
+<h4 class="heading-small">Breakdown of occurrence records</h4>
+<p>Responsive Google charts go here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

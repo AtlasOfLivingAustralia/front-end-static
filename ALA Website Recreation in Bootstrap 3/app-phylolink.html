@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App: PhyloLink</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/my-styles.css" rel="stylesheet">
+
+  <script src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
+  <script src="js/Chart.js"></script>
+
+  <!-- FontAwesome -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" class="img-responsive" src="img/supporting-graphic-element-flat.png">
+        </a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand font-xsmall" href="#">The Atlas Of Living Australia</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li >
+            <a href="#">
+              Contact us
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li >
+            <a href="#">Get involved</a>
+          </li>
+
+          <li class="dropdown font-xsmall">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              ALA Apps
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Spatial portal</a></li>
+              <li ><a href="#">Occurrence search</a></li>
+              <li ><a href="#">Fish map</a></li>
+              <li ><a href="#">Regions</a></li>
+              <li ><a href="#">Explore your area</a></li>
+
+              <li class="divider"></li>
+              <li><a href="#">Record a sighting</a></li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">DigiVol</a></li>
+              <li><a href="#">Fieldcapture</a></li>
+              <li><a href="#">Soils to satellite</a></li>
+              <li><a href="#">Traits, species lists</a></li>
+
+              <li class="divider"></li>
+              <li><a href="#">Community portals</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Datasets browser</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search the Atlas"></div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <small>
+          <ul class="nav navbar-nav navbar-right">
+            <li ><a href="#">My profile</a></li>
+            <li ><a href="#">Login</a></li>
+          </ul>
+        </small>
+      </div>
+    <!-- /.navbar-collapse --> </div>
+  <!-- /.container-fluid --> </nav>
+
+  <!-- Page View Controls -->
+  <div class="viewControl hidden-xs hidden-sm hidden-md">
+    <div class="viewToggle" title="Toggle full screen"><i class="fa fa-desktop"></i></div>
+    <div class="viewToggle" title="Toggle normal view"><i class="fa fa-tablet"></i></div>
+  </div>
+  <!-- End Page View Controls -->
+
+  <!-- Container -->
+  <div class="container" id="main">
+    <div class="col-xs-12">
+      <h1 class="hidden">Welcome to the Atlas of Living Australia website</h1><!-- Show the H1 on each page -->
+
+      <!-- Breadcrumb -->
+      <ol class="breadcrumb">
+        <li><a class="font-xxsmall" href="#">Home</a></li>
+        <li><a class="font-xxsmall" href="#">ALA Apps</a></li>
+        <!-- <li><a class="font-xxsmall" href="#">Long page title example</a></li> -->
+        <!-- <li><a class="font-xxsmall" href="#">What a great redesign</a></li> -->
+        <li class="font-xxsmall active">Application: PhyloLink</li>
+      </ol>
+      <!-- End Breadcrumb -->
+      <h2 class="heading-medium">Application: PhyloLink</h2>
+
+      <!-- Alert Information -->
+      <div class="alert alert-info alert-dismissible hidden-xs hidden-sm hidden-md" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>This page has multiple view settings.</strong> For best viewing results, select the&emsp; <i class="fa fa-desktop" title="Full width display"></i>&emsp; to swap to full screen. To reset your view, select&emsp; <i class="fa fa-tablet" title="Default display view"></i>&emsp;.
+      </div>
+      <!-- End Alert Information -->
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3>Overview</h3>
+        </div>
+        <div class="panel-body">
+
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="word-limit">
+                <p class="lead">
+                  PhyloLink is a collection of tools through which biodiversity can be explored from  a phylogenetic (or tree of life) perspective.
+                </p>
+                <p>
+                  At the core of these tools is the ability to easily intersect a phylogenetic tree with species occurrence records, environmental data, and species character information.
+                </p>
+                <p>
+                  The result is powerful ways of combining data to generate flexible and customisable visualisations, profiles and metrics for biodiversity.
+                </p>
+
+                <div class="alert alert-danger alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <strong>Context needed.</strong> Call to action needed to explain why the user will interact with the buttons below. Note: this alert is dismissable.
+                </div>
+
+                <div class="button-toolbar row">
+                  <button type="button" class="btn btn-primary btn-lg btn-block">Visualise Trees</button>
+                  <button type="button" class="btn btn-default btn-lg btn-block">Phylogenetic Diversity</button>
+                </div>
+
+
+                <div class="alert alert-danger alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <strong>Context needed.</strong> I have included a title below to give the body text meaningful context. Note: this alert is dismissable.
+                </div>
+                <h3 class="heading-small">What is Phylogeny?</h3>
+
+                <p>
+                  A phylogeny (or a tree of life) is a theory about how organisms are related to one another through evolutionary time. Phylogenies are based on the assumption that more closely related species will be more similar to one another, and they are commonly built using genetic sequences or physical characters. They are often visually represented as trees: the tips of the ever branching tree representing species, and the branches representing ‘evolutionary distance’ (e.g. length of time) from the ancestors from which they evolved.
+                </p>
+                <p>
+                  The tools intersect species occurrence data with environmental layers and phylogenetic trees, enabling a variety of new perspectives on biodiversity. For example, you can investigate the environmental envelopes occupied by the species of any chosen clade (a group of related organisms sharing a common ancestral node). You can also measure and compare biodiversity for any given area/s in ways that account for both the number of species occurring there, and their evolutionary distinctness from one another, using phylogenetic diversity. The  tools will also allow you to map the spatial distribution of characters (e.g. waxy leaves) across the landscape.
+                </p>
+
+                <div class="well">
+                  <h4 class="heading-xsmall">Collaborators and acknowledgement: </h4>
+                  <p class="font-xsmall">These tools are the result of a collaboration between scientists, the creators of PhyloJIVE and the Atlas of Living Australia. The tools have been developed by Temi Varghese, Adam Collins and Nick dos Remedios, with advice from Joe Miller, Craig Moritz, Dan Rosauer and Garry Jolley-Rogers.</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <p class="lead">
+          The Atlas of Living Australia is a collaborative, national project that aggregates biodiversity data from multiple sources and makes it available and usable online.
+        </p>
+        <p class="lead">
+          &copy; Sharing biodiversity knowledge to shape our future.
+        </p>
+      </div>
+
+      <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+        <ul class="link-list">
+          <li class="heading"><a href="#">Citizen Science &rarr;</a></li>
+          <li><a href="#">About CS in the ALA</a></li>
+          <li><a href="#">DigiVol Portal</a></li>
+          <li><a href="#">Record a sighting</a></li>
+          <li><a href="#">Upload media</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+        <ul class="link-list">
+          <li class="heading"><a href="#">Atlas Features &rarr;</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Sandbox</a></li>
+          <li><a href="#">Digitisation guidance</a></li>
+          <li><a href="#">Atlas Mobile Apps</a></li>
+        </ul>
+      </div>
+
+      <!-- <div class="clearfix visible-xs-block visible-lg-inline-block"></div> -->
+
+      <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+        <ul class="link-list">
+          <li class="heading"><a href="#">Atlas Data &rarr;</a></li>
+          <li><a href="#">Sensitive Data</a></li>
+          <li><a href="#">Data integration</a></li>
+          <li><a href="#">Dataset upload</a></li>
+          <li><a href="#">Species list upload</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+        <ul class="link-list">
+          <li class="heading"><a href="#">Contact Us &rarr;</a></li>
+          <li><a href="#">Communications</a></li>
+          <li><a href="#">About the Atlas</a></li>
+          <li><a href="#">My Sightings</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Associated Sites</a></li>
+        </ul>
+      </div>
+
+    </div><!-- End row -->
+
+    </div><!-- End container -->
+  </footer><!-- End Main footer -->
+
+  <footer class="secondary-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+
+          <div class="row">
+            <div class="col-xs-6 col-sm-12">
+              <img class="img-responsive ncris" src="img/NCRIS-Logo_Mono.png"><!-- Logo -->
+            </div>
+
+            <div class="col-xs-6 col-sm-12">
+              <img class="img-responsive aus-govt" src="img/Aust-Govt-Initiative-stacked-64.png"><!-- Logo -->
+            </div>
+          </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <p>
+            The Atlas of Living Australia is hosted by <a href="#">The Commonwealth Scientific and Industrial Research Organisation</a> (CSIRO) and is a node of the <a href="#">Global Biodiversity Information Facility (GBIF)</a>.
+          </p>
+          <div class="col-xs-6 col-sm-6">
+            <img class="img-responsive csiro" src="img/CSIRO_Solid_RGB.svg"><!-- Logo -->
+          </div>
+
+          <div class="col-xs-6 col-sm-6">
+            <img class="img-responsive gbif" src="img/GBIF_logo_short_form.gif"><!-- Logo -->
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <p>
+            This site is licensed under a <a href="#">Creative Commons Attribution 3.0 Australia License</a>.
+          </p>
+          <p><img class="img-responsive" src="img/creativecommons.png"></p><!-- Logo -->
+          <p>
+            Provider content may be covered by other <a href="#">Terms of Use</a>.
+          </p>
+        </div>
+      </div><!-- End row -->
+
+    </div><!-- End container -->
+  </footer>
+
+  <footer class="social-footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <ul class="social list-inline">
+            <li><a class="soc-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="soc-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="soc-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a class="soc-envelope" href="#"><i class="fa fa-envelope"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+          <ul class="footer-nav list-inline">
+            <li ><a href="#">Contact Us</a></li>
+            <li ><a href="#">Get Involved</a></li>
+            <li ><a href="#">Explore the ALA</a></li>
+          </ul>
+        </div>
+
+      </div><!-- End row -->
+    </div><!-- End container -->
+  </footer>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
