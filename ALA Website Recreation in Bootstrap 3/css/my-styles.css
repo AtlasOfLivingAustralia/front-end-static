@@ -240,7 +240,7 @@ label.control-label.heading-medium {font-size:24px;font-weight:700;line-height:1
 .color--primary-red{color: #F26649;} .backgroundcolor--primary-red{background-color: #F26649;}
 .color--purple{color: #2E358B;} .backgroundcolor--purple{background-color: #2E358B;}
 .color--red{color: #B10E1E;} .backgroundcolor--red{background-color: #B10E1E;}
-.color--white{color: #fff;} .backgroundcolor--white{background-color: #fff;}
+.color--white{color: #fff !important;} .backgroundcolor--white{background-color: #fff;}
 .color--yellow{color: #FFBF47;} .backgroundcolor--yellow{background-color: #FFBF47;}
 
 
