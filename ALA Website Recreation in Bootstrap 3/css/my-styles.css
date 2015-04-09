@@ -185,6 +185,17 @@ div.row.control-group > div:nth-child(1) > form > div > span > button {margin-le
 .panel .panel-thumbnail{padding:0;}
 .panel-feature{font-size:15px;line-height:1.6em;}
 
+.panel-success {border-color:#d6e9c6;}
+.panel-success>.panel-heading {color:#3c763d;background-color:#dff0d8;border-color:#d6e9c6;}
+.panel-success>.panel-footer{border-color:#d6e9c6;background-color: #f2faef;}
+
+/* Tabs
+================================= */
+
+ul.nav-tabs li:first-child a{border-radius:0;}
+ul.nav-tabs li:last-child a{border-radius:0;}
+.nav-tabs{margin-bottom:30px;}
+
 /* Modal
 ================================= */
 
@@ -294,6 +305,38 @@ li .soc-bell:hover{background-color:#75ab0a;}
 
 .padding-bottom-1{padding-bottom: 1em;}
 .padding-bottom-2{padding-bottom: 2em;}
+.padding-right-1{padding-right: 1em;}
+.padding-left-1{padding-left: 1em;}
+
+/* Comments (taxonoverflow styling)
+================================= */
+
+.page-profile .comment {float:none;width: auto;}
+.comment .alert {position:relative;padding: 0 0 1em 45px;overflow: hidden;border-top: 1px solid #f1f1f1;}
+.comment .alert:first-child {border-top: 0;}
+.comment .alert:first-child .body {padding-top: 0;}
+.alert {margin-bottom: 10px;border: 1px solid transparent;border-top: 1px solid #ddd;}
+.comment .alert .body {padding: 1em 0 0;overflow: hidden;font-size: 14px;border-bottom: 0;}
+.comment .alert .time {font-size: 12px;color: #bbb;}
+.comment .alert .author {padding: 0;font-weight: bold;}
+.comment .alert .comment-icon {position: absolute;top: 14px;left: 0;width: 28px;height: 28px;color: #bbb;}
+.comment-icon {font-size: 28px;}
+.comment-wrapper{margin-bottom: 0;border-top: 1px solid #f2f2f2;}
+.comment-wrapper:first-child {border-top: 0;}
+.comment-wrapper .body{padding: 1em 0 0;overflow: hidden;font-size: 14px;border-bottom: 0;}
+.comment-wrapper .time{font-size: 12px;color: #bbb;}
+.comment-wrapper .author{padding: 0;font-weight: bold;}
+.question-list{font-size: 13px;font-weight: 400;line-height: 1.5em;}
+
+.cp {vertical-align: top;float: left;margin-right: 10px;width: 28%;}
+.votes {display: inline-block;font-size: 11px;color: #777;}
+.mini-counts {margin-bottom: 4px;font-size: 17px;font-weight: 300;color: #777;}
+.contrib-number{display: inline-block;color: #444;font-size: 34px;margin-top: 18px;}
+.contrib-details{color: #9a9a9a;font-size: 13px;text-align: center;display: block;}
+.contrib-stats {margin-bottom: 10px;text-align: center;}
+.contrib-question{font-size: 20px;font-weight: 900;color: #9a9a9a;margin-bottom: 0.2em;}
+.contrib-body{margin-bottom: .8em;}
+.contrib-time{font-size: 12px;color: #bbb;margin-bottom: .2em;}
 
 /* Media Queries (Mobile First Method = only add rules to modify larger views)
 ================================= */
