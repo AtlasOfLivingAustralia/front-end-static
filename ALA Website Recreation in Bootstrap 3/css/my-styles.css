@@ -307,6 +307,7 @@ li .soc-bell:hover{background-color:#75ab0a;}
 .padding-bottom-2{padding-bottom: 2em;}
 .padding-right-1{padding-right: 1em;}
 .padding-left-1{padding-left: 1em;}
+.padding-top-1{padding-top: 1em;}
 
 /* Comments (taxonoverflow styling)
 ================================= */
@@ -331,7 +332,7 @@ li .soc-bell:hover{background-color:#75ab0a;}
 .cp {vertical-align: top;float: left;margin-right: 10px;width: 28%;}
 .votes {display: inline-block;font-size: 11px;color: #777;}
 .mini-counts {margin-bottom: 4px;font-size: 17px;font-weight: 300;color: #777;}
-.contrib-number{display: inline-block;color: #444;font-size: 34px;margin-top: 18px;}
+.contrib-number{display: inline-block;/*color:#444*/;font-size: 34px;margin-top: 18px;}
 .contrib-details{color: #9a9a9a;font-size: 13px;text-align: center;display: block;}
 .contrib-stats {margin-bottom: 10px;text-align: center;}
 .contrib-question{font-size: 20px;font-weight: 900;color: #9a9a9a;margin-bottom: 0.2em;}
