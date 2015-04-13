@@ -130,7 +130,7 @@ img.ncris{margin-top:8px;}
 .btn-success,.label-success,.progress-bar-success{background-color:#65b045;}
 .btn-warning,.label-warning,.progress-bar-warning{background-color:#f4b400;color:#444;}
 .form-control,.span10X{border-color:#d7d7d7;}
-.panel .btn i{color:#fff;}
+/*.panel .btn i{color:#fff;}*/
 .well,.panel{border-color:#d2d2d2;/*border-radius:3px*/;box-shadow:0 1px 0 #cfcfcf;}
 .pad {margin-right: 1em;}
 div.row.control-group > div:nth-child(1) > form > div > span > button {margin-left: 4px;}
@@ -177,7 +177,7 @@ div.row.control-group > div:nth-child(1) > form > div > span > button {margin-le
 
 .list-group a{font-size:13px;font-weight:400;line-height:1.5em;}
 .list-group-item:first-child,.list-group-item:last-child{border-radius:0;}
-.panel .btn i,.btn span{color:#666;}
+/*.panel .btn i,.btn span{color:#666;}*/
 .panel .img-circle{height:50px;width:50px;}
 .panel .panel-default{border-color:#ccc;}
 .panel .panel-heading{background-color:#fff;border-color:#fff;color:#262626;font-size:16px;font-weight:700;padding: 10px 15px 0 15px;}
@@ -188,6 +188,7 @@ div.row.control-group > div:nth-child(1) > form > div > span > button {margin-le
 .panel-success {border-color:#d6e9c6;}
 .panel-success>.panel-heading {color:#3c763d;background-color:#dff0d8;border-color:#d6e9c6;}
 .panel-success>.panel-footer{border-color:#d6e9c6;background-color: #f2faef;}
+.panel-default>.panel-footer.comments, .panel-success>.panel-footer.comments{background-color: #fff;}
 
 /* Tabs
 ================================= */
@@ -199,7 +200,7 @@ ul.nav-tabs li:last-child a{border-radius:0;}
 /* Modal
 ================================= */
 
-.modal-dialog{width:450px;}
+.modal-dialog{width:380px;}
 .modal-footer{border-width:0;}
 
 /* Forms
@@ -338,6 +339,7 @@ li .soc-bell:hover{background-color:#75ab0a;}
 .contrib-question{font-size: 20px;font-weight: 900;color: #9a9a9a;margin-bottom: 0.2em;}
 .contrib-body{margin-bottom: .8em;}
 .contrib-time{font-size: 12px;color: #bbb;margin-bottom: .2em;}
+.ident-question {font-size:16px;font-weight:900;color:#9a9a9a;margin-bottom:0.2em;}
 
 /* Media Queries (Mobile First Method = only add rules to modify larger views)
 ================================= */
@@ -352,6 +354,7 @@ li .soc-bell:hover{background-color:#75ab0a;}
 @media only screen and (min-width : 480px) {
   img.aus-govt,img.ncris{max-width:200px;}
   form.banner{padding-top:6.5em;}
+  .modal-dialog{width:450px;}
 }
 
 /* Small Devices, Tablets */
@@ -360,12 +363,13 @@ li .soc-bell:hover{background-color:#75ab0a;}
   #main{padding:50px 0 40px 0;}
   .navbar-brand{font-size:1.15em;padding-right:15px;}
   form.banner{padding-top:7.5em;}
+  .modal-dialog{width:700px;}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
 	.help-text {margin-top: 0;}
-
+  /*.modal-dialog{width:700px;}*/
 }
 
 /* Large Devices, Wide Screens */
