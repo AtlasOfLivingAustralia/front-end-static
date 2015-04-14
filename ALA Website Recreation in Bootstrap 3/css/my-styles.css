@@ -200,8 +200,10 @@ ul.nav-tabs li:last-child a{border-radius:0;}
 /* Modal
 ================================= */
 
+.modal h4 {text-align:center;}
 .modal-dialog{width:380px;}
 .modal-footer{border-width:0;}
+.modal:before {display: inline-block;}
 
 /* Forms
 ================================= */
