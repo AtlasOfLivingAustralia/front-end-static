@@ -15,8 +15,12 @@ ul.pull-right {
 .alert-promotional{color: #FFF6F5;background-color: #F26649;border-color: #DA644E;}
 .alert-promotional.alert-dismissible > div > div > div > p > strong, .alert-promotional.alert-dismissible > div > div > div > p, .alert-promotional.alert-dismissible > div > div > div > p > a {color: #FFF6F5;}
 .alert {border-radius: 0;}
-
 .alert-promotional.alert-dismissible > div > div > div > button{line-height: 1.7;}
+
+.menu-top{
+  border-top: 1px solid #e4e5e7;
+}
+li.divider{margin-top: 20px;}
 
 .p-xxs {
     padding: 5px !important
