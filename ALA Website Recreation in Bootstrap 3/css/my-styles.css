@@ -58,6 +58,8 @@ strong{color:#5f5d60;}
 .icon-black{color:#5f5d60;}
 .icon-white{color:white;}
 .breadcrumb{padding:0;margin-top: -10px}
+sup.beta-badge {color: #da644e;font-weight: lighter;}
+
 
 /* Navbar
 ================================= */
@@ -232,6 +234,13 @@ ul.nav-tabs li:last-child a{border-radius:0;}
 ================================= */
 
 th,td{padding: .3em 0;}
+
+/* Facet tags
+================================= */
+
+.tag {text-transform: uppercase;}
+ul#tagsFacet,ul#typesFacet {list-style-type: none;padding-left: 0;margin-bottom: 1.4em;}
+#tagsFacet li,#typesFacet li {font-size: 14px;}
 
 /* Blog
 ================================= */
