@@ -108,6 +108,8 @@ h4{color:#E9004A;}
 
 #banner-image{-moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;background-position:center center;background-size:cover;min-height:150px;text-align:center;width:100%;
 background:url(../img/blog-default-feature-img-01.jpg) no-repeat center top;background-color: #000;}
+#banner-image-profile{-moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;background-position:center center;background-size:cover;min-height:150px;text-align:center;width:100%;
+background:url(../img/blog-default-feature-img-02.jpg) no-repeat center top;background-color: #000;}
 .jumbotron{background-color: #e9004a;}
 #banner-image>div>div>h2{color:white;}
 
@@ -293,7 +295,7 @@ li .soc-bell:hover{background-color:#75ab0a;}
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
-  #banner-image{min-height:200px;}
+  #banner-image,#banner-image-profile{min-height:200px;}
 }
 
 /* Small Devices, Tablets */
