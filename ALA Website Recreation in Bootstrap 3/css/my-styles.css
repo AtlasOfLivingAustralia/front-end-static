@@ -261,6 +261,8 @@ ul.nav-tabs li:last-child a{border-radius:0;}
 .help-block{font-size: 14px;font-weight: 400;}
 p.control-label{padding-top: 0.70em;}
 #ala-login-fields .input-lg, .input-lg, .form-group-lg .form-control{font-size: 14px;}
+.checkbox-label {font-size: 13px;line-height: 1.62em;color: #637073;}
+.forgot {position: absolute;top: 446px;right: 31px;font-size: 13px;}
 
 /* Tables
 ================================= */
