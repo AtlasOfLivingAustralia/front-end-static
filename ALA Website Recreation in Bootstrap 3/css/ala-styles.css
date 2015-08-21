@@ -162,6 +162,32 @@ div.row.control-group > div:nth-child(1) > form > div > span > button {margin-le
 .pagination>.active>a:hover{background-color:#DA644E;border-color:#F26649;}
 .pagination>.active>a:focus{background-color:#DA644E;border-color:#F26649;}
 
+.pager li > a,
+.pager li > span {background-color: white;border-radius: 0;font-size: 13px;font-weight: 800;letter-spacing: 1px;padding: 10px 16px;text-transform: uppercase;}
+.pager li > a:hover,
+.pager li > a:focus {color: white;background-color:#DA644E;border: 1px solid #DA644E;}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {color: #808080;background-color: #404040;cursor: not-allowed;}
+
+.btn-survey{
+  background-color: white;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 13px 16px;
+  text-transform: uppercase;
+  border: 1px solid #ddd;
+}
+.btn-survey:focus, .btn-survey:hover{
+  color: white;
+  background-color: #DA644E;
+  border: 1px solid #DA644E;
+  text-decoration: none;
+}
+
 
 /* Main stats
 ================================= */
