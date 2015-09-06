@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ALA Homepage</title>
+  <title>ALA | Species by location</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -128,183 +128,85 @@
     </div><!-- /.container-fluid -->
   </nav><!-- End Navbar -->
 
-  <div class="jumbotron ala-header">
-    <div class="container no-gutter">
-      <div class="col-xs-12 col-sm-12 col-md-10 col-lg-9 col-lg-offset-1">
-
-        <form id="global-search" class="banner" action="http://bie.ala.org.au/search" method="get" name="search-form">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search the Atlas ...">
-            <span class="input-group-btn">
-              <input class="btn btn-primary btn-lg button-search" type="submit">Search
-            </span>
-          </div>
-        </form>
-
-      </div>
-    </div>
-  </div><!-- End Jumbotron -->
-
-  <!-- Promotional alert -->
-  <div class="alert alert-promotional alert-dismissible" role="alert">
-    <div class="container">
-      <div class="row-fluid">
-        <div class="col-md-12">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close" title="Close"><span aria-hidden="true">&times;</span></button>
-          <p>The Atlas of Living Australia <a href="#">User Survey is now available</a>. You could <strong>win 1 of 10 ALA prize packs!</strong></p>
-        </div>
-      </div>
-    </div>
-  </div><!-- End promotional alert -->
-
   <!-- Container -->
   <div class="container" id="main">
     <!-- Main col -->
-    <div class="col-md-9">
-    <h1 class="hidden">Welcome to the Atlas of Living Australia website</h1><!-- Show the H1 on each page -->
-    <h2 class="heading-medium">Explore the Atlas of Living Australia</h2>
+    <div class="col-sm-12 col-md-9 col-lg-9">
+      <h1 class="hidden">Welcome the Atlas of Living Australia</h1>
+      <ol class="breadcrumb">
+        <li><a class="font-xxsmall" href="index.html">Home</a></li>
+        <!-- <li><a class="font-xxsmall" href="about-us-page.html">About</a></li> -->
+        <li class="font-xxsmall active">Species by location</li>
+      </ol>
+      <h2 class="heading-medium">Species by location</h2>
       <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
 
-          <div class="col-lg-4 col-md-4 col-sm-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <a href="#" class="font-xxxsmall pull-right">View all</a>
-                <h4 class="heading-underlined">Australia’s species</h4>
-              </div>
-              <div class="panel-body">
+              <!-- Start word-limit -->
+              <div class="word-limit">
+                <h1 class="heading-xlarge">Explore by region or location</h1>
+                <p class="lead color--primary-red">
+                  Use the Atlas of Living Australia to browse species by region or by location.
+                </p>
+                <!-- <p>
+                  Select the relevant section and find out ...
+                </p> -->
+              </div><!-- End Word limit -->
+
+              <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="heading-underlined">Explore by pre-defined region</h4>
+                    </div>
+                    <div class="panel-body">
+                      <p>
+                        <img src="img/browse-by-region.jpg" class="img-responsive hidden-xs" alt="Insets pinned to a board">
+                      </p>
+                      <div class="clearfix"></div>
+                      <p class="panel-feature">
+                        Pre-defined regions include states and territories, local government areas, biogeographic regions, marine regions, management regions and more.
+                      </p>
+                      <a href="#" class="btn btn-primary btn-lg btn-block">Browse by region</a>
+                    </div>
+                  </div>
+                </div><!-- End Col -->
+
+                <div class="col-lg-6 col-sm-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="heading-underlined">Explore by address or location</h4>
+                    </div>
+                    <div class="panel-body">
+                      <p>
+                        <img src="img/browse-by-location.jpg" class="img-responsive hidden-xs" alt="Insets pinned to a board">
+                      </p>
+                      <div class="clearfix"></div>
+                      <p class="panel-feature">
+                        Simply enter an address or location to find the recorded species nearby. You can set the size of the search area and download the results.
+                      </p>
+                      <a href="#" class="btn btn-primary btn-lg btn-block">Browse by location</a>
+                    </div>
+                  </div>
+                </div><!-- End Col -->
+              </div><!-- End row -->
+
+              <!-- <div class="word-limit">
                 <p>
-                  <!-- <img src="img/australias-species-amanita-xanthocephala.jpg" class="img-responsive hidden-xs"> --> <!-- Australia’s species: Option 1 -->
-                  <!-- <img src="img/australias-species-cricket.jpg" class="img-responsive hidden-xs"> --> <!-- Australia’s species: Option 2 -->
-                  <!-- <img src="img/australias-species-lizard.jpg" class="img-responsive hidden-xs"> --> <!-- Australia’s species: Option 3 -->
-                  <img src="img/australias-species-octopus-maorum.jpg" class="img-responsive hidden-xs"> <!-- Australia’s species: Option 4 -->
+                  Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </p>
-                <div class="clearfix"></div>
-                <!-- <hr class="hidden-xs"> -->
-                <p class="panel-feature">
-                  Search for a species by common, scientific name or search by category.
-                </p>
-                <a href="#" class="btn btn-primary">Browse species</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-sm-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <a href="#" class="font-xxxsmall pull-right">View all</a>
-                <h4 class="heading-underlined">Species by location</h4>
-              </div>
-              <div class="panel-body">
-                <p>
-                  <!-- <img src="img/species-by-location-diodon-nicthemerus.jpg" class="img-responsive hidden-xs"> --> <!-- Species by location: Option 1 -->
-                  <!-- <img src="img/species-by-location-dragonfly.jpg" class="img-responsive hidden-xs"> --> <!-- Species by location: Option 2 -->
-                  <img src="img/species-by-location-phyllopteryx-taeniolatus.jpg" class="img-responsive hidden-xs"> <!-- Species by location: Option 3 -->
-                </p>
-                <div class="clearfix"></div>
-                <!-- <hr class="hidden-xs"> -->
-                <p class="panel-feature">
-                  Search by pre-defined region, or enter an address or location to find the recorded species nearby.
-                </p>
-                <a href="species-by-location.html" class="btn btn-primary">Browse locations</a>
-              </div>
-            </div>
-          </div>
-
-           <div class="col-lg-4 col-md-4 col-sm-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <a href="#" class="font-xxxsmall pull-right">View all</a>
-                <h4 class="heading-underlined">Collections</h4>
-              </div>
-              <div class="panel-body">
-                <p>
-                  <!-- <img src="img/natural-history-collection-0100-mv.jpg" class="img-responsive hidden-xs" alt="Insets pinned to a board"> --> <!-- Natural history collections: Option 1 -->
-                  <!-- <img src="img/natural-history-collection-0105-mv.jpg" class="img-responsive hidden-xs" alt="Insets pinned to a board"> --> <!-- Natural history collections: Option 2 -->
-                  <!-- <img src="img/natural-history-collection-ANIC-3-Beetlesonpins.jpg" class="img-responsive hidden-xs" alt="Insets pinned to a board"> --> <!-- Natural history collections: Option 3 -->
-                  <img src="img/natural-history-collection-ANIC-insect4.jpg" class="img-responsive hidden-xs" alt="Insets pinned to a board"> <!-- Natural history collections: Option 4 -->
-                </p>
-                <div class="clearfix"></div>
-                <!-- <hr class="hidden-xs"> -->
-                <p class="panel-feature">
-                  Learn about the institution, the collections they hold and view records of specimens that have been databased.
-                </p>
-                <a href="#" class="btn btn-primary">Browse collections</a>
-              </div>
-            </div>
-          </div><!-- End Col -->
+              </div> -->
 
 
 
-          <div class="col-lg-4 col-md-4 col-sm-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <a href="#" class="font-xxxsmall pull-right">View all</a>
-                <h4 class="heading-underlined">Mapping &amp; analysis</h4>
-              </div>
-              <div class="panel-body">
-                <p>
-                  <!-- <img src="img/mapping-82172860.jpg" class="img-responsive hidden-xs"> --> <!-- Mapping &amp; analysis: Option 1 -->
-                  <!-- <img src="img/mapping-82172860.jpg" class="img-responsive hidden-xs"> --> <!-- Mapping &amp; analysis: Option 2 -->
-                  <!-- <img src="img/mapping-82172860.jpg" class="img-responsive hidden-xs"> --> <!-- Mapping &amp; analysis: Option 3 -->
-                  <img src="img/mapping-82172860.jpg" class="img-responsive hidden-xs"> <!-- Mapping &amp; analysis: Option 4 -->
-                </p>
-                <div class="clearfix"></div>
-                <!-- <hr class="hidden-xs"> -->
-                <p class="panel-feature">
-                  Mapping &amp; analysis focuses on where a chosen species was located, what species were found in a defined area and what are the environmental conditions in that area.
-                </p>
-                <a href="#" class="btn btn-primary">Browse Mapping</a>
-              </div>
-            </div>
-          </div>
+            </div><!-- End panel-body -->
+          </div><!-- End panel.panel-default -->
+        </div><!-- End col -->
+      </div><!-- End row -->
 
-          <div class="col-lg-4 col-md-4 col-sm-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <a href="#" class="font-xxxsmall pull-right">View all</a>
-                <h4 class="heading-underlined">Data sets</h4>
-              </div>
-              <div class="panel-body">
-                <p>
-                  <!-- <img src="img/data-sets-0002-1628-mv.jpg" class="img-responsive hidden-xs" src="Molluscs on a beach"> --> <!-- Data sets: Option 1 -->
-                  <!-- <img src="img/data-sets-ANIC-2.jpg" class="img-responsive hidden-xs" src="Molluscs on a beach"> --> <!-- Data sets: Option 2 -->
-                  <img src="img/data-sets-bembicium-auratum.jpg" class="img-responsive hidden-xs" src="Molluscs on a beach"> <!-- Data sets: Option 3 -->
-                </p>
-                <div class="clearfix"></div>
-                <!-- <hr class="hidden-xs"> -->
-                <p class="panel-feature">
-                  Refine the list of all the data sets contained within the Atlas by institution, integration status, content, resource, and license.
-                </p>
-                <a href="#" class="btn btn-primary">Browse Data sets</a>
-              </div>
-            </div>
-          </div>
-
-           <div class="col-lg-4 col-md-4 col-sm-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <a href="#" class="font-xxxsmall pull-right">View all</a>
-                <h4 class="heading-underlined">ALA Community</h4>
-              </div>
-              <div class="panel-body">
-                <p>
-                  <!-- <img src="img/partner-profiles-drosera-whittakeri.jpg" class="img-responsive hidden-xs"> --> <!-- Partner Profiles: Option 1 -->
-                  <!-- <img src="img/partner-profiles-laccaria.jpg" class="img-responsive hidden-xs"> --> <!-- Partner Profiles: Option 2 -->
-                  <!-- <img src="img/partner-profiles-leucobryum-aduncum.jpg" class="img-responsive hidden-xs"> --> <!-- Partner Profiles: Option 3 -->
-                  <img src="img/partner-profiles-taylora-tasmanica.jpg" class="img-responsive hidden-xs"> <!-- Partner Profiles: Option 4 -->
-                </p>
-                <div class="clearfix"></div>
-                <!-- <hr class="hidden-xs"> -->
-                <p class="panel-feature">
-                  View our partner profiles and see how our key contributors help grow the Atlas of Living Australia.
-                </p>
-                <a href="#" class="btn btn-primary">Browse community</a>
-              </div>
-            </div>
-          </div><!-- End Col -->
-
-        </div><!-- End row -->
-      </div><!-- End main col -->
+    </div><!-- End main col -->
 
     <!-- Aside -->
     <aside class="col-lg-3 col-md-3 col-sm-12">
@@ -337,6 +239,19 @@
 
       <div class="panel panel-default">
         <div class="panel-heading">
+          <h4 class="heading-underlined">Connect with us</h4>
+        </div>
+        <div class="panel-body">
+          <ul class="social list-inline pull-left">
+            <li><a class="soc-facebook" href="https://www.facebook.com/atlasoflivingaustralia" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="soc-twitter" href="https://twitter.com/atlaslivingaust" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="soc-envelope" href="#" title="Email"><i class="fa fa-envelope"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
           <h4 class="heading-underlined">Survey feedback</h4>
         </div>
         <div class="panel-body">
@@ -364,7 +279,7 @@
       </div><!-- End panel.panel-default -->
     </aside><!-- End Aside -->
 
-  </div><!-- End Container -->
+  </div><!-- End container#main -->
 
   <!-- Footer -->
   <footer class="main-footer">
@@ -392,7 +307,7 @@
       <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
         <ul class="link-list">
           <li class="heading"><a href="#">Atlas Features &rarr;</a></li>
-          <li><a href="app-dashboard.html">Dashboard</a></li>
+          <li><a href="#">Dashboard</a></li>
           <li><a href="#">Sandbox</a></li>
           <li><a href="#">Digitisation guidance</a></li>
           <li><a href="#">Atlas Mobile Apps</a></li>
