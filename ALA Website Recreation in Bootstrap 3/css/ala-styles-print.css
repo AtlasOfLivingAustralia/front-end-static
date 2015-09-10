@@ -3,7 +3,7 @@
   /* Global
   ================================= */
 
-  * {-webkit-print-color-adjust: exact;print-color-adjust: exact;}
+  *, :before, :after {color: inherit!important; }
 
   /* Scaffold (Bootstrap 3)
   ================================= */
@@ -89,17 +89,6 @@
   .font-xxxsmall{font-size:7px;font-weight:400}
   code{font-size:inherit;}
 
-  /* Links (URL)
-  ================================= */
-
-  a {font-weight:bolder; text-decoration:none;}
-  a[href^=http]:after {content:" <" attr(href) "> ";}
-  a[href^="#"]:after {content: "";}
-  $a:after > img {content: "";}
-  a:not(:local-link):after {content:" <" attr(href) "> ";}
-  a, .link-list .heading a {color: #C44D34!important;}
-  p.lead {color:rgb(242, 102, 73)!important;}
-
   /* Colours and Swatchs
   ================================= */
 
@@ -121,5 +110,16 @@
   .color--apple{color: #65B044!important;} .backgroundcolor--apple{background-color: #65B044!important;}
   .color-lochmara {color: #0087BE!important;} .background-lochmara {background-color: #0087BE!important;}
   .color-facebook {color: #507CBE!important;} .background-facebook {background-color: #507CBE!important;}
+
+  /* Links (URL)
+  ================================= */
+
+  a {font-weight:bolder; text-decoration:none;}
+  a[href^=http]:after {content:" <" attr(href) "> ";}
+  a[href^="#"]:after {content: "";}
+  $a:after > img {content: "";}
+  a:not(:local-link):after {content:" <" attr(href) "> ";}
+  a, .link-list .heading a {color: #C44D34!important;}
+  p.lead {color:rgb(242, 102, 73)!important;}
 
 }
