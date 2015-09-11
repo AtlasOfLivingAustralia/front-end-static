@@ -1,11 +1,11 @@
 @media print {
 
-  /* Global
+  /* (@media print) Global
   ================================= */
 
   *, :before, :after {color: inherit!important; }
 
-  /* Scaffold (Bootstrap 3)
+  /* (@media print) Scaffold (Bootstrap 3)
   ================================= */
 
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {float: left;}
@@ -74,7 +74,7 @@
   th.visible-sm,
   td.visible-sm {display: table-cell !important;}
 
-  /* Typography
+  /* (@media print) Typography
   ================================= */
 
   .caption{font-size: 10px; font-weight: 400; width: 80%;}
@@ -89,7 +89,7 @@
   .font-xxxsmall{font-size:7px;font-weight:400}
   code{font-size:inherit;}
 
-  /* Colours and Swatchs
+  /* (@media print) Colours and Swatchs
   ================================= */
 
   .swatch-colour{height:70px;width:100%;display:block;border-bottom:1px solid #ccc!important;}
@@ -111,7 +111,7 @@
   .color-lochmara {color: #0087BE!important;} .background-lochmara {background-color: #0087BE!important;}
   .color-facebook {color: #507CBE!important;} .background-facebook {background-color: #507CBE!important;}
 
-  /* Links (URL)
+  /* (@media print) Links (URL)
   ================================= */
 
   a {font-weight:bolder; text-decoration:none;}

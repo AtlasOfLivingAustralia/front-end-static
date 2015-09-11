@@ -170,23 +170,8 @@ div.row.control-group > div:nth-child(1) > form > div > span > button {margin-le
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
 .pager .disabled > span {color: #808080;background-color: #404040;cursor: not-allowed;}
-
-.btn-survey{
-  background-color: white;
-  border-radius: 0;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  padding: 13px 16px;
-  text-transform: uppercase;
-  border: 1px solid #ddd;
-}
-.btn-survey:focus, .btn-survey:hover{
-  color: white;
-  background-color: #DA644E;
-  border: 1px solid #DA644E;
-  text-decoration: none;
-}
+.btn-survey{background-color: white;border-radius: 0;font-size: 13px;font-weight: 800;letter-spacing: 1px;padding: 13px 16px;text-transform: uppercase;border: 1px solid #ddd;}
+.btn-survey:focus, .btn-survey:hover{color: white;background-color: #DA644E;border: 1px solid #DA644E;text-decoration: none;}
 
 /* Main stats
 ================================= */
@@ -496,4 +481,131 @@ li .login-soc-bell:hover{background-color:#75ab0a;}
 @media only screen and (min-width : 1200px) {
   .container{width:1100px;}
   #main{padding:40px 0;}
+}
+
+/* For print */
+@media print {
+
+  /* (@media print) Global
+  ================================= */
+
+  *, :before, :after {color: inherit!important; }
+
+  /* (@media print) Scaffold (Bootstrap 3)
+  ================================= */
+
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {float: left;}
+  .col-sm-12 {width: 100%;}
+  .col-sm-11 {width: 91.66666667%;}
+  .col-sm-10 {width: 83.33333333%;}
+  .col-sm-9 {width: 75%;}
+  .col-sm-8 {width: 66.66666667%;}
+  .col-sm-7 {width: 58.33333333%;}
+  .col-sm-6 {width: 50%;}
+  .col-sm-5 {width: 41.66666667%;}
+  .col-sm-4 {width: 33.33333333%;}
+  .col-sm-3 {width: 25%;}
+  .col-sm-2 {width: 16.66666667%;}
+  .col-sm-1 {width: 8.33333333%;}
+  .col-sm-pull-12 {right: 100%;}
+  .col-sm-pull-11 {right: 91.66666667%;}
+  .col-sm-pull-10 {right: 83.33333333%;}
+  .col-sm-pull-9 {right: 75%;}
+  .col-sm-pull-8 {right: 66.66666667%;}
+  .col-sm-pull-7 {right: 58.33333333%;}
+  .col-sm-pull-6 {right: 50%;}
+  .col-sm-pull-5 {right: 41.66666667%;}
+  .col-sm-pull-4 {right: 33.33333333%;}
+  .col-sm-pull-3 {right: 25%;}
+  .col-sm-pull-2 {right: 16.66666667%;}
+  .col-sm-pull-1 {right: 8.33333333%;}
+  .col-sm-pull-0 {right: auto;}
+  .col-sm-push-12 {left: 100%;}
+  .col-sm-push-11 {left: 91.66666667%;}
+  .col-sm-push-10 {left: 83.33333333%;}
+  .col-sm-push-9 {left: 75%;}
+  .col-sm-push-8 {left: 66.66666667%;}
+  .col-sm-push-7 {left: 58.33333333%;}
+  .col-sm-push-6 {left: 50%;}
+  .col-sm-push-5 {left: 41.66666667%;}
+  .col-sm-push-4 {left: 33.33333333%;}
+  .col-sm-push-3 {left: 25%;}
+  .col-sm-push-2 {left: 16.66666667%;}
+  .col-sm-push-1 {left: 8.33333333%;}
+  .col-sm-push-0 {left: auto;}
+  .col-sm-offset-12 {margin-left: 100%;}
+  .col-sm-offset-11 {margin-left: 91.66666667%;}
+  .col-sm-offset-10 {margin-left: 83.33333333%;}
+  .col-sm-offset-9 {margin-left: 75%;}
+  .col-sm-offset-8 {margin-left: 66.66666667%;}
+  .col-sm-offset-7 {margin-left: 58.33333333%;}
+  .col-sm-offset-6 {margin-left: 50%;}
+  .col-sm-offset-5 {margin-left: 41.66666667%;}
+  .col-sm-offset-4 {margin-left: 33.33333333%;}
+  .col-sm-offset-3 {margin-left: 25%;}
+  .col-sm-offset-2 {margin-left: 16.66666667%;}
+  .col-sm-offset-1 {margin-left: 8.33333333%;}
+  .col-sm-offset-0 {margin-left: 0%;}
+  .visible-xs {display: none !important;}
+  .hidden-xs {display: block !important;}
+  table.hidden-xs {display: table;}
+  tr.hidden-xs {display: table-row !important;}
+  th.hidden-xs,
+  td.hidden-xs {display: table-cell !important;}
+  .hidden-xs.hidden-print {display: none !important;}
+  .hidden-sm {display: none !important;}
+  .visible-sm {display: block !important;}
+  table.visible-sm {display: table;}
+  tr.visible-sm {display: table-row !important;}
+  th.visible-sm,
+  td.visible-sm {display: table-cell !important;}
+
+  /* (@media print) Typography
+  ================================= */
+
+  .caption{font-size: 10px; font-weight: 400; width: 80%;}
+  p.lead{color:rgb(242, 102, 73);font-size: 20px;}
+  p,li,ul{font-size: 14px;}
+  blockquote{font-size:17px;font-weight:300;}
+  .heading-xlarge{font-size:34px;}
+  .heading-large{font-size:28px;}
+  .heading-medium{font-size:20px;}
+  .font-xsmall{font-size:12px;line-height:1.25;text-transform:none;}
+  .font-xxsmall{font-size:9px;line-height:1.5;text-transform:uppercase;font-weight: 400;}
+  .font-xxxsmall{font-size:7px;font-weight:400}
+  code{font-size:inherit;}
+
+  /* (@media print) Colours and Swatchs
+  ================================= */
+
+  .swatch-colour{height:70px;width:100%;display:block;border-bottom:1px solid #ccc!important;}
+  .color--dark-grey{color: #9d9d9d!important;} .backgroundcolor--dark-grey{background-color: #9d9d9d!important;}
+  .color--dark-red{color: #C44D34!important;} .backgroundcolor--dark-red{background-color: #C44D34!important;}
+  .color--green{color: #006435!important;} .backgroundcolor--green{background-color: #006435!important;}
+  .color--medium-blue{color: #2475A4!important;} .backgroundcolor--medium-blue{background-color: #2475A4!important;}
+  .color--medium-grey{color: #637073!important;} .backgroundcolor--medium-grey{background-color: #637073!important;}
+  .color--mellow-red{color: #DF3034!important;} .backgroundcolor--mellow-red{background-color: #DF3034!important;}
+  .color--off-black{color: #212121!important;} .backgroundcolor--off-black{background-color: #212121!important;}
+  .color--off-white{color: #F2F2F2!important;} .backgroundcolor--off-white{background-color: #F2F2F2!important;}
+  .color--pink{color: #D0367D!important;} .backgroundcolor--pink{background-color: #D0367D!important;}
+  .color--primary-red{color: #F26649!important;} .backgroundcolor--primary-red{background-color: #F26649!important;}
+  .color--purple{color: #2E358B!important;} .backgroundcolor--purple{background-color: #2E358B!important;}
+  .color--red{color: #B10E1E!important;} .backgroundcolor--red{background-color: #B10E1E!important;}
+  .color--white{color: #fff !important;} .backgroundcolor--white{background-color: #fff!important;}
+  .color--yellow{color: #FFBF47!important;} .backgroundcolor--yellow{background-color: #FFBF47!important;}
+  .color--apple{color: #65B044!important;} .backgroundcolor--apple{background-color: #65B044!important;}
+  .color-lochmara {color: #0087BE!important;} .background-lochmara {background-color: #0087BE!important;}
+  .color-facebook {color: #507CBE!important;} .background-facebook {background-color: #507CBE!important;}
+
+  /* (@media print) Links (URL)
+  ================================= */
+
+  a {font-weight:bolder; text-decoration:none;}
+  a[href^=http]:after {content:" <" attr(href) "> ";}
+  a[href^="#"]:after {content: "";}
+  $a:after > img {content: "";}
+  a:not(:local-link):after {content:" <" attr(href) "> ";}
+  a, .link-list .heading a {color: #C44D34!important;}
+  p.lead {color:rgb(242, 102, 73)!important;}
+
 }
