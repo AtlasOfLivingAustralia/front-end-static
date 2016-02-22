@@ -45,6 +45,13 @@ strong{color:#5f5d60;}
 .font-xxxsmall{font-size:11px;font-weight:400}
 .heading-large{font-size:36px;font-weight:700;line-height:1.1111111111;margin-bottom:.55556em;margin-top:1.25em;text-transform:none;}
 .heading-medium{border-bottom:inherit;font-size:24px;font-weight:700;line-height:1.25;margin-bottom:.83333em;margin-top:1.875em;text-transform:none;}
+.heading-medium-alt{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 0;
+  color: #333;
+}
 .heading-small{border-bottom:inherit;font-size:19px;font-weight:700;line-height:1.3157894737;margin-bottom:.3125em;text-transform:none;}
 .heading-xlarge{font-size:48px;font-weight:700;line-height:1.0416666667;margin-bottom:.6em;margin-top:.625em;text-transform:none;}
 .heading-underlined{border:0 solid #efefef;border-bottom-width:1px;padding-bottom:10px;}
@@ -415,6 +422,7 @@ li .login-soc-bell:hover{background-color:#75ab0a;}
 .padding-bottom-1{padding-bottom: 1em;}.padding-bottom-2{padding-bottom: 2em;}
 .padding-right-1{padding-right: 1em;}
 .padding-left-1{padding-left: 1em;}
+.padding-left-half-1{padding-left: .5em;}
 .padding-top-1{padding-top: 1em;}
 .margin-bottom-1{margin-bottom:1em;}.margin-bottom-2{margin-bottom:2em;}
 .margin-bottom-half-1{margin-bottom: .5em;}
