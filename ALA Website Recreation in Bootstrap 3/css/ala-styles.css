@@ -462,6 +462,29 @@ li .login-soc-bell:hover{background-color:#75ab0a;}
 .contrib-time{font-size: 12px;color: #bbb;margin-bottom: .2em;}
 .ident-question {font-size:16px;font-weight:900;color:#9a9a9a;margin-bottom:0.2em;}
 
+/* Radio button and check list button styles
+================================= */
+
+.funky-list-item{clear: both;}
+.funky-label {width: 100%;border-radius: 0px;border: 1px solid #D1D3D4}
+input[type="radio"]:empty {margin-left: -9999px;}
+input[type="radio"]:empty ~ .funky-label {position: relative;float: left;line-height: 3.5em;text-indent: 5.25em;margin-top: 0;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+input[type="radio"]:empty ~ .funky-label:before {position: absolute;display: block;top: 0;bottom: 0;left: 0;content:'';width: 3.5em;background: #D1D3D4;border-radius: 3px 0 0 3px;}
+input[type="radio"]:hover:not(:checked) ~ .funky-label:before {content:'\2714';text-indent: 1.3em;color: #C2C2C2;}
+input[type="radio"]:hover:not(:checked) ~ .funky-label {color: #888;}
+input[type="radio"]:checked ~ .funky-label:before {content:'\2714';text-indent: 1.3em;color: #9CE2AE;background-color: #4DCB6D;}
+input[type="radio"]:checked ~ .funky-label {color: #777;}
+input[type="radio"]:focus ~ .funky-label:before {box-shadow: 0 0 0 3px #999;}
+
+input[type="checkbox"]:empty {margin-left: -9999px;}
+input[type="checkbox"]:empty ~ .funky-label {position: relative;float: left;line-height: 3.5em;text-indent: 5.25em;margin-top: 0;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+input[type="checkbox"]:empty ~ .funky-label:before {position: absolute;display: block;top: 0;bottom: 0;left: 0;content:'';width: 3.5em;background: #D1D3D4;border-radius: 3px 0 0 3px;}
+input[type="checkbox"]:hover:not(:checked) ~ .funky-label:before {content:'\2714';text-indent: 1.3em;color: #C2C2C2;}
+input[type="checkbox"]:hover:not(:checked) ~ .funky-label {color: #888;}
+input[type="checkbox"]:checked ~ .funky-label:before {content:'\2714';text-indent: 1.3em;color: #9CE2AE;background-color: #4DCB6D;}
+input[type="checkbox"]:checked ~ .funky-label {color: #777;}
+input[type="checkbox"]:focus ~ .funky-label:before {box-shadow: 0 0 0 3px #999;}
+
 
 /* Media Queries (Mobile First Method = only add rules to modify larger views)
 ================================= */
