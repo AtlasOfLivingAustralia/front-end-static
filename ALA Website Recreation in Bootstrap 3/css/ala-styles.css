@@ -536,6 +536,9 @@ input[type="checkbox"]:focus ~ .funky-label:before {box-shadow: 0 0 0 3px #999;}
   .panel-body .front-grain-community{
     background: url(../img/partner-profiles-taylora-tasmanica-313.jpg) no-repeat center top;
   }
+  .panel-body .front-grain-occurrence{
+    background: url(../img/occurrence-records-australia-313.jpg) no-repeat center top;
+  }
   /* larger jumbotron images for wider browsers */
   .ala-header{-moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;
     background:url(../img/no-1-january-15327752868_cf0d213ee1_k-by-kevin-thiele.jpg) no-repeat center top; /*JAN*/
