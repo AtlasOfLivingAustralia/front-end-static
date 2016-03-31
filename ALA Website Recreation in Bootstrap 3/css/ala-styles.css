@@ -15,6 +15,8 @@ button{outline:0;}
 hr{border-color:#ececec;}
 textarea{outline:0;resize:none;}
 
+body.email{-webkit-font-smoothing:antialiased;background-color:#fff;padding-top:80px;}
+
 /* Columns
 ================================= */
 .no-gutter>[class*='col-']{padding-right:0;padding-left:0;}
@@ -86,7 +88,7 @@ hgroup h3.heading-large{margin-bottom: 0;}
 #subnav{padding-top:6px;}
 .dropdown-menu{background-color:#f4f4f4;border-color:#f0f0f0;border-radius:0;margin-top:-1px;}
 .dropdown-menu li > a:hover{background-color:#fff;}
-.navbar{margin-bottom:0;}
+/*.navbar{margin-bottom:0;}*/
 .navbar-default{background-color:#fff;border-width:0;z-index:5;}
 .navbar-default .dropdown-menu li > a{padding-left:30px;}
 .navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > li:hover > a{background-color:transparent;border:0 solid #F26649;border-bottom-width:2px;}
@@ -122,6 +124,14 @@ form.banner{padding-top:6.5em;}
 #global-search > div > input{padding: 1em;min-height: 4.2em;}
 #global-search > div > span > input{padding: .93em}
 .jumbotron.color--skyblue {background-color: #60c6cf !important;}
+
+.info-hub-banner{-moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;
+  background:url(../img/info-hub-banner-1.jpg) no-repeat center top;
+  background-attachment:relative;background-position:center center;background-size:cover;margin-top:-100px;min-height:165px;text-align:center;width:100%;}
+/*form.banner{padding-top:6.5em;}*/
+/*#global-search > div > input{padding: 1em;min-height: 4.2em;}*/
+/*#global-search > div > span > input{padding: .93em}*/
+/*.jumbotron.color--skyblue {background-color: #60c6cf !important;}*/
 
 /* Images (img)
 ================================= */
@@ -486,6 +496,48 @@ input[type="checkbox"]:checked ~ .funky-label:before {content:'\2714';text-inden
 input[type="checkbox"]:checked ~ .funky-label {color: #777;}
 input[type="checkbox"]:focus ~ .funky-label:before {box-shadow: 0 0 0 3px #999;}
 
+/* Topic side-nav
+================================= */
+/*.topic-sidebar.affix {position: fixed;top: 115px;}
+#main > aside > nav > ul > li > a {display: block;padding: 10px 20px 2px;font-size: 18px;font-weight: 700;}
+#main > aside > nav > ul > li > a:hover {padding-left: 19px;text-decoration: none;background-color: transparent;border-left: 1px solid #DA644E;}
+.topic-sidenav .nav>li>a {padding-top: 1px;padding-bottom: 1px;padding-left: 31px;font-size: 14px;font-weight: 400;}
+.topic-sidenav .nav>li>a:hover {padding-left: 30px;text-decoration: none;background-color: transparent;border-left: 1px solid #DA644E;}*/
+
+/* Email styling
+================================= */
+
+h3.email{font-size: 1.4em;margin-top: 1.5em;font-weight: 700;color: #222;margin-bottom: .3em;}
+p.email{font-size: 24px;font-weight: 300;}
+img.ala-logo-inline{width: 440px;}
+hr.email{margin-top: 0;margin-bottom: 3em;}
+.main-footer-email{background-color:#F2F2F2;margin:100px 0 0;padding:30px 0 40px;}
+.cc-image{margin-top: 9px;}
+table.email{margin-bottom: 4em;}
+
+/* Side menu (with search)
+================================= */
+
+#main > div > div > div.col-lg-3.col-md-4.col-xs-12 > div > nav > div.side-menu-container.margin-bottom-2 > ul{margin:0;width: 100%;}
+.side-menu {position:relative;background-color:#f8f8f8;border-right:1px solid #e7e7e7;}
+.side-menu .navbar {border: none;}
+.side-menu .navbar-header {width:100%;border-bottom:1px solid #e7e7e7;}
+.side-menu .navbar-nav .active a {background-color: transparent;margin-right: -1px;border-right: 5px solid #e7e7e7;} /*Grey bar on right side*/
+.side-menu .navbar-nav li {/*border-bottom: 1px solid #e7e7e7;display: block;*/width: 100%;}
+.side-menu #dropdown {border: 0;margin-bottom: 0;border-radius: 0;background-color: transparent;box-shadow: none;}
+.side-menu #dropdown .caret {float: right;margin: 9px 5px 0;}
+.side-menu #dropdown > a {border-bottom: 1px solid #e7e7e7;}
+.side-menu #dropdown .panel-body {padding:0;background-color:#f3f3f3;} /*sub menu background colour*/
+.side-menu #dropdown .panel-body .navbar-nav {width: 100%;}
+.side-menu #dropdown .panel-body .navbar-nav li {padding-left: 15px;border-bottom: 1px solid #e7e7e7;} /*Sub menu style*/
+.side-menu #dropdown .panel-body .navbar-nav li:last-child {border-bottom: none;}
+.side-menu #dropdown .panel-body .panel-body {margin-left: -15px;}
+.side-menu #dropdown .panel-body .panel-body li {padding-left: 30px;}
+.side-menu #dropdown .panel-body .panel-body li:last-child {border-bottom: 1px solid #e7e7e7;}
+
+
+
+
 
 /* Media Queries (Mobile First Method = only add rules to modify larger views)
 ================================= */
@@ -496,6 +548,7 @@ input[type="checkbox"]:focus ~ .funky-label:before {box-shadow: 0 0 0 3px #999;}
   .help-text {margin-top: 1em;}
   .alert-promotional.alert-dismissible>div>div>div>p>strong,
   .alert-promotional.alert-dismissible>div>div>div>p{font-size: 16px;}
+  h2.email{font-weight: 300;font-size: 45px;}
 }
 
 /* Extra Small Devices, Phones */
@@ -503,6 +556,7 @@ input[type="checkbox"]:focus ~ .funky-label:before {box-shadow: 0 0 0 3px #999;}
   img.aus-govt,img.ncris{max-width:200px;}
   form.banner{padding-top:6.5em;}
   .modal-dialog{width:450px;}
+
 }
 
 /* Small Devices, Tablets */
@@ -539,6 +593,9 @@ input[type="checkbox"]:focus ~ .funky-label:before {box-shadow: 0 0 0 3px #999;}
   .panel-body .front-grain-occurrence{
     background: url(../img/occurrence-records-australia-313.jpg) no-repeat center top;
   }
+  .panel-body .front-grain-atlas{
+    background: url(../img/Generic-blog-image-pattern-bkg-alternate-small.jpg) no-repeat center top;
+  }
   /* larger jumbotron images for wider browsers */
   .ala-header{-moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;
     background:url(../img/no-1-january-15327752868_cf0d213ee1_k-by-kevin-thiele.jpg) no-repeat center top; /*JAN*/
@@ -560,6 +617,7 @@ input[type="checkbox"]:focus ~ .funky-label:before {box-shadow: 0 0 0 3px #999;}
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
 	.help-text {margin-top: 0;}
+  h2.email{font-weight: 300;font-size: 65px;}
   /*.modal-dialog{width:700px;}*/
 }
 
