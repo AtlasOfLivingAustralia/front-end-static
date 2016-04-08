@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ALA | Atlas Information Hub</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/ala-styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/ala-styles-print.css" media="print">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+  #sidebar.affix {
+      position: fixed;
+      top:50px;
+/*      width:228px;*/
+    }
+
+    @media(max-width:767px){
+       #sidebar.affix {
+         position: static;
+         width: auto;
+         top: 0;
+        }
+    }
+</style>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="email">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" class="img-responsive" src="img/supporting-graphic-element-flat.png">
+        </a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand font-xsmall" href="index.html">Atlas Of Living Australia</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+
+          <li class="dropdown font-xsmall">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Explore
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://dashboard.ala.org.au/">Atlas Dashboard</a></li>
+              <li><a href="http://collections.ala.org.au/">Collections</a></li>
+              <li><a href="http://collections.ala.org.au/datasets">Datasets</a></li>
+
+              <li class="divider"></li>
+              <li class="dropdown-header">Occurrence records</li>
+              <li><a href="http://lists.ala.org.au/iconic-species">Browse iconic species</a></li>
+              <li><a href="http://biocache.ala.org.au/">Browse records</a></li>
+              <li><a href="http://regions.ala.org.au/">Browse your region</a></li>
+              <li><a href="http://biocache.ala.org.au/explore/your-area">Explore your area</a></li>
+
+              <li class="divider"></li>
+              <li class="dropdown-header">Analyse</li>
+              <li><a href="http://spatial.ala.org.au/">Spatial Portal</a></li>
+              <li><a href="http://phylolink.ala.org.au/">Phylolink</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown font-xsmall">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Contribute
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://biocollect.ala.org.au/">Join a Citizen Science project</a></li>
+              <li><a href="http://sightings.ala.org.au/">Record a sighting</a></li>
+              <li><a href="http://volunteer.ala.org.au/">Digitise a record</a></li>
+              <!-- <li><a href="#">Occurrence sandbox</a></li> -->
+
+              <li class="divider"></li>
+              <li class="dropdown-header">Get in touch</li>
+              <li ><a href="https://rawgit.com/AtlasOfLivingAustralia/front-end-static/master/ALA%20Website%20Recreation%20in%20Bootstrap%203/feedback-form-page.html">Provide Feedback</a></li>
+              <li ><a href="https://rawgit.com/AtlasOfLivingAustralia/front-end-static/master/ALA%20Website%20Recreation%20in%20Bootstrap%203/contact-us-page.html">Contact Us</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown font-xsmall">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Learn
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="http://www.ala.org.au/about-the-atlas/">About the Atlas</a></li>
+
+              <li class="divider"></li>
+              <li ><a href="http://www.ala.org.au/education-resources/">Education Resources</a></li>
+
+              <li class="divider"></li>
+              <li class="dropdown-header">How we</li>
+              <li><a href="http://www.ala.org.au/about-the-atlas/communications-centre/">Communicate</a></li>
+              <li><a href="http://www.ala.org.au/faq/data-sensitivity/">Handle sensitive data</a></li>
+              <li><a href="http://www.ala.org.au/about-the-atlas/how-we-integrate-data/">Integrate data</a></li>
+              <li><a href="http://www.ala.org.au/get-involved/upload-data-sets/">Upload datasets</a></li>
+
+              <li class="divider"></li>
+              <li class="dropdown-header">How you can</li>
+              <li><a href="http://api.ala.org.au/">Use our API</a></li>
+              <li><a href="http://www.ala.org.au/about-the-atlas/downloadable-tools/ala-mobile-app/">Use the Atlas mobile app</a></li>
+              <li><a href="http://www.ala.org.au/get-involved/">Contribute to the Atlas</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <!-- <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search the Atlas"></div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form> -->
+        <small>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li ><a href="#">My profile</a></li>
+            <li ><a href="#">Login</a></li> -->
+
+          <li class="dropdown font-xsmall">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              User settings
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">My profile</a></li>
+
+              <li class="divider"></li>
+              <li><a href="login-auth-screen.html">Login</a></li>
+              <li><a href="register-page.html">Register</a></li>
+            </ul>
+          </li>
+          </ul>
+        </small>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav><!-- End Navbar -->
+
+  <div class="jumbotron info-hub-banner hidden-print">
+    <div class="container no-gutter">
+      <div class="col-xs-12 col-sm-12 col-md-10 col-lg-9 col-lg-offset-1">
+
+      </div>
+    </div>
+  </div><!-- End Jumbotron -->
+
+<!-- Container -->
+<div class="container" id="main">
+<!-- Main col -->
+<div class="col-sm-12 col-md-12 col-lg-12">
+  <h1 class="hidden">Welcome the Atlas of Living Australia</h1>
+  <ol class="breadcrumb hidden-print">
+    <li><a class="font-xxsmall" href="index.html">Home</a></li>
+    <!-- <li><a class="font-xxsmall" href="about-us-page.html">Contribute to the Atlas</a></li> -->
+    <li class="font-xxsmall active">Contribute to the ALA</li>
+  </ol>
+  <h2 class="heading-medium">Find out how you can contribute to the Atlas of Living Australia</h2>
+
+  <div class="row">
+    <!-- Navigation left column -->
+    <div class="col-lg-3 col-md-4 col-xs-12 sidebarCol">
+      <!-- Side menu -->
+      <div class="side-menu affix" id="sidebar">
+
+        <nav class="navbar navbar-default" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <div class="brand-wrapper">
+
+              <!-- Brand -->
+              <div class="brand-name-wrapper">
+                <a class="navbar-brand">Browse by topic</a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Main Menu -->
+          <div class="side-menu-container margin-bottom-2">
+            <ul class="nav navbar-nav">
+
+              <!-- First Dropdown -->
+              <li class="panel panel-default " id="dropdown">
+                <a data-toggle="collapse" href="#first-dropdown-lvl1">
+                  <i class="fa fa-circle-thin"></i>
+                  &emsp;Join a CS project
+                  <span class="caret"></span>
+                </a>
+
+                <!-- Dropdown level 1 -->
+                <div id="first-dropdown-lvl1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li><a href="#">Sub menu item 1</a></li>
+                      <li><a href="#">Sub menu item 2</a></li>
+                      <li><a href="#">Sub menu item 3</a></li>
+                      <li><a href="#">Sub menu item 4</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li><!-- End first dropdown -->
+
+              <!-- Second Dropdown -->
+              <li class="panel panel-default" id="dropdown">
+                <a data-toggle="collapse" href="#second-dropdown-lvl1">
+                  <!-- <span class="glyphicon glyphicon-user"></span> -->
+                  <i class="fa fa-circle-thin"></i>
+                  &emsp;Digitise a record
+                  <span class="caret"></span>
+                </a>
+
+                <!-- Dropdown level 1 -->
+                <div id="second-dropdown-lvl1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li><a href="#">Sub menu item 1</a></li>
+                      <li><a href="#">Sub menu item 2</a></li>
+                      <li><a href="#">Sub menu item 3</a></li>
+                      <li><a href="#">Sub menu item 4</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li><!-- End second dropdown -->
+
+              <!-- Third Dropdown-->
+              <li class="panel panel-default" id="dropdown">
+                <a data-toggle="collapse" href="#third-dropdown-lvl1">
+                  <i class="fa fa-circle-thin"></i>
+                  &emsp;Submit a record
+                  <span class="caret"></span>
+                </a>
+
+                <!-- Dropdown level 1 -->
+                <div id="third-dropdown-lvl1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li><a href="#">Sub menu item 1</a></li>
+                      <li><a href="#">Sub menu item 1</a></li>
+                      <li><a href="#">Sub menu item 1</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li><!-- End third dropdown -->
+
+            </ul>
+          </div>
+        </nav><!-- /.navbar-collapse -->
+      </div>
+      <!-- End side menu -->
+    </div>
+    <!-- End navigation left column -->
+    <!-- Right column -->
+    <div class="col-lg-9 col-md-8 col-xs-12">
+      <!-- Section 1 start -->
+      <div class="row">
+        <div class="col-sm-12 col-md-10 col-lg-10 margin-bottom-2">
+          <h2 class="email margin-bottom-half-1">Join a Citizen Science project</h2>
+
+          <div id="about-the-atlas">
+            <!-- <h2>About the Atlas</h2> -->
+            <p class="lead color--primary-red">
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.
+            </p>
+            <p class="margin-bottom-2">
+              Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.
+            </p>
+          </div>
+
+          <div class="row">
+            <!-- Section separator start -->
+            <div id="our-focus" class="col-md-12">
+              <p class="separator t-center margin-bottom-2">
+                <span>About the Atlas: our focus</span>
+              </p>
+            </div>
+            <!-- Section separator end -->
+
+            <div class="col-md-3">
+              <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Our focus</h4>
+              <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Our focus</h4>
+            </div>
+            <div class="col-md-8 margin-bottom-1">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              </p>
+            </div>
+
+            <!-- Section separator start -->
+            <div id="our-vision" class="col-md-12">
+              <p class="separator t-center margin-bottom-2">
+                <span>About the Atlas: our mission</span>
+              </p>
+            </div>
+            <!-- Section separator end -->
+
+            <div class="col-md-3">
+              <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Our vision</h4>
+              <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Our vision</h4>
+            </div>
+            <div class="col-md-8 margin-bottom-1">
+              <p>
+                Space, the final frontier. These are the voyages of the Starship Enterprise. It's five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.
+              </p>
+            </div>
+
+            <!-- Section separator start -->
+            <div id="our-mission" class="col-md-12">
+              <p class="separator t-center margin-bottom-2">
+                <span>About the Atlas: our mission</span>
+              </p>
+            </div>
+            <!-- Section separator end -->
+
+            <div class="col-md-3">
+              <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Our mission</h4>
+              <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Our mission</h4>
+            </div>
+            <div class="col-md-8 margin-bottom-1">
+              <p>
+                The Atlas of Living Australia's mission is to provide creative tools that help anyone contribute their knowledge to the public. From the citizen scientists to the field experts who are contineously capturing information, to the casual observers recording a sighting for the first time, the Atlas of Living Australia provides elegant solutions that set new standards for recording data.
+              </p>
+            </div>
+
+            <!-- Section separator start -->
+            <div id="at-a-glance-information" class="col-md-12">
+              <p class="separator t-center margin-bottom-2">
+                <span>About the Atlas: at a glance information</span>
+              </p>
+            </div>
+            <!-- Section separator end -->
+
+            <div class="col-md-3">
+              <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">At a glance information</h4>
+              <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">At a glance information</h4>
+            </div>
+
+            <div class="col-md-8">
+              <h4 class="stat__number margin-top-none color--primary-red">60 million</h4>
+              <p class="margin-bottom-2">
+                60 million contributed records are now living in the Atlas. This number is growing every day.
+              </p>
+
+              <h4 class="stat__number margin-top-none color--primary-red">12,000+</h4>
+              <p class="margin-bottom-2">
+                12,000 plus active users contributing to the Atlas since 2010.
+              </p>
+
+              <h4 class="stat__number margin-top-none color--primary-red">2010</h4>
+              <p class="margin-bottom-2">
+                The Atlas of Living Australia was launched in 2010 and receives support from the Australian Government through the National Collaborative Research Infrastructure Strategy (NCRIS).
+              </p>
+            </div>
+          </div>
+          <!-- End row -->
+        </div>
+      </div><!-- End row -->
+      <!-- Section 1 end -->
+
+      <!-- Section 2 start -->
+      <div class="row">
+        <div class="col-sm-12 col-md-10 col-lg-10 margin-bottom-2">
+          <h2 class="email margin-bottom-half-1">Digitise a record</h2>
+
+          <div id="about-the-atlas">
+
+            <!-- <h2 id="how-we">How we</h2> -->
+            <p class="lead color--primary-red">
+              Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.
+            </p>
+            <p>
+              Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+            </p>
+
+          </div>
+
+          <div class="row">
+
+            <!-- Section separator start -->
+            <div id="upload-data-sets" class="col-md-12">
+              <p class="separator t-center margin-bottom-2">
+                <span>How we upload data sets</span>
+              </p>
+            </div>
+            <!-- Section separator end -->
+
+            <div class="col-md-3">
+              <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Upload data sets</h4>
+              <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Upload data sets</h4>
+            </div>
+            <div class="col-md-8 margin-bottom-1">
+              <p>
+                Contact the Data Management team if you wish to upload a data set. The Data Management Team can provide you with guidance on how to structure and describe your data set.
+              </p>
+              <h4 class="stat__number margin-top-none color--primary-red">Download a data set template</h4>
+              <ul>
+                <li>
+                  <a href="http://www.ala.org.au/wp-content/uploads/2010/06/ALA-occurrence-data-template-simple.xls">ALA occurrence data template – simple</a>
+                  [.xls 20KB]
+                </li>
+                <li>
+                  <a href="http://www.ala.org.au/wp-content/uploads/2010/06/ALA-occurrence-data-template-high-quality.xls">ALA occurrence data template – high quality</a>
+                  [.xls 32KB]
+                </li>
+                <li>
+                  <a href="http://www.ala.org.au/wp-content/uploads/2010/06/ALA-species-list-template.xls">ALA species list template</a>
+                  [.xls 20KB]
+                </li>
+                <li>
+                  <a href="http://www.ala.org.au/wp-content/uploads/2010/06/ALA-multimedia-template.xls">ALA multimedia template</a>
+                  [.xls 20KB]
+                </li>
+                <li>
+                  <a href="http://www.ala.org.au/wp-content/uploads/2010/06/ALA-species-profile-template.xls">ALA species profile template</a>
+                  [.xls 23KB]
+                </li>
+              </ul>
+              <p>
+                Read the
+                <a href="/faq/data-sharing/data-upload-templates/">data set template FAQ</a>
+                .
+              </p>
+
+              <h4 class="stat__number margin-top-none color--primary-red">Test your data online</h4>
+              <p>You can how test your data using these tools:</p>
+              <ul>
+                <li>
+                  <a href="http://sandbox.ala.org.au/">Sandbox – Occurrence data</a>
+                </li>
+                <li>
+                  <a href="http://lists.ala.org.au/">Species list upload</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Section separator start -->
+            <div id="integrate-data" class="col-md-12">
+              <p class="separator t-center margin-bottom-2">
+                <span>How we integrate data</span>
+              </p>
+            </div>
+            <!-- Section separator end -->
+
+            <div class="col-md-3">
+              <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Integrate data</h4>
+              <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Integrate data</h4>
+            </div>
+            <div class="col-md-8 margin-bottom-1">
+              <p>
+                Before data can be displayed in the Atlas of Living Australia (Atlas) it is subject to a data integration process consisting of:
+              </p>
+              <ul>
+                <li>
+                  <a title="Data mobilisation" href="http://www.ala.org.au/about-the-atlas/how-we-integrate-data/data-mobilisation/">Data mobilisation</a>
+                  —getting the data into the Atlas
+                </li>
+                <li>
+                  <a title="Data quality assurance" href="http://www.ala.org.au/about-the-atlas/how-we-integrate-data/data-quality-assurance/">Data quality assurance</a>
+                  —checking various aspects of the data, eg the current species name
+                </li>
+                <li>
+                  <a title="Data sensitivity checks" href="http://www.ala.org.au/about-the-atlas/how-we-integrate-data/data-sensitivity-checks/">Data sensitivity check</a>
+                  —to identify if the data relates to a species that is sensitive for reasons of conservation or biosecurity.
+                </li>
+              </ul>
+              <p>See also:</p>
+              <ul>
+                <li>
+                  <a title="Our data providers" href="http://www.ala.org.au/about-the-atlas/our-data-providers/">Our data providers</a>
+                  for information on who provides our data
+                </li>
+                <li>
+                  <a title="Atlas data" href="http://www.ala.org.au/about-the-atlas/atlas-data/">Atlas data</a>
+                  for information on the types and nature of the data used by the Atlas
+                </li>
+              </ul>
+            </div>
+
+            <!-- Section separator start -->
+            <div id="handle-sensitive-data" class="col-md-12">
+              <p class="separator t-center margin-bottom-2">
+                <span>How we handle sensitive data</span>
+              </p>
+            </div>
+            <!-- Section separator end -->
+
+            <div class="col-md-3">
+              <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Handle sensitive data</h4>
+              <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Handle sensitive data</h4>
+            </div>
+            <div class="col-md-8 margin-bottom-1">
+              <h4 class="stat__number margin-top-none color--primary-red">Who decides if data is sensitive?</h4>
+              <p>Data may be considered sensitive for reasons of:</p>
+              <ul>
+                <li>conservation, e.g. the locations of threatened species</li>
+                <li>
+                  biosecurity, e.g. unverified sightings of pests not previously recorded in Australia
+                </li>
+                <li>
+                  privacy, e.g. specimens collected on private property, collectors names etc.
+                </li>
+              </ul>
+              <p>
+                John Tann and Paul Flemons, working at the Australian Museum, undertook a study for the Atlas in 2009 to determine the difficulties associated with working with sensitive data and how they act as a barrier to data sharing.  The study report was made available for public comment and is available at
+                <a href="http://www.ala.org.au/wp-content/uploads/2010/07/ALA-sensitive-data-report-and-proposed-policy-v1.1.pdf" onclick="javascript:_gaq.push(['_trackEvent','download','http://www.ala.org.au/wp-content/uploads/2010/07/ALA-sensitive-data-report-and-proposed-policy-v1.1.pdf']);">Our secrets are not your secrets: Sensitive data report</a>
+                .  The creation of a Sensitive Data Service (SDS) was a key recommendation of the study.
+              </p>
+              <p>
+                The Atlas has worked with Commonwealth,  State and Territory agencies as well as with data providers to obtain authoritative  lists  of species considered to be sensitive because of conservation or biosecurity related concerns.  These agencies have also provided details of how data on those species is to be handled.  The Atlas has developed SDS infrastructure to implement this advice.
+              </p>
+              <p>
+                The SDS has not been designed to handle privacy related sensitivity concerns.
+              </p>
+              <p>
+                The SDS enables data in sensitive records to be annotated, withheld or generalised according to a publicly available set of rules.
+                <br>
+                Please note, users are informed whenever data has been modified or withheld.
+              </p>
+              <p>
+                Learn more about theses external agencies and the species lists and rules they have provided to address conservation related sensitivities in
+                <a title="Sensitive data lists" href="http://lists.ala.org.au/public/sdsLists">Conservation Sensitivity related Atlas Data Sets</a>
+                .
+                <br>Work on biosecurity related sensitivity rules is ongoing.</p>
+              <p>
+                Conservation and biosecurity data  sensitivity can also be checked online at
+                <a href="http://sds.ala.org.au/">sds.ala.org.au</a>
+                .  Simply enter a single species name or upload a spreadsheet of names. Sensitivity checking via a web service is also planned.
+              </p>
+            </div>
+
+            <!-- Section separator start -->
+            <div id="communicate" class="col-md-12">
+              <p class="separator t-center margin-bottom-2">
+                <span>How we communicate</span>
+              </p>
+            </div>
+            <!-- Section separator end -->
+
+            <div class="col-md-3">
+              <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Communicate</h4>
+              <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Communicate</h4>
+            </div>
+            <div class="col-md-8 margin-bottom-1">
+              <h4 class="stat__number margin-top-none color--primary-red">Communications centre</h4>
+              <p>
+                For communications-related information contact the Atlas Communications Team, at&nbsp;
+                <a href="mailto:info@ala.org.au">info@ala.org.au</a>
+              </p>
+              <p>Access:</p>
+              <ul>
+                <li>
+                  <a title="Media releases" href="http://www.ala.org.au/about-the-atlas/communications-centre/media-releases/">Media releases</a>
+                </li>
+                <li>
+                  <a title="Media coverage 2012" href="/about-the-atlas/communications-centre/media-coverage-2012/">Media coverage 2012</a>
+                </li>
+                <li>
+                  <a title="Media coverage 2011" href="http://www.ala.org.au/about-the-atlas/communications-centre/media-coverage-2011/">Media coverage 2011</a>
+                </li>
+                <li>
+                  <a title="Media coverage previous years" href="http://www.ala.org.au/about-the-atlas/communications-centre/media-coverage-previous-years/">Media coverage-previous years</a>
+                </li>
+                <li>
+                  <a title="Publications" href="http://www.ala.org.au/about-the-atlas/communications-centre/publications/">Publications</a>
+                </li>
+                <li>
+                  <a title="Presentations" href="http://www.ala.org.au/about-the-atlas/communications-centre/presentations/">Presentations</a>
+                </li>
+                <li>
+                  <a title="Logos" href="http://www.ala.org.au/about-the-atlas/communications-centre/logos/">Atlas logos</a>
+                </li>
+                <li>
+                  <a title="Events" href="http://www.ala.org.au/about-the-atlas/communications-centre/events/">Biodiversity events</a>
+                </li>
+              </ul>
+              <p>
+                See&nbsp;
+                <a title="Photo credits" href="http://www.ala.org.au/about-the-atlas/terms-of-use/photo-credits/">Photo Credits</a>
+                &nbsp;for&nbsp;information on using photographs from the Atlas.
+              </p>
+            </div>
+
+          </div><!-- End row -->
+        </div>
+      </div><!-- End row -->
+      <!-- Section 2 end -->
+
+      <!-- Section 3 start -->
+      <div class="row">
+        <div class="col-sm-12 col-md-10 col-lg-10">
+          <h2 class="email margin-bottom-half-1">Submit a record</h2>
+
+          <div id="about-the-atlas">
+            <!-- <h2>How you can use our API</h2> -->
+            <p class="lead color--primary-red">
+              Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.
+            </p>
+            <p>
+              Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            </p>
+            <p class="margin-bottom-2">
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.
+            </p>
+          </div>
+
+          <div class="row">
+
+          <!-- Section separator start -->
+          <div id="use-our-api" class="col-md-12">
+            <p class="separator t-center margin-bottom-2">
+              <span>How you can use our API</span>
+            </p>
+          </div>
+          <!-- Section separator end -->
+
+          <div class="col-md-3">
+            <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Use our API</h4>
+            <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Use our API</h4>
+          </div>
+          <div class="col-md-8 margin-bottom-1">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+            <p>
+              To access a complete listing of the web services for the ALA,
+              <a href="http://api.ala.org.au/">visit our API page</a>
+              .
+            </p>
+          </div>
+
+          <!-- Section separator start -->
+          <div id="use-our-mobile-app" class="col-md-12">
+            <p class="separator t-center margin-bottom-2">
+              <span>How you can use our mobile app</span>
+            </p>
+          </div>
+          <!-- Section separator end -->
+
+          <div class="col-md-3">
+            <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Use our mobile app</h4>
+            <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Use our mobile app</h4>
+          </div>
+          <div class="col-md-8 margin-bottom-1">
+            <p>
+              In addition to the
+              <a href="http://m.ala.org.au" target="_blank">mobile version of the ALA website</a>
+              , the ALA provides a dedicated mobile app you can install on your smart phone.
+            </p>
+
+            <p>
+              <a class="btn btn-default btn-lg btn-block" href="https://itunes.apple.com/au/app/ozatlas/id509021205">Download the Atlas mobile app for iOS</a>
+            </p>
+
+            <p>
+              <a class="btn btn-default btn-lg btn-block" href="https://play.google.com/store/apps/details?id=au.org.ala.mobile.ozatlas">Download the Atlas mobile app for Android</a>
+            </p>
+          </div>
+
+          <!-- Section separator start -->
+          <div id="contribute-to-the-atlas" class="col-md-12">
+            <p class="separator t-center margin-bottom-2">
+              <span>How you can contribute to the Atlas</span>
+            </p>
+          </div>
+          <!-- Section separator end -->
+
+          <div class="col-md-3">
+            <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Contribute to the Atlas</h4>
+            <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Contribute to the Atlas</h4>
+          </div>
+          <div class="col-md-8 margin-bottom-1">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+            <p>
+              There are 3 main ways that you can help contribute to the Atlas of Living Australia.  They are:
+            </p>
+            <ol class="margin-bottom-2">
+              <li>Join a citizen science project</li>
+              <li>Record a sighting</li>
+              <li>Digitise a record</li>
+            </ol>
+
+            <h4 class="stat__number margin-top-none color--primary-red">Join a citizen science project</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+            <p>
+              <a class="btn btn-default btn-lg btn-block margin-bottom-2" href="#">Join a citizen science project</a>
+            </p>
+
+            <h4 class="stat__number margin-top-none color--primary-red">Record a sighting</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+            <p>
+              <a class="btn btn-default btn-lg btn-block margin-bottom-2" href="https://play.google.com/store/apps/details?id=au.org.ala.mobile.ozatlas">Record a sighting</a>
+            </p>
+
+            <h4 class="stat__number margin-top-none color--primary-red">Digitise a record</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+            <p>
+              <a class="btn btn-default btn-lg btn-block margin-bottom-2" href="https://play.google.com/store/apps/details?id=au.org.ala.mobile.ozatlas">Digitise a record</a>
+            </p>
+          </div>
+
+          </div><!-- End row -->
+        </div>
+      </div><!-- End row -->
+      <!-- Section 3 end -->
+    </div>
+    <!-- End right column -->
+  </div>
+
+</div>
+<!-- End main col -->
+
+</div>
+<!-- End container#main -->
+
+<!-- Footer -->
+<footer class="main-footer">
+
+<hr class="email">
+
+<div class="container">
+<div class="row">
+  <div class="col-sm-12 col-md-4 col-lg-4">
+    <p class="lead">
+      The Atlas of Living Australia is a collaborative, national project that aggregates biodiversity data from multiple sources and makes it available and usable online.
+    </p>
+    <p class="lead">Sharing biodiversity knowledge to shape our future.</p>
+  </div>
+
+  <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 hidden-print">
+    <h5>Explore</h5>
+    <ul class="link-list">
+      <li>
+        <a href="http://dashboard.ala.org.au/">Atlas Dashboard</a>
+      </li>
+      <li>
+        <a href="http://collections.ala.org.au/">Collections</a>
+      </li>
+      <li>
+        <a href="http://collections.ala.org.au/datasets">Datasets</a>
+      </li>
+      <li>
+        <a href="http://lists.ala.org.au/iconic-species">Browse iconic species</a>
+      </li>
+      <li>
+        <a href="http://biocache.ala.org.au/">Browse records</a>
+      </li>
+      <li>
+        <a href="http://regions.ala.org.au/">Browse your region</a>
+      </li>
+      <li>
+        <a href="http://biocache.ala.org.au/explore/your-area">Explore your area</a>
+      </li>
+      <li>
+        <a href="http://spatial.ala.org.au/">Spatial Portal</a>
+      </li>
+      <li>
+        <a href="http://phylolink.ala.org.au/">Phylolink</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 hidden-print">
+    <h5>Contribute</h5>
+    <ul class="link-list">
+      <li>
+        <a href="http://biocollect.ala.org.au/">Join a Citizen Science project</a>
+      </li>
+      <li>
+        <a href="http://sightings.ala.org.au/">Record a sighting</a>
+      </li>
+      <li>
+        <a href="http://volunteer.ala.org.au/">Digitise a record</a>
+      </li>
+      <li >
+        <a href="https://rawgit.com/AtlasOfLivingAustralia/front-end-static/master/ALA%20Website%20Recreation%20in%20Bootstrap%203/feedback-form-page.html">Provide Feedback</a>
+      </li>
+      <li >
+        <a href="https://rawgit.com/AtlasOfLivingAustralia/front-end-static/master/ALA%20Website%20Recreation%20in%20Bootstrap%203/contact-us-page.html">Contact Us</a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="clearfix visible-xs-block">
+    <!-- This fixes the alignment issues of the footer columns --> </div>
+
+  <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 hidden-print">
+    <h5>Learn</h5>
+    <ul class="link-list">
+      <li>
+        <a href="http://www.ala.org.au/about-the-atlas/">About the Atlas</a>
+      </li>
+      <li>
+        <a href="http://www.ala.org.au/education-resources/">Education Resources</a>
+      </li>
+      <li>
+        <a href="http://www.ala.org.au/faq/">FAQs</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 hidden-print">
+    <h5>Participate</h5>
+    <ul class="link-list">
+      <li>
+        <a href="https://fieldcapture.ala.org.au/merit">MERIT</a>
+      </li>
+      <li>
+        <a href="http://root.ala.org.au/">BDRS</a>
+      </li>
+      <li>
+        <a href="http://oztrack.org/">ZoaTrack</a>
+      </li>
+      <li>
+        <a href="http://www.soils2satellites.org.au/">Soils to satellites</a>
+      </li>
+      <li>
+        <a href="http://fish.ala.org.au/">FishMap</a>
+      </li>
+      <li>
+        <a href="http://volunteer.ala.org.au/">DigiVol</a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+<!-- End row -->
+
+</div>
+<!-- End container -->
+</footer>
+<!-- End Main footer -->
+
+<footer class="secondary-footer hidden-print">
+<div class="container">
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+
+    <div class="row">
+      <div class="col-xs-6 col-sm-12">
+        <img class="img-responsive ncris" src="img/NCRIS_mono.svg">
+        <!-- Logo --> </div>
+      <div class="col-xs-6 col-sm-12">
+        <img class="img-responsive aus-govt" src="img/aus_initiative_stacked.svg">
+        <!-- Logo --> </div>
+    </div>
+
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <p>
+      The Atlas of Living Australia a node of the
+      <a href="#">Global Biodiversity Information Facility (GBIF)</a>
+      .
+    </p>
+    <div class="col-xs-12 col-sm-12">
+      <img class="img-responsive gbif" src="img/GBIF_logo_short_form.gif">
+      <!-- Logo --> </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <p>
+      This site is licensed under a
+      <a href="#">Creative Commons Attribution 3.0 Australia License</a>
+      .
+    </p>
+    <p>
+      <img class="img-responsive" src="img/creativecommons.png"></p>
+    <!-- Logo -->
+    <p>
+      Provider content may be covered by other
+      <a href="#">Terms of Use</a>
+      .
+    </p>
+  </div>
+</div>
+<!-- End row -->
+</div>
+<!-- End container -->
+</footer>
+
+<footer class="social-footer hidden-print">
+<div class="container">
+<div class="row">
+
+  <div class="col-xs-12 col-sm-5 col-md-4">
+    <ul class="social list-inline">
+      <li>
+        <a class="soc-facebook" href="https://www.facebook.com/atlasoflivingaustralia" title="Facebook"> <i class="fa fa-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="soc-twitter" href="https://twitter.com/atlaslivingaust" title="Twitter"> <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="soc-envelope" href="contact-us-page.html" title="Email">
+          <i class="fa fa-envelope"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-xs-12 col-sm-6">
+    <a href="#" type="button" class="btn btn-primary">Contact Us</a>
+    <a href="#" type="button" class="btn btn-default">Provide Feedback</a>
+    <a href="#" type="button" class="btn btn-default">Contribute</a>
+    <a href="#" type="button" class="btn btn-link">System Status</a>
+  </div>
+
+</div>
+<!-- End row -->
+</div>
+<!-- End container -->
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+      console.log("testing");
+      var headerHeight = $('.navbar-fixed-top').outerHeight(true) + $('.info-hub-banner').outerHeight(true) + $('.breadcrumb').outerHeight(true);
+      var footerHeight = 0;
+      $('footer').each(function() {
+        footerHeight += $(this).outerHeight();
+      });
+      console.log("heights",headerHeight, footerHeight);
+      $('#sidebar').affix({
+        offset: {
+            top: headerHeight,
+            bottom: footerHeight
+        }
+      });
+
+      $(window).scroll(function () {
+          $('#sidebar').width($('.sidebarCol').width());
+      });
+  });
+</script>
+</body>
+</html>
