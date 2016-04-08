@@ -999,12 +999,11 @@
         }
       });
       
-      $(window).scroll(function () {
+      $(window).scroll(resizeMenu).resize(resizeMenu);
+      
+      function resizeMenu() {
           $('#sidebar').width($('.sidebarCol').width());
-      });
-      $(window).resize(function () {
-          $('#sidebar').width($('.sidebarCol').width());
-      });
+      }
   });
 </script>
 </body>
