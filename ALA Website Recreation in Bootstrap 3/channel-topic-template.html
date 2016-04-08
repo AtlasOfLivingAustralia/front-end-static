@@ -985,7 +985,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
   jQuery(document).ready(function($) {
-      console.log("testing");
+      
       var headerHeight = $('.navbar-fixed-top').outerHeight(true) + $('.info-hub-banner').outerHeight(true) + $('.breadcrumb').outerHeight(true); 
       var footerHeight = 0;
       $('footer').each(function() {
@@ -1000,6 +1000,9 @@
       });
       
       $(window).scroll(function () {
+          $('#sidebar').width($('.sidebarCol').width());
+      });
+      $(window).resize(function () {
           $('#sidebar').width($('.sidebarCol').width());
       });
   });
