@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ALA | Atlas Information Hub</title>
+  <title>ALA | AIH: About the Atlas</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,14 +34,14 @@
   <meta name="theme-color" content="#ffffff">
 
   <style>
-  #sidebar.affix {
+  .profile-usermenu.affix {
       position: fixed;
       top:50px;
 /*      width:228px;*/
     }
 
     @media(max-width:767px){
-       #sidebar.affix {
+       .profile-usermenu.affix {
          position: static;
          width: auto;
          top: 0;
@@ -199,208 +199,134 @@
 
   <div class="row">
 
-    <div class="col-xs-12">
-      <p class="lead color--primary-red">
-        Here you will find helpful information on
-        the Atlas of Living Australia;
-        how we do things at the Atlas;
-        how you can use the Atlas;
-        our educational resources;
-        the Spatial Portal; and
-        how you can contribute to the Atlas.
-      </p>
-    </div>
+        <!-- Navigation left column -->
+        <div class="col-lg-3 col-md-4 col-xs-12 sidebarCol">
+          <div class="profile-usermenu margin-bottom-2">
+            <ul class="nav">
+              <li class="active"><a>About the Atlas</a></li>
+              <li><a href="#our-focus">Our focus</a></li>
+              <li><a href="#our-vision">Our vision</a></li>
+              <li><a href="#our-mission">Our mission</a></li>
+              <li><a href="#at-a-glance-information">At a glance information</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End navigation left column -->
 
-    <!-- <div class="col-lg-4 col-md-4 col-sm-6">
+        <!-- Right column -->
+        <div class="col-lg-9 col-md-8 col-xs-12">
+          <!-- Section 1 start -->
+          <div class="row">
+            <div class="col-sm-12 col-md-10 col-lg-10 margin-bottom-2">
+              <h2 class="email margin-bottom-half-1">About the Atlas</h2>
 
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="heading-underlined">About the Atlas</h4>
-        </div>
-        <div class="panel-body">
-          <div class="front-grain front-grain-atlas"></div>
-          <div class="clearfix"></div>
-          <p class="panel-feature margin-top-half-1">
-            <h4 class="search-result"><a href="#">Topics covered</a></h4>
-            <p class="help-block">Maecenas, sed diam eget, risus varius, blandit sit amet, non magna.</p>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-6">
+              <div id="introduction">
+                <!-- <h2>About the Atlas</h2> -->
+                <p class="lead color--primary-red">
+                  The Atlas of Living Australia (ALA) is a free online resource, which provides access to a wealth of information about Australia’s biodiversity.
+                </p>
+                <p>
+                  The type of information available includes species occurrence records (based on field observations, specimens from biological collections, and surveys), photographs, sound recordings, maps, molecular data, and links to additional literature.
+                </p>
+                <p class="margin-bottom-2">
+                  Powerful mapping tools that are provided as open source software, allow users to explore and analyse this information in a myriad of ways. The ALA is used for research, environmental monitoring, conservation planning and management, education, Citizen Science, and biosecurity activities.
+                </p>
+              </div>
 
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="heading-underlined">How we ...</h4>
-        </div>
-        <div class="panel-body">
-          <div class="front-grain front-grain-atlas"></div>
-          <div class="clearfix"></div>
-          <p class="panel-feature margin-top-half-1">
-            <h4 class="search-result"><a href="#">Topics covered</a></h4>
-            <p class="help-block">Maecenas, sed diam eget, risus varius, blandit sit amet, non magna.</p>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="heading-underlined">How you can ...</h4>
-        </div>
-        <div class="panel-body">
+              <div class="row">
+                <!-- Section separator start -->
+                <div id="our-focus" class="col-md-12">
+                  <p class="separator t-center margin-bottom-2">
+                    <span>About the Atlas: our focus</span>
+                  </p>
+                </div>
+                <!-- Section separator end -->
 
-          <div class="front-grain front-grain-atlas"></div>
-          <div class="clearfix"></div>
-          <p class="panel-feature margin-top-half-1">
-            <h4 class="search-result"><a href="#">Topics covered</a></h4>
-            <p class="help-block">Maecenas, sed diam eget, risus varius, blandit sit amet, non magna.</p>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="col-md-3">
+                  <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Our focus</h4>
+                  <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Our focus</h4>
+                </div>
+                <div class="col-md-8 margin-bottom-1">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                  </p>
+                </div>
 
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="heading-underlined">Educational resources</h4>
-        </div>
-        <div class="panel-body">
+                <!-- Section separator start -->
+                <div id="our-vision" class="col-md-12">
+                  <p class="separator t-center margin-bottom-2">
+                    <span>About the Atlas: our vision</span>
+                  </p>
+                </div>
+                <!-- Section separator end -->
 
-          <div class="front-grain front-grain-atlas"></div>
-          <div class="clearfix"></div>
-          <p class="panel-feature margin-top-half-1">
-            <h4 class="search-result"><a href="#">Topics covered</a></h4>
-            <p class="help-block">Maecenas, sed diam eget, risus varius, blandit sit amet, non magna.</p>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
+                <div class="col-md-3">
+                  <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Our vision</h4>
+                  <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Our vision</h4>
+                </div>
+                <div class="col-md-8 margin-bottom-1">
+                  <p>
+                    Space, the final frontier. These are the voyages of the Starship Enterprise. It's five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.
+                  </p>
+                </div>
 
-          <h4 class="heading-underlined">Spatial portal</h4>
-        </div>
-        <div class="panel-body">
+                <!-- Section separator start -->
+                <div id="our-mission" class="col-md-12">
+                  <p class="separator t-center margin-bottom-2">
+                    <span>About the Atlas: our mission</span>
+                  </p>
+                </div>
+                <!-- Section separator end -->
 
-          <a href="#"><div class="front-grain front-grain-atlas"></div></a>
-          <div class="clearfix"></div>
-          <p class="panel-feature margin-top-half-1">
-            <h4 class="search-result"><a href="#">Topics covered</a></h4>
-            <p class="help-block">Maecenas, sed diam eget, risus varius, blandit sit amet, non magna.</p>
-          </p>
+                <div class="col-md-3">
+                  <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">Our mission</h4>
+                  <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">Our mission</h4>
+                </div>
+                <div class="col-md-8 margin-bottom-1">
+                  <p>
+                    The Atlas of Living Australia's mission is to provide creative tools that help anyone contribute their knowledge to the public. From the citizen scientists to the field experts who are contineously capturing information, to the casual observers recording a sighting for the first time, the Atlas of Living Australia provides elegant solutions that set new standards for recording data.
+                  </p>
+                </div>
+
+                <!-- Section separator start -->
+                <div id="at-a-glance-information" class="col-md-12">
+                  <p class="separator t-center margin-bottom-2">
+                    <span>About the Atlas: at a glance information</span>
+                  </p>
+                </div>
+                <!-- Section separator end -->
+
+                <div class="col-md-3">
+                  <h4 class="form-heading-medium text-right margin-bottom-half-1 hidden-xs hidden-sm">At a glance information</h4>
+                  <h4 class="form-heading-medium margin-bottom-half-1 visible-xs visible-sm">At a glance information</h4>
+                </div>
+
+                <div class="col-md-8">
+                  <h4 class="stat__number margin-top-none color--primary-red">60 million</h4>
+                  <p class="margin-bottom-2">
+                    60 million contributed records are now living in the Atlas. This number is growing every day.
+                  </p>
+
+                  <h4 class="stat__number margin-top-none color--primary-red">12,000+</h4>
+                  <p class="margin-bottom-2">
+                    12,000 plus active users contributing to the Atlas since 2010.
+                  </p>
+
+                  <h4 class="stat__number margin-top-none color--primary-red">2010</h4>
+                  <p class="margin-bottom-2">
+                    The Atlas of Living Australia was launched in 2010 and receives support from the Australian Government through the National Collaborative Research Infrastructure Strategy (NCRIS).
+                  </p>
+                </div>
+              </div>
+              <!-- End row -->
+            </div>
+          </div><!-- End row -->
+          <!-- Section 1 end -->
+
         </div>
-      </div>
-    </div> -->
+        <!-- End right column -->
 
   </div><!-- End row -->
-
-  <div class="row">
-
-    <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="panel panel-default">
-        <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="img/ala-info-hub-ala-brand-icon.jpg"></a>
-        <div class="panel-body">
-          <div class="clearfix"></div>
-          <ol class="list-unstyled">
-            <li>
-              <h4 class="search-result"><a href="channel-info-about-the-atlas.html">About the Atlas</a></h4>
-              <p class="help-block">Learn about the Atlas of Living Australia.</p>
-              <p class="help-block"><strong>Topics include:</strong> Our vision, Our mission, What we do, Our focus and more.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="panel panel-default">
-        <a href="channel-info-how-we.html"><img class="img-responsive" src="img/ala-info-hub-how-we-icon.jpg"></a>
-        <div class="panel-body">
-          <div class="clearfix"></div>
-          <ol class="list-unstyled">
-            <li>
-              <h4 class="search-result"><a href="channel-info-how-we.html">How we ...</a></h4>
-              <p class="help-block">Learn how we do things at the Atlas.</p>
-              <p class="help-block"><strong>Topics include:</strong> how we ... Integrate data, Handle sensitive data and Communicate.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="panel panel-default">
-        <a href="channel-info-how-you-can.html"><img class="img-responsive" src="img/ala-info-hub-how-you-can-icon.jpg"></a>
-        <div class="panel-body">
-          <div class="clearfix"></div>
-          <ol class="list-unstyled">
-            <li>
-              <h4 class="search-result"><a href="channel-info-how-you-can.html">How you can ...</a></h4>
-              <p class="help-block">Learn how you can use the Atlas.</p>
-              <p class="help-block"><strong>Topics include:</strong> How you can ... Upload data sets, Use our API, and Use our data sets.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <!-- End content row -->
-
-    <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="panel panel-default">
-        <a href="#"><img class="img-responsive" src="img/ala-info-hub-education-icon.jpg"></a>
-        <div class="panel-body">
-          <div class="clearfix"></div>
-          <ol class="list-unstyled">
-            <li>
-              <h4 class="search-result"><a href="#">Educational resources</a></h4>
-              <p class="help-block">Learn from our educational resources.</p>
-              <p class="help-block"><strong>Topics include:</strong> Class room activities, The Atlas of Living Australia user guides and How educational providers use the Atlas.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="panel panel-default">
-        <a href="#"><img class="img-responsive" src="img/ala-info-hub-spatial-portal-icon.jpg"></a>
-        <div class="panel-body">
-          <div class="clearfix"></div>
-          <ol class="list-unstyled">
-            <li>
-              <h4 class="search-result"><a href="#">Spatial portal guide</a></h4>
-              <p class="help-block">Learn about the Spatial Portal.</p>
-              <p class="help-block"><strong>Topics include:</strong> where species are located, what species are found, and what environmental conditions are in that area.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-6">
-      <div class="panel panel-default">
-        <a href="#"><img class="img-responsive" src="img/ala-info-hub-get-involved-icon.jpg"></a>
-        <div class="panel-body">
-          <div class="clearfix"></div>
-          <p class="panel-feature margin-top-half-1">
-
-          </p>
-
-          <ol class="list-unstyled">
-            <li>
-              <h4 class="search-result"><a href="#">Contribute to the ALA</a></h4>
-              <p class="help-block">Learn how you can contribute to the ALA.</p>
-              <p class="help-block"><strong>Topics include:</strong> Joining citizen science projects, Digitising records, Recording sightings and Submitting data sets.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-  </div>
 
 </div>
 <!-- End main col -->
@@ -564,7 +490,7 @@
         footerHeight += $(this).outerHeight();
       });
       console.log("heights",headerHeight, footerHeight);
-      $('#sidebar').affix({
+      $('.profile-usermenu').affix({
         offset: {
             top: headerHeight,
             bottom: footerHeight
@@ -572,7 +498,7 @@
       });
 
       $(window).scroll(function () {
-          $('#sidebar').width($('.sidebarCol').width());
+          $('.profile-usermenu').width($('.sidebarCol').width());
       });
   });
 </script>
