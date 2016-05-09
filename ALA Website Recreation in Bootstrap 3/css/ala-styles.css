@@ -131,13 +131,7 @@ form.banner{padding-top:6.5em;}
 #global-search > div > span > input{padding: .93em}
 .jumbotron.color--skyblue {background-color: #60c6cf !important;}
 
-.info-hub-banner{-moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;
-  background:url(../img/info-hub-banner-1.jpg) no-repeat center top;
-  background-attachment:relative;background-position:center center;background-size:cover;margin-top:-100px;min-height:165px;text-align:center;width:100%;}
-/*form.banner{padding-top:6.5em;}*/
-/*#global-search > div > input{padding: 1em;min-height: 4.2em;}*/
-/*#global-search > div > span > input{padding: .93em}*/
-/*.jumbotron.color--skyblue {background-color: #60c6cf !important;}*/
+.info-hub-banner{background:url(../img/info-hub-banner-3.jpg);background-repeat: repeat-x;margin-top:-80px;min-height:165px;text-align:center;width:100%;}
 
 /* Images (img)
 ================================= */
