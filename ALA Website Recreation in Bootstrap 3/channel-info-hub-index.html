@@ -33,21 +33,6 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <style>
-  #sidebar.affix {
-      position: fixed;
-      top:50px;
-/*      width:228px;*/
-    }
-
-    @media(max-width:767px){
-       #sidebar.affix {
-         position: static;
-         width: auto;
-         top: 0;
-        }
-    }
-</style>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -555,26 +540,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-      console.log("testing");
-      var headerHeight = $('.navbar-fixed-top').outerHeight(true) + $('.info-hub-banner').outerHeight(true) + $('.breadcrumb').outerHeight(true);
-      var footerHeight = 0;
-      $('footer').each(function() {
-        footerHeight += $(this).outerHeight();
-      });
-      console.log("heights",headerHeight, footerHeight);
-      $('#sidebar').affix({
-        offset: {
-            top: headerHeight,
-            bottom: footerHeight
-        }
-      });
 
-      $(window).scroll(function () {
-          $('#sidebar').width($('.sidebarCol').width());
-      });
-  });
-</script>
 </body>
 </html>
