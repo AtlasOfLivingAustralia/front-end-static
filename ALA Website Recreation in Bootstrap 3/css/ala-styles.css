@@ -626,6 +626,8 @@ table.email{margin-bottom: 4em;}
   top:50px;
 }
 
+.affix-bottom {position:absolute;}
+
 /* Media Queries (Mobile First Method = only add rules to modify larger views)
 ================================= */
 
