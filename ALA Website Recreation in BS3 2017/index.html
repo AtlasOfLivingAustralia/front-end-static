@@ -242,7 +242,7 @@
       <!-- <h2 class="heading-medium">Explore the Atlas of Living Australia</h2> -->
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default panel-row-1">
             <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="img/australias-species-octopus-maorum.jpg"></a>
             <div class="panel-body">
               <div class="clearfix"></div>
@@ -256,7 +256,7 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default panel-row-1">
             <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="img/species-by-location-phyllopteryx-taeniolatus.jpg"></a>
             <div class="panel-body">
               <div class="clearfix"></div>
@@ -270,7 +270,7 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default panel-row-1">
             <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="img/occurrence-records-australia.jpg"></a>
             <div class="panel-body">
               <div class="clearfix"></div>
@@ -285,7 +285,7 @@
         </div>
         <!-- End Col -->
         <div class="col-lg-4 col-md-4 col-sm-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default panel-row-1">
             <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-get-involved-icon.jpg"></a>
             <div class="panel-body">
               <div class="clearfix"></div>
@@ -300,7 +300,7 @@
         </div>
 
         <div class="col-lg-4 col-md-4 col-sm-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default panel-row-1">
             <a href="channel-info-about-the-atlas.html">
               <img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-how-you-can-icon.jpg"></a>
               <div class="panel-body">
@@ -316,7 +316,7 @@
           </div>
 
           <div class="col-lg-4 col-md-4 col-sm-6">
-            <div class="panel panel-default">
+            <div class="panel panel-default panel-row-1">
               <a href="http://sightings.ala.org.au/">
                 <img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-education-icon.jpg"></a>
                 <div class="panel-body">
@@ -470,15 +470,25 @@
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
+      resizePanels();
+      
+      $( window ).resize(function() {
+        resizePanels();
+      });
+    });
+    
+    function resizePanels() {
       var panels = $('.panel.panel-default'); // might want to use a more specific selector (e.g. add an extra class to those panel divs)
       var max = 0;
       $.each(panels, function(i,el) {
-        if (max < $(el).innerHeight()) {
-          max = $(el).innerHeight();
+        var thisMax = $(el).find('img').outerHeight() + $(el).find('.panel-body').outerHeight();
+        var icon = $(el).find('a');
+        if (max < thisMax) {
+          max = thisMax;
         }
       });
       panels.innerHeight(max); // set height to all divs
-    });
+    }
   </script>
 </body>
 </html>
