@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ALA Homepage</title>
+  <title>Content template</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="background-lightgrey">
+<body class="background-white">
 
   <!-- Navbar start -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -125,8 +125,7 @@
   </nav>
   <!-- End Navbar -->
 
-  <!-- Jumbotron start -->
-  <div class="jumbotron ala-header hidden-print">
+  <div class="jumbotron info-hub-banner hidden-print">
     <div class="container no-gutter">
       <div class="col-xs-12 col-sm-12 col-md-10 col-lg-9 col-lg-offset-1">
 
@@ -134,170 +133,98 @@
     </div>
   </div><!-- End Jumbotron -->
 
+  <div class="container">
+    <section class="content-container">
+      <div class="row">
 
-  <!-- Promotional alert -->
-  <div class="alert alert-promotional alert-dismissible hidden-print" role="alert">
-    <div class="container">
-      <div class="row-fluid">
-        <div class="col-md-12">
-          <button type="button" class="close alert-dismissable-button" data-dismiss="alert" aria-label="Close" title="Close"><span aria-hidden="true">&times;</span></button>
-          <p class="alert-text">
-            We will be updating our website over the next couple of months. <a href="#">Read about our Continuous Delivery methodology</a> and you can also <a href="#">read our release notes</a> for our test site.
+        <article class="col-md-12 header-wrap margin-bottom-half-1">
+          <div class="row-fluid margin-bottom-2">
+            <ol class="breadcrumb hidden-print">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">ALA Blog</a></li>
+              <li active">Setting the benchmark</li>
+            </ol>
+          </div>
+
+          <h5 class="subject-category-overline">Article</h5>
+          <h2 class="subject-title">Setting the benchmark for a streamlined approach to environmental data management</h2>
+          <h3 class="subject-subtitle">The NSW Office of Environment and Heritage (OEH) and the Atlas of Living Australia (ALA) have teamed up to produce an integrated data feed to enable researchers more efficient access to environmental data across NSW. This collaboration sets the benchmark for a more streamlined approach to environmental data management across Australia.</h3>
+          <p class="subject-byline">By Hannah Scott, 16 March, 2017</p>
+          <p class="subject-byline">Tags:&ensp;<span class="label label-ala">News</span> <span class="label label-ala">Data</span></p>
+        </article>
+        <article class="col-md-3 col-md-push-9">
+          <!-- Navigation right column -->
+          <h4>Page contents:</h4>
+          <div class="profile-usermenu margin-bottom-2">
+            <ul class="nav">
+              <li><a href="#environmental-data">Environmental Data Management</a></li>
+              <li><a href="#about-bionet">About BioNet</a></li>
+              <li><a href="#about-ala">About ALA</a></li>
+            </ul>
+          </div>
+          <!-- End navigation right column -->
+        </article>
+
+        <article class="col-md-8 col-md-pull-3">
+          <h4 id="environmental-data">Environmental Data Management</h4>
+
+          <p>OEH’s BioNet team has created an Open Application Programing Interface (API) that anyone can use, with the ALA (a database of Australia’s national biodiversity information) now on board as an early adopter. The API allows NSW species sightings data to automatically synchronise between the two platforms.</p>
+
+          <p>Since going live in October 2016, the benefits of the integrated data feed have already been realised. “On the launch of the integration, we immediately saw the holdings of records from NSW OEH into the ALA increase from 7 million to 9 million records,” said Miles Nicholls, Data Manager ALA, “Given that NSW OEH is the second largest supplier of data to the ALA, this represents a significant increase in the data available on NSW for research purposes.”</p>
+
+          <p>According to BioNet’s Project Manager, James Bibby, the key goal of this collaboration is to demonstrate momentum and capability of the API, and encourage other states across Australia to adopt of a consistent international standard. “We took the decision to standardise the exchange protocol for all our BioNet OpenAPIs using the international OASIS OData standard, but on top of this we needed to select a data standard specific to sharing species sightings” said James Bibby Project Manager, NSW OEH.  “It was natural for us to turn to the ALA as the national hub for sharing species sightings data and align with them where possible. A great outcome of this project is that the NSW BioNet data you can now access through the ALA platform is so much more up to date”</p>
+
+          <p>This collaborative effort between the ALA and OEH was also focused on aligning with best-practice data standards for the BioNet Web Service. Using open agreed standards will reduce the cost of integration of data sharing.  “The ALA are using Darwin Core standard reference for sharing information on biological diversity which has broad international support – so it made perfect sense to adopt the standard,” said James Bibby. “Our open data initiative is all about mobilizing data and having it used to drive improved biodiversity outcomes.”</p>
+
+          <p>“The adoption of standards which have broad support in the community and by technology providers is clearly the way to break down barriers to access and integrate the data, and to interpret and understand it,” said James Bibby.</p>
+
+          <p>The ALA and OEH are now exploring future collaboration opportunities, including how to harvest data back to OEH and increase the data available to the State in order to improve evidence based decision making while utilising the ALA as a hub to distribute data to other government agencies.</p>
+
+          <p class="margin-bottom-2">
+            <img src="http://placehold.it/450x300" class="img-responsive" alt="a place holder image">
           </p>
-        </div>
-      </div>
-    </div>
-  </div><!-- End promotional alert -->
-
-  <!-- Container -->
-  <div class="container" id="main">
-
-    <div class="col-md-8 col-md-offset-2">
-      <h1 class="heading-large margin-bottom-quarter-1">Atlas of Living Australia</h1>
-      <h2 class="promotional">
-        The Atlas of Living Australia is a collaborative, national project that aggregates biodiversity data from multiple sources and makes it freely available and usable online
-      </h2>
-    </div>
-
-    <!-- Main stats -->
-    <div class="col-md-12">
-      <div class="main-stats row">
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Occurrence Records</h4>
-          <div class="stat-number">
-            67,648,001
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar--flamingo" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 27%;"></div>
-          </div>
-          <p class="stat-measurement">
-            <i class="fa fa-chevron-up color--mojo"></i> <strong>27%</strong> more than last year
+          <p>
+            <a class="btn btn-default btn-lg" href="#">This is a call to action</a>
+            <a class="btn btn-default btn-lg" href="#">This is another call to action</a>
           </p>
-        </div>
 
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Species</h4>
-          <div class="stat-number">
-            611,113
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar--flamingo" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 15%;"></div>
-          </div>
-          <p class="stat-measurement">
-            <i class="fa fa-chevron-up color--mojo"></i> <strong>15%</strong> more than last year
+          <p>For more information about this project, or about this collaboration, please contact the OEH BioNet team via bionet@envrionment.nsw.gov.au.</p>
+
+          <p>For media enquiries, please contact Hannah Scott, Communication Manager Atlas of Living Australia on 0467 707 182.</p>
+
+          <!-- <div id="upload-data-sets">
+            <p class="separator t-center margin-bottom-2">
+              <span>Section name and side menu anchor link</span>
+            </p>
+          </div> -->
+          <hr>
+
+          <h4 id="about-bionet">About BioNet</h4>
+          <p>
+            BioNet is the trusted source of biodiversity data for decision making in NSW, developed by the NSW Office of Environment and Heritage.  It contains a range of biodiversity data collections which are being progressively made available via OpenAPIs.  Currently Species Sightings, NSW Landscapes and Vegetation Classification data are available, with plans to make Threatened Entities data available in 2017.
           </p>
-        </div>
 
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Data Sets</h4>
-          <div class="stat-number">
-            5,398
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar--flamingo" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 38%;"></div>
-          </div>
-          <p class="stat-measurement">
-            <i class="fa fa-chevron-up color--mojo"></i> <strong>38%</strong> more than last year
+          <!-- <div id="upload-data-sets">
+            <p class="separator t-center margin-bottom-2">
+              <span>Section name and side menu anchor link</span>
+            </p>
+          </div> -->
+
+          <h4 id="about-ala">About ALA</h4>
+          <p>
+            The Atlas of Living Australia (ALA) is Australia’s national biodiversity database. It provides free, online access to a vast repository of information about Australia’s amazing biodiversity. It’s a collaborative, open infrastructure that pulls together biodiversity data from multiple sources, and focuses on making biodiversity information accessible and usable.
           </p>
-        </div>
 
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Active Contributors</h4>
-          <div class="stat-number">
-            349,192
-          </div>
-          <div class="progress">
-            <div class="progress-bar progress-bar--flamingo" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 23%;"></div>
-          </div>
-          <p class="stat-measurement">
-            <i class="fa fa-chevron-up color--mojo"></i> <strong>23%</strong> more than last year
-          </p>
-        </div>
-      </div>
-    </div><!-- End main stats -->
+        </article>
 
-
-    <!-- Main col -->
-    <div class="col-md-12">
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default panel-row-1">
-          <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="img/australias-species-octopus-maorum.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="channel-info-about-the-atlas.html">Australian species</a></h3>
-            <p class="help-block">
-              Search for Australian flora and fauna species by common, scientific name or search by category.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default panel-row-1">
-          <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="img/species-by-location-phyllopteryx-taeniolatus.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="channel-info-about-the-atlas.html">Species by location</a></h3>
-            <p class="help-block">
-              Search the Spatial Portal by pre-defined region, or enter an address or location to find the recorded species nearby.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default panel-row-1">
-          <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="img/occurrence-records-australia.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="channel-info-about-the-atlas.html">Occurrence records</a></h3>
-            <p class="help-block">
-              The Atlas of Living Australia has over 60 million occurrence records and that list is growing every day.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Col -->
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default panel-row-1">
-          <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-get-involved-icon.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="channel-info-about-the-atlas.html">Contribute to the ALA</a></h3>
-            <p class="help-block">
-              Learn about the ALA and discover the many different ways in which we can help you achieve your goals.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default panel-row-1">
-          <a href="channel-info-about-the-atlas.html">
-            <img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-how-you-can-icon.jpg">
-          </a>
-          <div class="panel-body">
-            <h3><a href="channel-info-about-the-atlas.html">Browse ALA news</a></h3>
-            <p class="help-block">
-              Learn about the ALA and discover the many different ways in which we can help you achieve your goals.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default panel-row-1">
-          <a href="http://sightings.ala.org.au/">
-            <img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-education-icon.jpg">
-          </a>
-          <div class="panel-body">
-            <h3><a href="http://sightings.ala.org.au/">ALA knowledge base</a></h3>
-            <p class="help-block">
-              Did you see something? Photograph something? Contribute your sighting to the Atlas of Living Australia. Log your sighting at our Record a Sighting page.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Col -->
-    </div><!-- End main col -->
-
+      </div><!-- End row -->
+    </section>
   </div>
 
   <footer>
     <!-- Container -->
     <div class="container footer-container ">
+      <hr class="footer-border">
       <div class="row footer-nav">
 
         <div class="col-md-12 margin-bottom-2">
