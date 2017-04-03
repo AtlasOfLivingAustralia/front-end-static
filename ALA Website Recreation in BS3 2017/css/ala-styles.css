@@ -37,8 +37,38 @@ ul.nav.navbar-nav {
   margin-left: -15px;
 }
 
+.navbar-default .navbar-nav>li>a {
+    color: #555;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #111;
+}
+
+/* Login ribbon
+================================= */
+
 .nav-login {
-  font-weight: 700;
+    float: none !important;
+    font-weight: 700;
+}
+
+.nav-login li {
+    background-color: #f26649;
+    height: 90px;
+    margin-top: -30px;
+    border-radius: 0 0 6px 6px;
+    margin-bottom: -10px;
+}
+
+div.col-md-1>ul.nav-login>li>a {
+    color: #fff;
+    margin-top: 30px;
+}
+
+div.col-md-1>ul.nav-login>li>a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 /* Search
@@ -104,7 +134,7 @@ ul.nav.navbar-nav {
   form.banner{padding-top:6.5em;}
   button.btn.btn-default.btn-lg {min-height: 46px;}
 
-.info-hub-banner{background:url(../img/info-hub-banner-4.jpg);background-repeat: repeat-x;margin-top:60px;text-align:center;width:100%;}
+.info-hub-banner {background-repeat: repeat-x;background: url(../img/info-hub-banner-3.png);margin-top: 50px;text-align: center;width: 100%;background-color: #f26649;}
 
 
 /* Alerts
@@ -390,7 +420,7 @@ p.alert-text>a:hover {text-decoration: none;}
 
 .stat-number {
   color: #444;
-  font-size: 34px;
+  font-size: 40px;
   font-weight: 500;
 }
 
@@ -560,6 +590,11 @@ footer {
   img.img-responsive.csiro {max-width: 200px;max-height: 100px;}
   img.img-responsive.gbif {max-width: 150px;}
   img.img-responsive.aus-govt {max-width: 200px;}
+
+  /*.ncris-logo {background:url(../img/NCRIS_GREY.png) no-repeat; max-width: 150px;}
+  .csiro-logo {background:url(../img/CSIRO_Solid_GREY.png) no-repeat; max-width:200px; max-height:100px;}
+  .gbif-logo {background:url(../img/GBIF_GREY.png) no-repeat; max-width: 150px;}
+  .aus-govt-logo {background:url(../img/aus_initiative_stacked_GREY.png) no-repeat; max-width: 200px;}*/
 
 
 /* Layout control
@@ -1013,6 +1048,8 @@ fieldset[disabled] .btn-link:focus {
   }
 
   .ala-header {margin-top: 80px;}
+
+  .info-hub-banner {margin-top: 36px;}
 
   .main-stats {padding: 10px 25px;}
 

@@ -11,7 +11,6 @@
   <link href="css/ala-styles.css" rel="stylesheet">
 
   <!-- FontAwesome -->
-  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -40,7 +39,7 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <div class="row row-search">
-          <div class="col-xs-12 col-sm-6 col-md-8 pull-right">
+          <div class="col-xs-12 col-sm-5 col-md-7">
             <form id="global-search" class="banner" action="#" method="get" name="search-form" _lpchecked="1">
               <div class="icon-addon addon-lg">
                 <input type="text" placeholder="Search the Atlas ..." class="form-control">
@@ -48,10 +47,15 @@
               </div>
             </form>
           </div>
+          <div class="col-md-1 hidden-xs">
+            <ul class="nav navbar-nav navbar-right nav-login">
+              <li><a href="#">Log in</a></li>
+            </ul>
+          </div>
         </div><!-- End row -->
 
         <ul class="nav navbar-nav">
-          <li class="active disabled"><a href="#">Home</a></li>
+          <li><a href="#">Home</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
               Start exploring
@@ -117,7 +121,7 @@
             </ul>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right visible-xs">
           <li><a href="#"><span class="nav-login">Log in</span></a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -125,13 +129,7 @@
   </nav>
   <!-- End Navbar -->
 
-  <div class="jumbotron info-hub-banner hidden-print">
-    <div class="container no-gutter">
-      <div class="col-xs-12 col-sm-12 col-md-10 col-lg-9 col-lg-offset-1">
-
-      </div>
-    </div>
-  </div><!-- End Jumbotron -->
+  <div class="jumbotron info-hub-banner hidden-print"></div>
 
   <div class="container">
     <section class="content-container">
@@ -147,7 +145,7 @@
           <div class="row-fluid margin-bottom-2">
             <ol class="breadcrumb hidden-print">
               <li><a href="index.html">Home</a></li>
-              <li><a href="index.html">ALA help documentation</a></li>
+              <li><a href="index.html">Knowledge base</a></li>
               <li active">How we ...</li>
             </ol>
           </div>
