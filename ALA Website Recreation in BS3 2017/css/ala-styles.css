@@ -45,11 +45,10 @@ ul.nav.navbar-nav {
     color: #111;
 }
 
-/* Login ribbon
+/* Nav Login
 ================================= */
 
-.nav-login {
-    float: none !important;
+.nav-login, .nav-logged-in {
     font-weight: 700;
 }
 
@@ -70,6 +69,29 @@ div.col-md-1>ul.nav-login>li>a:hover {
     color: #fff;
     text-decoration: underline;
 }
+
+.nav-logged-in>li {
+  background-color: #f26649;
+  height: 90px;
+  margin-top: -30px;
+  border-radius: 0 0 6px 6px;
+  margin-bottom: -10px;
+}
+
+#bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a {
+  color: #fff;
+  margin-top: 30px;
+}
+
+#bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a:visited {
+  background-color: inherit;
+}
+
 
 /* Search
 ================================= */
@@ -1056,22 +1078,15 @@ fieldset[disabled] .btn-link:focus {
 
 @media screen and (min-width: 769px) {
 
-  .footer-bonus {
-    margin: 0 -15px;
-  }
+  ul.nav.navbar-nav.navbar-left.nav-logged-in {margin-left: 0;}
 
-  .footer-bonus-link {
-    height: 40px;
-    margin-top: 3px;
-  }
+  .footer-bonus {margin: 0 -15px;}
 
-  .footer-bonus-description {
-    margin-left: 76px;
-  }
+  .footer-bonus-link {height: 40px;margin-top: 3px;}
 
-  .footer-bonus-item {
-    margin-bottom: 40px;
-  }
+  .footer-bonus-description {margin-left: 76px;}
+
+  .footer-bonus-item {margin-bottom: 40px;}
 
 }
 
