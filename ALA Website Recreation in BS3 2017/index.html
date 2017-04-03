@@ -130,7 +130,7 @@
   </nav>
   <!-- End Navbar -->
 
-  <div class="jumbotron ala-header hidden-print"></div>
+  <div class="jumbotron ala-header hidden-print" id="ala-jumbotron"></div>
 
 
   <!-- Promotional alert -->
@@ -443,6 +443,11 @@
       $( window ).resize(function() {
         resizePanels();
       });
+      
+      // Change banner images based on month - format jtron-bg-month-01-770px.jpg
+      var month = ("0" + new Date().getDate()).slice(-2);
+      var filename = "img/jtron-bg-month-" + month + "-770px.jpg"
+      document.getElementById("ala-jumbotron").style.backgroundImage = "url('" + filename + "')";
     });
 
     function resizePanels() {
