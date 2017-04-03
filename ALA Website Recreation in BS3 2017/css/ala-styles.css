@@ -543,21 +543,21 @@ footer {
     float: right;
   }
 
-  .footer-bonus-brands span {
+  .footer-bonus-brands a {
     display: inline-block;
     margin: 20px 40px 60px 0;
     max-height: 80px; 
   }
-  .footer-bonus-brands span:hover {
+  .footer-bonus-brands a:hover {
     opacity:0.5;
   }
-  .footer-bonus-brands span#ncris {
+  .footer-bonus-brands #ncris {
     background-image: url('../img/NCRIS_GREY.png');
     background-size: 150px 55px;
     height: 55px;
     width: 150px;
   }
-  .footer-bonus-brands span#csiro {
+  .footer-bonus-brands #csiro {
     background-image: url('../img/CSIRO_Solid_GREY.png');
     background-size: 100px 100px;
     margin-top: 0;
@@ -566,17 +566,17 @@ footer {
     height: 120px;
     width: 100px;
   }
-  .footer-bonus-brands span#csiro:hover {
+  .footer-bonus-brands #csiro:hover {
     background-image: url('../img/CSIRO_Solid_COLOUR.png');
     opacity: 1;
   }
-  .footer-bonus-brands span#gbif {
+  .footer-bonus-brands #gbif {
     background-image: url('../img/GBIF_GREY.png');
     background-size: 150px 61px;
     height: 61px;
     width: 150px;
   }
-  .footer-bonus-brands span#aus-govt {
+  .footer-bonus-brands #aus-govt {
     background-image: url('../img/aus_initiative_stacked_GREY.png');
     background-size: 200px 65px;
     height: 65px;
