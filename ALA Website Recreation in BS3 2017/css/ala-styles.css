@@ -559,54 +559,39 @@ footer {
 
 .footer-bonus-brands a {
   display: inline-block;
+  background: url('../img/footer-bonus-logos.png') no-repeat; 
+  overflow: hidden; 
+  text-indent: -9999px; 
+  text-align: left;
   margin: 20px 40px 60px 0;
-  max-height: 80px;
 }
+
 .footer-bonus-brands #ncris {
-  background-image: url('../img/logo-NCRIS-GREY.png');
-  background-repeat: no-repeat;
-  height: 56px;
-  width: 150px;
+  background-position: -2px -262px; width: 150px; height: 59px; 
 }
 .footer-bonus-brands #ncris:hover {
-  background-image: url('../img/logo-NCRIS-mono.png');
-  background-repeat: no-repeat;
+  background-position: -2px -323px; width: 150px; height: 59px;
 }
 
 .footer-bonus-brands #csiro {
-  background-image: url('../img/logo-CSIRO-Solid-GREY.png');
-  background-repeat: no-repeat;
-  margin-top: 0;
-  margin-bottom: 40px;
-  max-height: 100px;
-  height: 120px;
-  width: 100px;
+  background-position: -2px -384px; width: 100px; height: 100px;
 }
 .footer-bonus-brands #csiro:hover {
-  background-image: url('../img/logo-CSIRO-Solid-RGB.png');
-  background-repeat: no-repeat;
+  background-position: -2px -486px; width: 100px; height: 100px;
 }
 
 .footer-bonus-brands #gbif {
-  background-image: url('../img/logo-GBIF-GREY.png');
-  background-repeat: no-repeat;
-  height: 61px;
-  width: 150px;
+  background-position: -2px -136px; width: 150px; height: 61px; 
 }
 .footer-bonus-brands #gbif:hover {
-  background-image: url('../img/logo-GBIF-RGB.png');
-  background-repeat: no-repeat;
+  background-position: -2px -199px; width: 150px; height: 61px;
 }
 
 .footer-bonus-brands #aus-govt {
-  background-image: url('../img/logo-aus-initiative-stacked-GREY.png');
-  background-repeat: no-repeat;
-  height: 65px;
-  width: 200px;
+  background-position: -2px -0px; width: 201px; height: 66px;
 }
 .footer-bonus-brands #aus-govt:hover {
-  background-image: url('../img/logo-aus-initiative-stacked-MONO.png');
-  background-repeat: no-repeat;
+  background-position: -2px -68px; width: 201px; height: 66px;
 }
 
 .footer-container {
