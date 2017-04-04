@@ -1,4 +1,4 @@
-/* Stark Theme
+/* Stark 2017 Theme
 ================================= */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);
 
@@ -446,6 +446,11 @@ p.alert-text>a:hover {text-decoration: none;}
   font-weight: 500;
 }
 
+.stat-number span {
+  color: #637073;
+  font-size: 32px;
+}
+
 .progress {
   height: 6px;
   background: #e8e8e8;
@@ -484,17 +489,12 @@ footer {
 }
 
 .footer-bonus-heading {
-  /*font-size: 14px;*/
-  /*color: #7b8b8e;*/
   margin: 0 0 15px;
 }
 
 .footer-bonus-item {
-  /*float: left;*/
-  /*width: 33%;*/
   padding: 0 15px;
 }
-/* Replace with BS3 grid */
 
 .footer-bonus-link {
   float: left;
@@ -528,7 +528,6 @@ footer {
   background: #b7c0c7;
   transition: background 0.15s ease;
   fill: #edeff0;
-  /*color: #fff;*/
 }
 
 .footer-social-link:hover {
@@ -537,7 +536,7 @@ footer {
 }
 
 .fa-facebook {color: #fff;padding-left:8px}
-.fa-twitter {color: #fff;padding-left:5px;}
+.fa-twitter {color: #fff;padding-left:6px;}
 
 .footer-list {
   clear: both;
@@ -549,109 +548,98 @@ footer {
 .footer-item {
   float: left;
   margin-right: 20px;
-  /*color: #b2bac2;*/
-  /*font-size: 13px;*/
   height: 24px;
   line-height: 24px;
 }
 
-/*.footer-item-text-link {
+.footer-item-status {
+  margin-right: 0;
+  float: right;
+}
+
+.footer-bonus-brands a {
+  display: inline-block;
+  margin: 20px 40px 60px 0;
+  max-height: 80px;
+}
+.footer-bonus-brands #ncris {
+  background-image: url('../img/logo-NCRIS-GREY.png');
+  background-repeat: no-repeat;
+  height: 56px;
+  width: 150px;
+}
+.footer-bonus-brands #ncris:hover {
+  background-image: url('../img/logo-NCRIS-mono.png');
+  background-repeat: no-repeat;
+}
+
+.footer-bonus-brands #csiro {
+  background-image: url('../img/logo-CSIRO-Solid-GREY.png');
+  background-repeat: no-repeat;
+  margin-top: 0;
+  margin-bottom: 40px;
+  max-height: 100px;
+  height: 120px;
+  width: 100px;
+}
+.footer-bonus-brands #csiro:hover {
+  background-image: url('../img/logo-CSIRO-Solid-RGB.png');
+  background-repeat: no-repeat;
+}
+
+.footer-bonus-brands #gbif {
+  background-image: url('../img/logo-GBIF-GREY.png');
+  background-repeat: no-repeat;
+  height: 61px;
+  width: 150px;
+}
+.footer-bonus-brands #gbif:hover {
+  background-image: url('../img/logo-GBIF-RGB.png');
+  background-repeat: no-repeat;
+}
+
+.footer-bonus-brands #aus-govt {
+  background-image: url('../img/logo-aus-initiative-stacked-GREY.png');
+  background-repeat: no-repeat;
+  height: 65px;
+  width: 200px;
+}
+.footer-bonus-brands #aus-govt:hover {
+  background-image: url('../img/logo-aus-initiative-stacked-MONO.png');
+  background-repeat: no-repeat;
+}
+
+.footer-container {
+  padding: 30px;
+}
+
+hr.footer-border {
+  margin: -30px 0 20px 0;
+  border-top: 1px solid #e2e5e8;
+}
+
+.container {
+  position: relative;
+  max-width: 1260px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #384047;
+  display: block;
   font-weight: 500;
-  color: inherit;
-  }*/
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
 
-  .footer-item-status {
-    margin-right: 0;
-    float: right;
-  }
+ul {
+  list-style: none;
+}
 
-  .footer-bonus-brands a {
-    display: inline-block;
-    margin: 20px 40px 60px 0;
-    max-height: 80px; 
-  }
-  .footer-bonus-brands a:hover {
-    opacity:0.5;
-  }
-  .footer-bonus-brands #ncris {
-    background-image: url('../img/NCRIS_GREY.png');
-    background-size: 150px 55px;
-    height: 55px;
-    width: 150px;
-  }
-  .footer-bonus-brands #csiro {
-    background-image: url('../img/CSIRO_Solid_GREY.png');
-    background-size: 100px 100px;
-    margin-top: 0;
-    margin-bottom: 40px;
-    max-height: 100px;
-    height: 120px;
-    width: 100px;
-  }
-  .footer-bonus-brands #csiro:hover {
-    background-image: url('../img/CSIRO_Solid_COLOUR.png');
-    opacity: 1;
-  }
-  .footer-bonus-brands #gbif {
-    background-image: url('../img/GBIF_GREY.png');
-    background-size: 150px 61px;
-    height: 61px;
-    width: 150px;
-  }
-  .footer-bonus-brands #aus-govt {
-    background-image: url('../img/aus_initiative_stacked_GREY.png');
-    background-size: 200px 65px;
-    height: 65px;
-    width: 200px;
-  }
-
-  .footer-container {
-    padding: 30px;
-  }
-
-  hr.footer-border {
-    margin: -30px 0 20px 0;
-    border-top: 1px solid #e2e5e8;
-  }
-
-  .container {
-    position: relative;
-    max-width: 1260px;
-    /*margin: 0 auto;*/
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    color: #384047;
-    display: block;
-    font-weight: 500;
-    margin: 0;
-    text-rendering: optimizeLegibility;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-/*ul, ol {
-  font-size: 14px;
-  }*/
-
-  ul.link-list {
-    padding-left: 0;
-    margin-top: 10px;
-    line-height: 24px;
-  }
-
-  img.img-responsive.ncris {max-width: 150px;}
-  img.img-responsive.csiro {max-width: 200px;max-height: 100px;}
-  img.img-responsive.gbif {max-width: 150px;}
-  img.img-responsive.aus-govt {max-width: 200px;}
-
-  /*.ncris-logo {background:url(../img/NCRIS_GREY.png) no-repeat; max-width: 150px;}
-  .csiro-logo {background:url(../img/CSIRO_Solid_GREY.png) no-repeat; max-width:200px; max-height:100px;}
-  .gbif-logo {background:url(../img/GBIF_GREY.png) no-repeat; max-width: 150px;}
-  .aus-govt-logo {background:url(../img/aus_initiative_stacked_GREY.png) no-repeat; max-width: 200px;}*/
-
+ul.link-list {
+  padding-left: 0;
+  margin-top: 10px;
+  line-height: 24px;
+}
 
 /* Layout control
 ================================= */
