@@ -447,14 +447,14 @@
       document.getElementById("ala-jumbotron").style.backgroundImage = "url('" + filename + "')";
       
       // update ALA stats
-      var statsUrl = "http://dev.ala.org.au:8080/dashboard/dashboard/homePageStats?callback=?"; // http://dashboard.ala.org.au/dashboard/homePageStats
+      var statsUrl = "http://dashboard.ala.org.au/dashboard/homePageStats"; // http://dev.ala.org.au:8080/dashboard/dashboard/homePageStats
       $.getJSON(statsUrl, function(result){
-             log.debug("result", result);
-             $("#allRecords").html(result.recordCounts.count);
-             $("#allSpecies").html(result.speciesCounts.count);
-             $("#allDataset").html(result.datasetCounts.count);
-             $("#allDownloads").html(result.downloadCounts.count);
-           });
+         //console.log("result", result);
+         $("#allRecords").html(result.recordCounts.count.toLocaleString());
+         $("#allSpecies").html(result.speciesCounts.count.toLocaleString());
+         $("#allDatasets").html(result.datasetCounts.count.toLocaleString());
+         $("#allDownloads").html(result.downloadCounts.count.toLocaleString());
+      });
       
     });
 
