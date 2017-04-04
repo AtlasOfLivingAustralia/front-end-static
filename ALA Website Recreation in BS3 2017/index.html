@@ -185,28 +185,28 @@
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>Occurrence Records</h4>
           <div class="stat-number" id="allRecords">
-            updating...
+            <span class="stats-updating">updating...</span>
           </div>
         </div>
 
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>Species</h4>
           <div class="stat-number" id="allSpecies">
-            updating...
+            <span class="stats-updating">updating...</span>
           </div>
         </div>
 
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>Data Sets</h4>
           <div class="stat-number" id="allDatasets">
-            updating...
+            <span class="stats-updating">updating...</span>
           </div>
         </div>
 
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Records Downloaded</h4>
+          <h4>Records download events</h4>
           <div class="stat-number" id="allDownloads">
-            updating...
+            <span class="stats-updating">updating...</span>
           </div>
         </div>
       </div>
@@ -447,13 +447,15 @@
       document.getElementById("ala-jumbotron").style.backgroundImage = "url('" + filename + "')";
       
       // update ALA stats
-      var statsUrl = "http://dashboard.ala.org.au/dashboard/homePageStats"; // http://dev.ala.org.au:8080/dashboard/dashboard/homePageStats
-      $.getJSON(statsUrl, function(result){
+      var statsUrl = "http://dashboard.ala.org.au/dashboard/homePageStats?callback=?";
+      //var statsUrl = "http://dev.ala.org.au:8080/dashboard/dashboard/homePageStats?callback=?"; 
+      $.getJSON(statsUrl, function(result) {
          //console.log("result", result);
-         $("#allRecords").html(result.recordCounts.count.toLocaleString());
-         $("#allSpecies").html(result.speciesCounts.count.toLocaleString());
-         $("#allDatasets").html(result.datasetCounts.count.toLocaleString());
-         $("#allDownloads").html(result.downloadCounts.count.toLocaleString());
+         var data = result.data;
+         $("#allRecords").html(data.recordCounts.count.toLocaleString());
+         $("#allSpecies").html(data.speciesCounts.count.toLocaleString());
+         $("#allDatasets").html(data.datasetCounts.count.toLocaleString());
+         $("#allDownloads").html(data.downloadCounts.events.toLocaleString());
       });
       
     });
