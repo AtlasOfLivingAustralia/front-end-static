@@ -184,31 +184,37 @@
       <div class="main-stats row">
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>Occurrence Records</h4>
-          <div class="stat-number">
-            67,648,001
+          <div class="stat-number" id="allRecords">
+            updating...
           </div>
         </div>
 
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>Species</h4>
-          <div class="stat-number">
-            611,113
+          <div class="stat-number" id="allSpecies">
+            updating...
           </div>
         </div>
 
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
+<<<<<<< Updated upstream
           <!-- <h4>Data Sets</h4> -->
           <h4>Records downloaded</h4>
           <div class="stat-number">
             <!-- 5,398 -->
             10.15<span>B</span>
+=======
+          <h4>Data Sets</h4>
+          <div class="stat-number" id="allDatasets">
+            updating...
+>>>>>>> Stashed changes
           </div>
         </div>
 
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Active Contributors</h4>
-          <div class="stat-number">
-            349,192
+          <h4>Records Downloaded</h4>
+          <div class="stat-number" id="allDownloads">
+            updating...
           </div>
         </div>
       </div>
@@ -447,6 +453,17 @@
       var month = ("0" + new Date().getDate()).slice(-2);
       var filename = "img/jtron-bg-month-" + month + "-770px.jpg"
       document.getElementById("ala-jumbotron").style.backgroundImage = "url('" + filename + "')";
+      
+      // update ALA stats
+      var statsUrl = "http://dev.ala.org.au:8080/dashboard/dashboard/homePageStats?callback=?"; // http://dashboard.ala.org.au/dashboard/homePageStats
+      $.getJSON(statsUrl, function(result){
+             log.debug("result", result);
+             $("#allRecords").html(result.recordCounts.count);
+             $("#allSpecies").html(result.speciesCounts.count);
+             $("#allDataset").html(result.datasetCounts.count);
+             $("#allDownloads").html(result.downloadCounts.count);
+           });
+      
     });
 
     function resizePanels() {
