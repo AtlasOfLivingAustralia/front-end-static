@@ -513,10 +513,10 @@ footer {
   margin: 0;
 }
 
-.cash-icon, .ipad-icon, .briefcase-icon, .certificate-icon {
+/*.cash-icon, .ipad-icon, .briefcase-icon, .certificate-icon {
   width: 56px;
   height: 40px;
-}
+}*/
 
 .footer-social-item {
   width: 24px;
@@ -563,15 +563,16 @@ footer {
 
 .footer-bonus-brands a {
   display: inline-block;
-  background: url('../img/footer-bonus-logos.png') no-repeat; 
-  overflow: hidden; 
-  text-indent: -9999px; 
+  background: url('../img/footer-bonus-logos.png') no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
   text-align: left;
-  margin: 20px 40px 60px 0;
+  /*margin: 20px 40px 60px 0;*/
 }
 
 .footer-bonus-brands #ncris {
-  background-position: -2px -262px; width: 150px; height: 59px; 
+  background-position: -2px -262px; width: 150px; height: 59px;
+  margin: 20px 40px 75px 0;
 }
 .footer-bonus-brands #ncris:hover {
   background-position: -2px -323px; width: 150px; height: 59px;
@@ -579,13 +580,15 @@ footer {
 
 .footer-bonus-brands #csiro {
   background-position: -2px -384px; width: 100px; height: 100px;
+  margin: 10px 40px 60px 0;
 }
 .footer-bonus-brands #csiro:hover {
   background-position: -2px -486px; width: 100px; height: 100px;
 }
 
 .footer-bonus-brands #gbif {
-  background-position: -2px -136px; width: 150px; height: 61px; 
+  background-position: -2px -136px; width: 150px; height: 61px;
+  margin: 20px 40px 75px 0;
 }
 .footer-bonus-brands #gbif:hover {
   background-position: -2px -199px; width: 150px; height: 61px;
@@ -593,6 +596,7 @@ footer {
 
 .footer-bonus-brands #aus-govt {
   background-position: -2px -0px; width: 201px; height: 66px;
+  margin: 20px 40px 72px 0;
 }
 .footer-bonus-brands #aus-govt:hover {
   background-position: -2px -68px; width: 201px; height: 66px;
@@ -1065,6 +1069,13 @@ fieldset[disabled] .btn-link:focus {
 
   .footer-bonus-item {margin-bottom: 40px;}
 
+  .footer-bonus-brands #aus-govt {
+    /*background-position: -2px -0px;
+    width: 201px;
+    height: 66px;*/
+    margin: 0px 40px 72px 0;
+}
+
 }
 
 @media screen and (max-width: 768px) {
@@ -1096,11 +1107,35 @@ fieldset[disabled] .btn-link:focus {
     margin-bottom: 40px;
   }
 
-  img.img-responsive.ncris, img.img-responsive.csiro, img.img-responsive.gbif, img.img-responsive.aus-govt {
+  /*img.img-responsive.ncris, img.img-responsive.csiro, img.img-responsive.gbif, img.img-responsive.aus-govt {
+    display: block;
+  }*/
+
+  .footer-bonus-brands #ncris {
+    /*background-position: -2px -262px; width: 150px; height: 59px;*/
+    margin: 20px 0px 20px 0;
     display: block;
   }
 
-  .footer-bonus-brands img {
-    margin: 0 40px 30px 0;
+  .footer-bonus-brands #csiro {
+    /*background-position: -2px -384px; width: 100px; height: 100px;*/
+    margin: 0px 0px 20px 0;
+    display: block;
   }
+
+  .footer-bonus-brands #gbif {
+    /*background-position: -2px -136px; width: 150px; height: 61px;*/
+    margin: 0px 0px 20px 0;
+    display: block;
+  }
+
+  .footer-bonus-brands #aus-govt {
+    /*background-position: -2px -0px; width: 201px; height: 66px;*/
+    margin: 0px 0px 40px 0;
+    display: block;
+  }
+
+  /*.footer-bonus-brands img {
+    margin: 0 40px 30px 0;
+  }*/
 }
