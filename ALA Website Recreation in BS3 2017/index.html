@@ -216,7 +216,7 @@
     <!-- Main col -->
     <div class="col-md-12">
       <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default panel-row-1">
+        <div class="panel panel-default">
           <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="img/australias-species-octopus-maorum.jpg"></a>
           <div class="panel-body">
             <h3><a href="channel-info-about-the-atlas.html">Australian species</a></h3>
@@ -227,7 +227,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default panel-row-1">
+        <div class="panel panel-default">
           <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="img/species-by-location-phyllopteryx-taeniolatus.jpg"></a>
           <div class="panel-body">
             <h3><a href="channel-info-about-the-atlas.html">Species by location</a></h3>
@@ -238,7 +238,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default panel-row-1">
+        <div class="panel panel-default">
           <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="img/occurrence-records-australia.jpg"></a>
           <div class="panel-body">
             <h3><a href="channel-info-about-the-atlas.html">Occurrence records</a></h3>
@@ -250,7 +250,7 @@
       </div>
       <!-- End Col -->
       <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default panel-row-1">
+        <div class="panel panel-default">
           <a href="channel-info-about-the-atlas.html"><img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-get-involved-icon.jpg"></a>
           <div class="panel-body">
             <h3><a href="channel-info-about-the-atlas.html">Contribute to the ALA</a></h3>
@@ -261,7 +261,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default panel-row-1">
+        <div class="panel panel-default">
           <a href="channel-info-about-the-atlas.html">
             <img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-how-you-can-icon.jpg">
           </a>
@@ -274,7 +274,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default panel-row-1">
+        <div class="panel panel-default">
           <a href="http://sightings.ala.org.au/">
             <img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-education-icon.jpg">
           </a>
@@ -445,10 +445,10 @@
       var month = ("0" + new Date().getDate()).slice(-2);
       var filename = "img/jtron-bg-month-" + month + "-770px.jpg"
       document.getElementById("ala-jumbotron").style.backgroundImage = "url('" + filename + "')";
-      
+
       // update ALA stats
       var statsUrl = "http://dashboard.ala.org.au/dashboard/homePageStats?callback=?";
-      //var statsUrl = "http://dev.ala.org.au:8080/dashboard/dashboard/homePageStats?callback=?"; 
+      //var statsUrl = "http://dev.ala.org.au:8080/dashboard/dashboard/homePageStats?callback=?";
       $.getJSON(statsUrl, function(result) {
          //console.log("result", result);
          var data = result.data;
@@ -457,7 +457,7 @@
          $("#allDatasets").html(data.datasetCounts.count.toLocaleString());
          $("#allDownloads").html(data.downloadCounts.events.toLocaleString());
       });
-      
+
     });
 
     function resizePanels() {

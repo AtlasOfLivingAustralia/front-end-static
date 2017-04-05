@@ -25,7 +25,7 @@ body.background-lightgrey {
 /* Navbar
 ================================= */
 .container.container-navbar {
-  margin-top: 30px;
+  margin-top: 12px;
   padding-bottom: 0;
 }
 
@@ -152,7 +152,7 @@ div.col-md-1>ul.nav-login>li>a:hover {
   /*background:url(../img/jtron-bg-10-oct-770px.jpg) no-repeat center top;*/ /*OCT*/
   /*background:url(../img/jtron-bg-11-nov-770px.jpg) no-repeat center top;*/ /*NOV*/
   /*background:url(../img/jtron-bg-12-dec-770px.jpg) no-repeat center top;*/ /*DEC*/
-  background-attachment:relative;background-position:center center;background-size:cover;margin-top:130px;min-height:230px;text-align:center;width:100%;}
+  background-attachment:relative;background-position:center center;background-size:cover;margin-top:112px;min-height:230px;text-align:center;width:100%;}
   form.banner{padding-top:6.5em;}
   button.btn.btn-default.btn-lg {min-height: 46px;}
 
@@ -1084,7 +1084,7 @@ fieldset[disabled] .btn-link:focus {
     padding-top: 15px;
   }
 
-  .ala-header {margin-top: 80px;}
+  .ala-header {margin-top: 62px;}
 
   .info-hub-banner {margin-top: 36px;}
 
