@@ -185,28 +185,28 @@
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>Occurrence Records</h4>
           <div class="stat-number" id="allRecords">
-            <span class="stats-updating">updating...</span>
+            68,962,408
           </div>
         </div>
 
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>Species</h4>
           <div class="stat-number" id="allSpecies">
-            <span class="stats-updating">updating...</span>
+            472,875
           </div>
         </div>
 
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>Data Sets</h4>
           <div class="stat-number" id="allDatasets">
-            <span class="stats-updating">updating...</span>
+            5,502
           </div>
         </div>
 
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Record download events</h4>
+          <h4>User downloads</h4>
           <div class="stat-number" id="allDownloads">
-            <span class="stats-updating">updating...</span>
+            914,629
           </div>
         </div>
       </div>
@@ -449,10 +449,10 @@
       var statsUrl = "http://dashboard.ala.org.au/dashboard/homePageStats";
       $.getJSON(statsUrl, function(data) {
          //console.log("result", result);
-         $("#allRecords").html(data.recordCounts.count.toLocaleString());
-         $("#allSpecies").html(data.speciesCounts.count.toLocaleString());
-         $("#allDatasets").html(data.datasetCounts.count.toLocaleString());
-         $("#allDownloads").html(data.downloadCounts.events.toLocaleString());
+         $("#allRecords").html(data.recordCounts.count.toLocaleString()).hide(0).fadeIn("fast");
+         $("#allSpecies").html(data.speciesCounts.count.toLocaleString()).hide(0).fadeIn("fast");
+         $("#allDatasets").html(data.datasetCounts.count.toLocaleString()).hide(0).fadeIn("fast");
+         $("#allDownloads").html(data.downloadCounts.events.toLocaleString()).hide(0).fadeIn("fast");
       });
 
     });
