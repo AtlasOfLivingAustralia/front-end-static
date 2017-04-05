@@ -156,7 +156,7 @@ div.col-md-1>ul.nav-login>li>a:hover {
   form.banner{padding-top:6.5em;}
   button.btn.btn-default.btn-lg {min-height: 46px;}
 
-.info-hub-banner {background-repeat: repeat-x;background: url(../img/info-hub-banner-3.png);margin-top: 50px;text-align: center;width: 100%;background-color: #f26649;}
+.info-hub-banner {background-repeat: repeat-x;background: url(../img/info-hub-banner-3.png);margin-top: 32px;text-align: center;width: 100%;background-color: #f26649;}
 
 
 /* Alerts
@@ -175,7 +175,7 @@ div.col-md-1>ul.nav-login>li>a:hover {
   background-color:#C44D34;
   border-color:#9d9d9d;
   border-top:none;
-  color:#d3d3d3;
+  color:#fff;
 }
 .container.alert-container {
   padding: 0 25px;
@@ -211,10 +211,16 @@ p.alert-text>a:hover {text-decoration: none;}
 ================================= */
 
 .breadcrumb {
-  padding:0;
-  /*margin-top: -10px;*/
   background-color: transparent;
   border-radius: 0;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0;
+}
+
+.breadcrumb a {
+  color: #000;
+  text-decoration: underline;
 }
 
 
@@ -539,7 +545,7 @@ footer {
   fill: #fff;
 }
 
-.fa-facebook {color: #fff;padding-left:8px}
+.fa-facebook {color: #fff;padding-left:7px}
 .fa-twitter {color: #fff;padding-left:6px;}
 
 .footer-list {
@@ -580,7 +586,7 @@ footer {
 
 .footer-bonus-brands #csiro {
   background-position: -2px -384px; width: 100px; height: 100px;
-  margin: 10px 40px 60px 0;
+  margin: 5px 40px 60px 0;
 }
 .footer-bonus-brands #csiro:hover {
   background-position: -2px -486px; width: 100px; height: 100px;
@@ -742,7 +748,7 @@ ul.link-list {
   font-weight: 400;
 }
 
-article p, article ul {
+article p, article ul, article ol {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.63;
