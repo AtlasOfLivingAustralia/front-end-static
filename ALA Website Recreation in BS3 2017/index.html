@@ -197,20 +197,20 @@
         </div>
 
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Data Sets</h4>
-          <div class="stat-number" id="allDatasets">
-            5,502
-          </div>
-        </div>
-
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>User downloads</h4>
           <div class="stat-number" id="allDownloads">
             914,629
           </div>
         </div>
-      </div>
-    </div><!-- End main stats -->
+        
+        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
+          <h4>Registered users</h4>
+          <div class="stat-number" id="allUsers">
+            34,830
+          </div>
+        </div>
+      </div><!-- End main stats -->
+    </div>
 
 
     <!-- Main col -->
@@ -451,8 +451,8 @@
          //console.log("result", result);
          $("#allRecords").html(data.recordCounts.count.toLocaleString()).hide(0).fadeIn("fast");
          $("#allSpecies").html(data.speciesCounts.count.toLocaleString()).hide(0).fadeIn("fast");
-         $("#allDatasets").html(data.datasetCounts.count.toLocaleString()).hide(0).fadeIn("fast");
          $("#allDownloads").html(data.downloadCounts.events.toLocaleString()).hide(0).fadeIn("fast");
+         $("#allUsers").html(data.userCounts.count.toLocaleString()).hide(0).fadeIn("fast");
       });
 
     });
