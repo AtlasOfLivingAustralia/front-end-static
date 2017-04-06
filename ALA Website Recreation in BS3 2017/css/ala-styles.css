@@ -499,7 +499,8 @@ footer {
 }
 
 .footer-bonus-heading {
-  margin: 0 0 15px;
+  margin: 0 0 10px;
+  line-height: 20px;
 }
 
 .footer-bonus-item {
@@ -1119,7 +1120,7 @@ fieldset[disabled] .btn-link:focus {
 
   .footer-bonus-brands #ncris {
     /*background-position: -2px -262px; width: 150px; height: 59px;*/
-    margin: 20px 0px 20px 0;
+    margin: 5px 0px 20px 0;
     display: block;
   }
 
