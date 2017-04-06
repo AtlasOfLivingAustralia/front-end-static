@@ -185,28 +185,28 @@
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>Occurrence Records</h4>
           <div class="stat-number" id="allRecords">
-            68,962,408
+            68,000,000
           </div>
         </div>
 
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>Species</h4>
           <div class="stat-number" id="allSpecies">
-            472,875
+            472,000
           </div>
         </div>
 
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>User downloads</h4>
           <div class="stat-number" id="allDownloads">
-            914,629
+            914,000
           </div>
         </div>
         
         <div class="main-stats col-lg-3 col-md-3 col-sm-6">
           <h4>Registered users</h4>
           <div class="stat-number" id="allUsers">
-            34,830
+            34,000
           </div>
         </div>
       </div><!-- End main stats -->
@@ -445,17 +445,19 @@
       document.getElementById("ala-jumbotron").style.backgroundImage = "url('" + filename + "')";
 
       // update ALA stats
-
       var statsUrl = "http://dashboard.ala.org.au/dashboard/homePageStats";
       $.getJSON(statsUrl, function(data) {
-         //console.log("result", result);
-         $("#allRecords").html(data.recordCounts.count.toLocaleString()).hide(0).fadeIn("fast");
-         $("#allSpecies").html(data.speciesCounts.count.toLocaleString()).hide(0).fadeIn("fast");
-         $("#allDownloads").html(data.downloadCounts.events.toLocaleString()).hide(0).fadeIn("fast");
-         $("#allUsers").html(data.userCounts.count.toLocaleString()).hide(0).fadeIn("fast");
+         updateStats("#allRecords", data.recordCounts.count.toLocaleString());
+         updateStats("#allSpecies", data.speciesCounts.count.toLocaleString());
+         updateStats("#allDownloads", data.downloadCounts.events.toLocaleString());
+         updateStats("#allUsers", data.userCounts.count.toLocaleString());
       });
 
     });
+    
+    function updateStats(divId, statValue) {
+      $(divId).fadeOut("fast").html(statValue).fadeIn("fast");
+    }
 
     function resizePanels() {
       var panels = $('.panel.panel-default'); // might want to use a more specific selector (e.g. add an extra class to those panel divs)
