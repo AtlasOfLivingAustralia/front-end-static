@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Content template</title>
+  <title>Contact the ALA</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +55,7 @@
         </div><!-- End row -->
 
         <ul class="nav navbar-nav">
-          <li><a href="#">Home</a></li>
+          <li class="active"><a href="#">Home</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
               Start exploring
@@ -135,102 +135,72 @@
     <section class="content-container">
       <div class="row">
 
-        <!-- Structure reference
-        <div class="test-layout col-md-12">.col-md-12</div>
-        <div class="test-layout col-md-3 col-md-push-9">.col-md-3 .col-md-pull-8</div>
-        <div class="test-layout col-md-8 col-md-pull-3">.col-md-8 .col-md-push-3</div>
-        End structure reference -->
-
         <article class="col-md-12 header-wrap margin-bottom-half-1">
           <div class="row-fluid margin-bottom-2">
+            <!-- Breadcrumb -->
             <ol class="breadcrumb hidden-print">
               <li><a href="index.html">Home</a></li>
-              <li><a href="index.html">Knowledge base</a></li>
-              <li active">How we ...</li>
+              <li><a href="index.html">Site utilities</a></li>
+              <li active">Contact the ALA</li>
             </ol>
+            <!-- End breadcrumb -->
           </div>
 
-          <h5 class="subject-category-overline">Knowledge base</h5>
-          <h2 class="subject-title">Determined Parents are Moving the Needle on Gene Therapy</h2>
-          <h3 class="subject-subtitle">Families of patients are starting advocacy groups, raising money for research, and founding biotech companies to advance cures for rare diseases.</h3>
-          <p class="subject-byline">March 21, 2017</p>
+          <h5 class="subject-category-overline">Site utilities</h5>
+          <h2 class="subject-title">We'd love to hear from you</h2>
+          <h3 class="subject-subtitle padding-bottom-1">Want to say hi? Want to provide feedback? Want to tell us how we can help you? Or want to tell us about how you can help us? We'd like that too. Fill in the form below and we will get back to you as soon as we can.</h3>
+          <!-- <p class="subject-byline">March 21, 2017</p> -->
+
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label heading-medium">Topic</label>
+              <div class="col-sm-8">
+                <select class="form-control input-lg" required autofocus>
+                  <option>General enquiry</option>
+                  <option>ALA Content Findability</option>
+                  <option>App usability and feature functionality</option>
+                  <option>Problem logging and feedback</option>
+                </select>
+                <p class="help-block">Use the dropdown to select the relevant topic for your feedback.</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label heading-medium">Your name</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control input-lg" id="inputEmail3" placeholder="What people call you" required autofocus>
+                <!-- <p class="help-block">Sign up to be notified when the next article drops.</p> -->
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label heading-medium">Your email</label>
+              <div class="col-sm-8">
+                <input type="email" class="form-control input-lg" id="inputEmail3" placeholder="you@example.com">
+                <!-- <p class="help-block">Sign up to be notified when the next article drops.</p> -->
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label heading-medium">Your subject</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control input-lg" id="inputEmail3" placeholder="The subject of your enquiry">
+                <!-- <p class="help-block">Sign up to be notified when the next article drops.</p> -->
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label heading-medium">Your message</label>
+              <div class="col-sm-8">
+                <textarea class="form-control input-lg" rows="4" placeholder="Tell us what's on your mind"></textarea>
+                <!-- <p class="help-block">Sign up to be notified when the next article drops.</p> -->
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-8">
+                <button type="submit" class="btn btn-ala btn-lg">Send it</button>
+              </div>
+            </div>
+          </form>
         </article>
-        <article class="col-md-3 col-md-push-9">
-          <!-- Navigation right column -->
-          <h4>Page contents:</h4>
-          <div class="profile-usermenu margin-bottom-2">
-            <ul class="nav">
-              <li><a>How we ...</a></li>
-              <li><a href="#upload-data-sets">Upload data sets</a></li>
-              <li><a href="#integrate-data">Integrate data</a></li>
-              <li><a href="#handle-sensitive-data">Handle sensitive data</a></li>
-              <li><a href="#communicate">Communicate</a></li>
-            </ul>
-          </div>
-          <!-- End navigation right column -->
-        </article>
 
-        <article class="col-md-8 col-md-pull-3">
-          <h3>Section title</h3>
-          <h4>Section title or section question</h4>
-          <p>
-            Donec sed odio dui. Curabitur blandit tempus porttitor. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo.
-          </p>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus.
-          </p>
-          <p class="margin-bottom-2">
-            <img src="http://placehold.it/450x300" class="img-responsive" alt="a place holder image">
-          </p>
-          <p>
-            <a class="btn btn-default btn-lg" href="#">This is a call to action</a>
-            <a class="btn btn-default btn-lg" href="#">This is another call to action</a>
-          </p>
 
-          <div id="upload-data-sets">
-            <p class="separator t-center margin-bottom-2">
-              <span>Section name and side menu anchor link</span>
-            </p>
-          </div>
-
-          <h4>Section title or section question</h4>
-          <p>
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor:
-          </p>
-          <ul>
-            <li>
-              <a href="#">Venenatis Malesuada Dolor</a> Cras mattis consectetur purus sit amet fermentum.
-            </li>
-            <li>
-              <a href="#">Dolor Sem Fusce</a> Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-            </li>
-            <li>
-              <a href="#">Dolor Vulputate Purus</a> Curabitur blandit tempus porttitor.
-            </li>
-          </ul>
-
-          <p>Justo Quam:</p>
-          <ul>
-            <li>
-              <a href="#">Sollicitudin Egestas Fringilla</a> Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum.
-            </li>
-          </ul>
-          <p>
-            <a class="btn btn-ala btn-lg" href="#">btn large</a> <a class="btn btn-ala" href="#">btn default</a> <a class="btn btn-ala btn-sm" href="#">btn small</a>
-          </p>
-
-          <p>
-            Frase watched in awe and began to cry as the mouse’s limbs started to twitch. Eventually, it picked itself up and walked for the first time. “I thought, who cries watching a video of a mouse?” she recalls.
-          </p>
-
-          <p>
-            Frase is very likely the reason why the same treatment is now about to be tested in humans. In recent years, gene therapies have become safer and better at hitting their intended targets in the body, leading to a handful of remarkable cures in clinical trials. Advocates for rare-disease patients—especially determined parents like Frase—are increasingly seeking to start gene-therapy programs. They are establishing patient advocacy organizations, raising money for research, and even founding their own biotechnology startups to find treatments where few or none currently exist.
-          </p>
-
-          <p>
-            <a href="#">Gene therapy</a> is an experimental technique that attempts to replace a disease-causing gene with a healthy copy. Because many rare diseases are monogenic—caused by a mutation in one gene—the approach could potentially be used to treat any disease where the precise genetic mutation is known.
-          </p>
-        </article>
 
       </div><!-- End row -->
     </section>
@@ -274,7 +244,7 @@
         </div>
 
         <div class="col-xs-6 col-sm-3 col-lg-2 hidden-print">
-          <h5>Participate</h5>
+          <h5 class="footer-second-row">Participate</h5>
           <ul class="link-list">
             <li><a href="http://biocollect.ala.org.au/">Join a CS project</a></li>
             <li><a href="http://sightings.ala.org.au/">Record a sighting</a></li>
@@ -285,7 +255,7 @@
         </div>
 
         <div class="col-xs-6 col-sm-3 col-lg-2 hidden-print">
-          <h5>Learn about the ALA</h5>
+          <h5 class="footer-second-row">Learn about the ALA</h5>
           <ul class="link-list">
             <li><a href="/about-the-atlas/">About the ALA</a></li>
 
@@ -324,16 +294,17 @@
       <!-- Logo section -->
       <div class="row">
         <div class="col-md-12">
-          <h5 class="footer-bonus-heading">The ALA is made possible by</h5>
+          <h5 class="footer-bonus-heading">The ALA is made possible by contributions from its partners, is supported by NRIS and hosted by CSIRO</h5>
+          <!-- <p>It receives support from the Australian Government through the National Collaborative Research Infrastructure Strategy (NCRIS) and is hosted by CSIRO.</p> -->
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-12 footer-bonus-brands">
-          <img class="img-responsive ncris" src="img/NCRIS_GREY.png"><!-- Logo -->
-          <img class="img-responsive csiro" src="img/CSIRO_Solid_GREY.png"><!-- Logo -->
-          <img class="img-responsive gbif" src="img/GBIF_GREY.png"><!-- Logo -->
-          <img class="img-responsive aus-govt" src="img/aus_initiative_stacked_GREY.png"><!-- Logo -->
+          <a href="#" class="img-responsive" id="ncris"></a>
+          <a href="https://www.csiro.au/" target="_blank" id="csiro"></a>
+          <a href="#" class="img-responsive" id="gbif"></a>
+          <!-- <a id="aus-govt"></a> -->
         </div>
       </div>
       <!-- End logo section -->
@@ -349,9 +320,7 @@
             </li>
 
             <li class="footer-item footer-item-text footer-item-start"><a href="#">Copyright</a></li>
-            <li class="footer-item footer-item-text"><a href="#">Legal notice and disclaimer</a></li>
-            <li class="footer-item footer-item-text"><a href="#">Your privacy</a></li>
-            <li class="footer-item footer-item-text"><a href="#">Accessibility</a></li>
+            <li class="footer-item footer-item-text"><a href="#">Terms of use</a></li>
             <li class="footer-item footer-item-text"><a href="#">Contact us</a></li>
             <li class="footer-item footer-item-status"><a href="#">System status</a></li>
           </ul>
