@@ -152,7 +152,7 @@
   <!-- End Navbar -->
 
   <div class="jumbotron ala-header hidden-print" id="ala-jumbotron">
-     <div class="col-md-5 col-md-offset-1 promotional">The <b>Atlas of Living Australia</b> is a collaborative, national project that aggregates biodiversity data from multiple sources and makes it freely available and usable online</div>
+     <div class="col-lg-6 col-md-8 col-sm-12 col-md-offset-1 promotional">The <b>Atlas of Living Australia</b> is a collaborative, national project that aggregates biodiversity data from multiple sources and makes it freely available and usable online</div>
   </div>
 
 
@@ -448,7 +448,7 @@
       document.getElementById("ala-jumbotron").style.backgroundImage = "url('" + filename + "')";
 
       // update ALA stats
-      var statsUrl = "http://dashboard.ala.org.au/dashboard/homePageStats";
+      var statsUrl = "https://dashboard.ala.org.au/dashboard/homePageStats";
       $.getJSON(statsUrl, function(data) {
          updateStats("#allRecords", data.recordCounts.count.toLocaleString());
          updateStats("#allSpecies", data.speciesCounts.count.toLocaleString());
