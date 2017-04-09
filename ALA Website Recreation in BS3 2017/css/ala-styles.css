@@ -997,12 +997,16 @@ ul.link-list {
   /*margin-top:1.875em;*/
   /*text-transform:none;*/
 }
-.promotional {
-/*  color: #637073;*/
+
+.jumbotron .promotional {
   color: #F0F0F0;
-  background-color:rgba(0,0,0,0.5);
-  padding: 30px 40px 20px 60px;
+  background-color:rgba(0,0,0,0.4);
+  padding: 20px;
   text-align: left;
+  
+}
+.promotional {
+  color: #637073;
   font-size: 24px;
   font-weight: 400;
   line-height: 34px;
