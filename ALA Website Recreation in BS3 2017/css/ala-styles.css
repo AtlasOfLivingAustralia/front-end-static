@@ -730,7 +730,9 @@ p.alert-text>a:hover {text-decoration: none;}
 
 /* Main stats
 ================================= */
-.main-stats {padding: 25px;}
+.main-stats {
+  padding: 15px 25px 25px 25px;
+}
 
 .stat-number {
   color: #444;
@@ -996,7 +998,11 @@ ul.link-list {
   /*text-transform:none;*/
 }
 .promotional {
-  color: #637073;
+/*  color: #637073;*/
+  color: #F0F0F0;
+  background-color:rgba(0,0,0,0.4);
+  padding: 20px;
+  text-align: left;
   font-size: 24px;
   font-weight: 400;
   line-height: 34px;
@@ -1367,7 +1373,12 @@ fieldset[disabled] .btn-link:focus {
     width: 201px;
     height: 66px;*/
     margin: 0px 40px 72px 0;
-}
+  }
+    
+  .jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
 }
 
