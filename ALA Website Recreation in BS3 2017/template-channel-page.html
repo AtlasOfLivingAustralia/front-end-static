@@ -332,27 +332,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      resizePanels();
-
-      $( window ).resize(function() {
-        resizePanels();
-      });
-    });
-
-    function resizePanels() {
-      var panels = $('.panel.panel-default'); // might want to use a more specific selector (e.g. add an extra class to those panel divs)
-      var max = 0;
-      $.each(panels, function(i,el) {
-        var thisMax = $(el).find('img').outerHeight() + $(el).find('.panel-body').outerHeight();
-        var icon = $(el).find('a');
-        if (max < thisMax) {
-          max = thisMax;
-        }
-      });
-      panels.innerHeight(max); // set height to all divs
-    }
-  </script>
+  <script src="js/ala-wp-common.js"></script>
 </body>
 </html>
