@@ -433,13 +433,16 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript">
-    $(document).ready(function() {
+    // wait for all elements to render (including images)
+    $(window).load(function() {
       resizePanels();
 
       $( window ).resize(function() {
         resizePanels();
       });
-
+    });
+    
+    $(document).ready(function() {
       // Change banner images based on month - format jtron-bg-month-01-770px.jpg
       var month = ("0" + new Date().getDate()).slice(-2);
       var filename = "img/jtron-bg-month-" + month + "-770px.jpg"
@@ -453,7 +456,6 @@
          updateStats("#allDownloads", data.downloadCounts.events.toLocaleString());
          updateStats("#allUsers", data.userCounts.count.toLocaleString());
       });
-
     });
 
     function updateStats(divId, statValue) {
