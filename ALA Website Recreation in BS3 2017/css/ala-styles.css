@@ -89,7 +89,7 @@ div.col-md-1>ul.nav-login>li>a:hover {
 }
 
 #bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a:visited {
-  background-color: inherit;
+  background-color: transparent;
 }
 
 
