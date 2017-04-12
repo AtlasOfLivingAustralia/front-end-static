@@ -20,7 +20,7 @@ $(document).ready(function() {
     
     if ($(".main-stats").length) {
         // update ALA stats
-        var statsUrl = "http://dashboard.ala.org.au/dashboard/homePageStats";
+        var statsUrl = "https://dashboard.ala.org.au/dashboard/homePageStats";
         $.getJSON(statsUrl, function(data) {
             updateStats("#allRecords", data.recordCounts.count.toLocaleString());
             updateStats("#allSpecies", data.speciesCounts.count.toLocaleString());
