@@ -766,6 +766,26 @@ section#breadcrumb {
 
 .affix-bottom {position:absolute;}
 
+/* table of contents floating div */
+.toc-floating-menu.affix {
+  position: fixed;
+  top: 130px;
+}
+
+.sidebar-col {
+    min-height:600px;
+    margin-bottom: 20px;
+    position:relative !important;
+}
+
+@media(max-width:767px){
+   .toc-floating-menu.affix {
+     position: static;
+     width: auto;
+     top: 0;
+    }
+}
+
 /* Main stats
 ================================= */
 .main-stats {padding: 25px;}
