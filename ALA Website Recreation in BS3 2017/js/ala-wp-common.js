@@ -1,6 +1,6 @@
 var tocWidth = 0; // global
 
-// wait for all elements to render (including images)
+// wait for all elements to render (including images) - will be slower than $(document).ready()
 $(window).load(function() {
     resizePanels();
 
@@ -13,13 +13,13 @@ $(window).load(function() {
 $(document).ready(function() {
     // Change banner images based on month - format jtron-bg-month-01-770px.jpg
     if ($('#ala-jumbotron').length) { //if (document.getElementById("ala-jumbotron")) {
-        var month = ("0" + new Date().getDate()).slice(-2);
+        var month = ("0" + new Date().getMonth()).slice(-2);
         var filename = "img/jtron-bg-month-" + month + "-770px.jpg"
         document.getElementById("ala-jumbotron").style.backgroundImage = "url('" + filename + "')";
     }
     
+    // update ALA stats
     if ($(".main-stats").length) {
-        // update ALA stats
         var statsUrl = "https://dashboard.ala.org.au/dashboard/homePageStats";
         $.getJSON(statsUrl, function(data) {
             updateStats("#allRecords", data.recordCounts.count.toLocaleString());
@@ -29,13 +29,11 @@ $(document).ready(function() {
         });
     }
     
+    // Add floating toable of contents (ToC)
     if ($('.navbar-fixed-top').length && $('.toc-floating-menu').length) {
         var headerHeight = $('.navbar-fixed-top').outerHeight(true); //  + $('.info-hub-banner').outerHeight(true) + $('.breadcrumb').outerHeight(true);
         var footerHeight = $('footer').outerHeight(true) + $('.alert-creativecommons').outerHeight(true);
-        // $('footer').each(function() {
-        //      footerHeight += $(this).outerHeight(); // alert-creativecommons
-        //  });
-        // console.log("heights",headerHeight, footerHeight);
+        
         $('.toc-floating-menu').affix({
             offset: {
                 top:  $('.toc-floating-menu').offset().top - headerHeight, //headerHeight,
