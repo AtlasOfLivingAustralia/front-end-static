@@ -26,8 +26,8 @@ body.background-lightgrey {
 ================================= */
 .navbar {
     background-color: white;
-    border-top: 3px solid #d5502a;
-    border-bottom: 1px solid #E7E7E7;
+    border-top: 4px solid rgb(213, 80, 42);
+    border-bottom: 2px solid rgb(231, 231, 231);
 }
 
 .navbar-nav {
@@ -972,7 +972,7 @@ hr.footer-border {
 h1, h2, h3, h4, h5, h6 {
   color: #384047;
   display: block;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
   text-rendering: optimizeLegibility;
 }
@@ -1045,6 +1045,7 @@ ul.link-list {
   font-weight:700;
   line-height:1.1111111111;
   text-transform:none;
+  margin-bottom: 0;
 }
 .heading-medium{
   border-bottom:inherit;
@@ -1061,7 +1062,7 @@ ul.link-list {
   background-color:rgba(0,0,0,0.4);
   padding: 30px 40px 20px 60px;
   text-align: left;
-  
+
 }
 .promotional {
   color: #637073;
@@ -1436,7 +1437,7 @@ fieldset[disabled] .btn-link:focus {
     height: 66px;*/
     margin: 0px 40px 72px 0;
   }
-    
+
   .jumbotron {
     padding-top: 30px;
     padding-bottom: 30px;
