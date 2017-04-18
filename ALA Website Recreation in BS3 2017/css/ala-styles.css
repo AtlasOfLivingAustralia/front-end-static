@@ -104,7 +104,7 @@ div.col-md-1>ul.nav-login>li>a:visited {
 }
 
 #bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a:visited {
-  background-color: inherit;
+  background-color: transparent;
 }
 
 
@@ -788,7 +788,9 @@ section#breadcrumb {
 
 /* Main stats
 ================================= */
-.main-stats {padding: 25px;}
+.main-stats {
+  padding: 15px 25px 25px 25px;
+}
 
 .stat-number {
   color: #444;
@@ -1052,6 +1054,14 @@ ul.link-list {
   /*margin-bottom:.83333em;*/
   /*margin-top:1.875em;*/
   /*text-transform:none;*/
+}
+
+.jumbotron .promotional {
+  color: #F0F0F0;
+  background-color:rgba(0,0,0,0.4);
+  padding: 30px 40px 20px 60px;
+  text-align: left;
+  
 }
 .promotional {
   color: #637073;
@@ -1425,7 +1435,12 @@ fieldset[disabled] .btn-link:focus {
     width: 201px;
     height: 66px;*/
     margin: 0px 40px 72px 0;
-}
+  }
+    
+  .jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
 }
 
