@@ -56,8 +56,8 @@
         </div><!-- End row -->
 
         <ul class="nav navbar-nav">
-          <li><a href="#">Home</a></li>
-          <li class="dropdown">
+          <!-- <li><a href="#">Home</a></li> -->
+          <li class="dropdown active">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
               Start exploring
               <span class="caret"></span>
@@ -130,20 +130,34 @@
   </nav>
   <!-- End Navbar -->
 
-  <div class="jumbotron info-hub-banner hidden-print"></div>
+  <!-- Breadcrumb -->
+  <section id="breadcrumb">
+    <div class="container">
+      <div class="row">
+        <ul class="breadcrumb-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html"><span class="glyphicon glyphicon-menu-right"></span>Application</a></li>
+          <li active"><span class="glyphicon glyphicon-menu-right"></span>Explore your area</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- End breadcrumb -->
+
+  <!-- <div class="jumbotron info-hub-banner hidden-print"></div> -->
 
   <div class="container">
     <section class="content-container">
       <div class="row">
 
         <article class="col-md-12 header-wrap margin-bottom-half-1">
-          <div class="row-fluid margin-bottom-2">
+          <!-- <div class="row-fluid margin-bottom-2">
             <ol class="breadcrumb hidden-print">
               <li><a href="index.html">Home</a></li>
               <li><a href="index.html">Applications</a></li>
               <li active">Explore your area</li>
             </ol>
-          </div>
+          </div> -->
 
           <h5 class="subject-category-overline">Application</h5>
           <h2 class="subject-title">Explore your area</h2>

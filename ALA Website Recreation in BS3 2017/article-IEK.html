@@ -13,7 +13,6 @@
   <!-- FontAwesome -->
   <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -56,7 +55,7 @@
         </div><!-- End row -->
 
         <ul class="nav navbar-nav">
-          <li><a href="#">Home</a></li>
+          <!-- <li><a href="#">Home</a></li> -->
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
               Start exploring
@@ -99,7 +98,7 @@
               <li><a href="http://www.ala.org.au/about-the-atlas/contact-us/">Contact us</a></li>
             </ul>
           </li>
-          <li class="dropdown">
+          <li class="dropdown active">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
               Learn about the ALA
               <span class="caret"></span>
@@ -130,7 +129,21 @@
   </nav>
   <!-- End Navbar -->
 
-  <div class="jumbotron info-hub-banner hidden-print"></div>
+  <!-- Breadcrumb -->
+  <section id="breadcrumb">
+    <div class="container">
+      <div class="row">
+        <ul class="breadcrumb-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html"><span class="glyphicon glyphicon-menu-right"></span>Article</a></li>
+          <li active"><span class="glyphicon glyphicon-menu-right"></span>ALA and IEK</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- End breadcrumb -->
+
+  <!-- <div class="jumbotron info-hub-banner hidden-print"></div> -->
 
   <div class="container">
     <section class="content-container">
@@ -143,32 +156,35 @@
         End structure reference -->
 
         <article class="col-md-12 header-wrap margin-bottom-half-1">
-          <div class="row-fluid margin-bottom-2">
+          <!-- <div class="row-fluid margin-bottom-2">
             <ol class="breadcrumb hidden-print">
               <li><a href="index.html">Home</a></li>
               <li><a href="index.html">Article</a></li>
               <li active">ALA and IEK</li>
             </ol>
-          </div>
+          </div> -->
 
           <h5 class="subject-category-overline">Article</h5>
           <h2 class="subject-title">ALA and Indigenous Ecological Knowledge (IEK)</h2>
           <h3 class="subject-subtitle">In partnership with Indigenous communities working on country, the ALA is exploring the role of information management platforms in bridging the boundaries between traditional and contemporary Indigenous knowledge and western science.</h3>
           <p class="subject-byline">March 21, 2017</p>
         </article>
-        <article class="col-md-3 col-md-push-9">
-          <!-- Navigation right column -->
-          <h4>Page contents:</h4>
-          <div class="profile-usermenu margin-bottom-2">
-            <ul class="nav">
-              <li><a href="#overview">Overview</a></li>
-              <li><a href="#rangers">Yugul Mangi Rangers</a></li>
-              <li><a href="#olkola">Olkola People</a></li>
-              <li><a href="#calendars">Banbai Nation Fire and Season calendars</a></li>
-              <li><a href="#relevance">Improving the relevance of the ALA website and software for Indigenous people</a></li>
-              <li><a href="#ip">Indigenous Cultural and Intellectual Property</a></li>
-              <li><a href="#about">About Indigenous Ecological Knowledge (IEK)</a></li>
-            </ul>
+        
+        <article class="col-md-3 col-md-push-9 sidebar-col">
+          <div class="toc-floating-menu">
+            <!-- Navigation right column -->
+            <h4>Page contents:</h4>
+            <div class="profile-usermenu margin-bottom-2">
+              <ul class="nav">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#rangers">Yugul Mangi Rangers</a></li>
+                <li><a href="#olkola">Olkola People</a></li>
+                <li><a href="#calendars">Banbai Nation Fire and Season calendars</a></li>
+                <li><a href="#relevance">Improving the relevance of the ALA website and software for Indigenous people</a></li>
+                <li><a href="#ip">Indigenous Cultural and Intellectual Property</a></li>
+                <li><a href="#about">About Indigenous Ecological Knowledge (IEK)</a></li>
+              </ul>
+            </div>
           </div>
           <!-- End navigation right column -->
         </article>
@@ -392,27 +408,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      resizePanels();
-
-      $( window ).resize(function() {
-        resizePanels();
-      });
-    });
-
-    function resizePanels() {
-      var panels = $('.panel.panel-default'); // might want to use a more specific selector (e.g. add an extra class to those panel divs)
-      var max = 0;
-      $.each(panels, function(i,el) {
-        var thisMax = $(el).find('img').outerHeight() + $(el).find('.panel-body').outerHeight();
-        var icon = $(el).find('a');
-        if (max < thisMax) {
-          max = thisMax;
-        }
-      });
-      panels.innerHeight(max); // set height to all divs
-    }
-  </script>
+  <script src="js/ala-wp-common.js"></script>
 </body>
 </html>
