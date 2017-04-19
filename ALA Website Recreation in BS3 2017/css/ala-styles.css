@@ -9,6 +9,7 @@ body{-webkit-font-smoothing:antialiased;font:normal 15px Roboto,Helvetica,"Helve
 #main{padding: 0 0 2em 0;}
 body.background-white {background-color:#fff;}
 body.background-lightgrey {background-color:#f2f2f2;}
+.container {position: relative;max-width: 1260px;}
 
 /* Columns
 ================================= */
@@ -33,8 +34,8 @@ div.col-md-1>ul.nav-login>li>a:hover {color: #fff;text-decoration: underline;}
 div.col-md-1>ul.nav-login>li>a:visited {color: #fff;}
 .nav-logged-in>li {background-color: #d5502a;height: 76px;margin-top: -30px;border-radius: 0 0 6px 6px;margin-bottom: -10px;}
 #bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a {color: #fff;margin-top: 22px;}
-#bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a:hover {color: #fff;text-decoration: underline;}
-#bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a:visited {background-color: transparent;}
+#bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a:hover {background-color: #D5502A; color: #fff;text-decoration: underline;}
+#bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a:visited,#bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a:active,#bs-example-navbar-collapse-1 > div > div.col-md-2.hidden-xs > ul > li > a:focus {background-color: #D5502A;}
 
 /* Search
 ================================= */
@@ -295,208 +296,55 @@ section#breadcrumb {padding: 130px 0 15px 0;border-bottom: 1px solid #E7E7E7;bac
 
 /* Main stats
 ================================= */
-.main-stats {
-  padding: 15px 25px 25px 25px;
-}
-
-.stat-number {
-  color: #444;
-  font-size: 40px;
-  font-weight: 500;
-}
-
-.stat-number span {
-  color: #637073;
-  font-size: 32px;
-}
-
-.stat-number span.stats-updating {
-  font-size: 18px;
-}
-
-.progress {
-  height: 6px;
-  background: #e8e8e8;
-  box-shadow: none;
-  margin: 10px 0;
-}
+.main-stats {padding: 15px 25px 25px 25px;}
+.stat-number {color: #444;font-size: 40px;font-weight: 500;}
+.stat-number span {color: #637073;font-size: 32px;}
+.stat-number span.stats-updating {font-size: 18px;}
+.progress {height: 6px;background: #e8e8e8;box-shadow: none;margin: 10px 0;}
 .progress-bar--flamingo {background-color: #f26649;}
 
 /* Content
 ================================= */
-
 .form-signin.separator {margin: 24px 0;font-size: 14px;font-weight: 300;}
 .separator {position: relative;text-transform: uppercase;font-size: 12px;font-weight: 700;margin: 16px 0;}
 .separator span {padding: 5px 20px;background: #fff;color: #8f989d;position: relative;}
 .separator:before {content: '';display: block;width: 100%;height: 1px;background: #e3e6e7;position: absolute;top: 50%;}
 .t-center {text-align: center;}
-
-.content-container {
-  padding: 40px 20px 20px;
-}
+.content-container {padding: 40px 20px 20px;}
 
 
 /* Footer
 ================================= */
-footer {
-  background-color: #fff;
-}
-
-.footer-nav {
-  clear: both;
-  padding: 1em 0 2em;
-}
-
-.footer-bonus {
-  padding-bottom: 1em;
-}
-
-.footer-bonus-heading {
-  margin: 0 0 10px;
-  line-height: 20px;
-}
-
-.footer-bonus-item {
-  padding: 0 15px;
-}
-
-.footer-bonus-link {
-  float: left;
-}
-
-.footer-bonus-icon {
-  fill: #b5bec5;
-}
-
-.footer-bonus-description {
-  line-height: 22px;
-  margin: 0;
-}
-
-/*.cash-icon, .ipad-icon, .briefcase-icon, .certificate-icon {
-  width: 56px;
-  height: 40px;
-}*/
-
-.footer-social-item {
-  width: 24px;
-  overflow: hidden;
-  margin-right: 10px;
-  border-radius: 15px;
-}
-
-.footer-social-link {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #b7c0c7;
-  transition: background 0.15s ease;
-  fill: #edeff0;
-}
-
-.footer-social-link:hover {
-  background: #DA644E;
-  fill: #fff;
-}
-
+footer {background-color: #fff;}
+.footer-nav {clear: both;padding: 1em 0 2em;}
+.footer-bonus {padding-bottom: 1em;}
+.footer-bonus-heading {margin: 0 0 10px;line-height: 20px;}
+.footer-bonus-item {padding: 0 15px;}
+.footer-bonus-link {float: left;}
+.footer-bonus-icon {fill: #b5bec5;}
+.footer-bonus-description {line-height: 22px;margin: 0;}
+.footer-social-item {width: 24px;overflow: hidden;margin-right: 10px;border-radius: 15px;}
+.footer-social-link {display: block;width: 100%;height: 100%;background: #b7c0c7;transition: background 0.15s ease;fill: #edeff0;}
+.footer-social-link:hover {background: #DA644E;fill: #fff;}
 .fa-facebook {color: #fff;padding-left:7px}
 .fa-twitter {color: #fff;padding-left:6px;}
-
-.footer-list {
-  clear: both;
-  border-top: 1px solid #e2e5e8;
-  padding: 20px 0;
-  margin: 20px 0 0;
-}
-
-.footer-item {
-  float: left;
-  margin-right: 20px;
-  height: 24px;
-  line-height: 24px;
-}
-
-.footer-item-status {
-  margin-right: 0;
-  float: right;
-}
-
-.footer-bonus-brands a {
-  display: inline-block;
-  background: url('../img/footer-bonus-logos.png') no-repeat;
-  overflow: hidden;
-  text-indent: -9999px;
-  text-align: left;
-  /*margin: 20px 40px 60px 0;*/
-}
-
-.footer-bonus-brands #ncris {
-  background-position: -2px -262px; width: 150px; height: 59px;
-  margin: 20px 40px 75px 0;
-}
-.footer-bonus-brands #ncris:hover {
-  background-position: -2px -323px; width: 150px; height: 59px;
-}
-
-.footer-bonus-brands #csiro {
-  background-position: -2px -384px; width: 100px; height: 100px;
-  margin: 5px 40px 60px 0;
-}
-.footer-bonus-brands #csiro:hover {
-  background-position: -2px -486px; width: 100px; height: 100px;
-}
-
-.footer-bonus-brands #gbif {
-  background-position: -2px -136px; width: 150px; height: 61px;
-  margin: 20px 40px 75px 0;
-}
-.footer-bonus-brands #gbif:hover {
-  background-position: -2px -199px; width: 150px; height: 61px;
-}
-
-.footer-bonus-brands #aus-govt {
-  background-position: -2px -0px; width: 201px; height: 66px;
-  margin: 20px 40px 72px 0;
-}
-.footer-bonus-brands #aus-govt:hover {
-  background-position: -2px -68px; width: 201px; height: 66px;
-}
-
-.footer-container {
-  padding: 30px;
-}
-
-hr.footer-border {
-  margin: -30px 0 20px 0;
-  border-top: 1px solid #e2e5e8;
-}
-
-.container {
-  position: relative;
-  max-width: 1260px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #384047;
-  display: block;
-  font-weight: 700;
-  margin: 0;
-  text-rendering: optimizeLegibility;
-}
-
-ul {
-  list-style: none;
-}
-
-ul.link-list {
-  padding-left: 0;
-  margin-top: 10px;
-  line-height: 24px;
-}
+.footer-list {clear: both;border-top: 1px solid #e2e5e8;padding: 20px 0;margin: 20px 0 0;}
+.footer-item {float: left;margin-right: 20px;height: 24px;line-height: 24px;}
+.footer-item-status {margin-right: 0;float: right;}
+.footer-bonus-brands a {display: inline-block;background: url('../img/footer-bonus-logos.png') no-repeat;overflow: hidden;text-indent: -9999px;text-align: left;}
+.footer-bonus-brands #ncris {background-position: -2px -262px; width: 150px; height: 59px;margin: 20px 40px 75px 0;}
+.footer-bonus-brands #ncris:hover {background-position: -2px -323px; width: 150px; height: 59px;}
+.footer-bonus-brands #csiro {background-position: -2px -384px; width: 100px; height: 100px;margin: 5px 40px 60px 0;}
+.footer-bonus-brands #csiro:hover {background-position: -2px -486px; width: 100px; height: 100px;}
+.footer-bonus-brands #gbif {background-position: -2px -136px; width: 150px; height: 61px;margin: 20px 40px 75px 0;}
+.footer-bonus-brands #gbif:hover {background-position: -2px -199px; width: 150px; height: 61px;}
+.footer-bonus-brands #aus-govt {background-position: -2px -0px; width: 201px; height: 66px;margin: 20px 40px 72px 0;}
+.footer-bonus-brands #aus-govt:hover {background-position: -2px -68px; width: 201px; height: 66px;}
+.footer-container {padding: 30px;}
+hr.footer-border {margin: -30px 0 20px 0;border-top: 1px solid #e2e5e8;}
 
 /* Layout control
 ================================= */
-
 .padding-bottom-1{padding-bottom: 1em;}.padding-bottom-2{padding-bottom: 2em;}
 .padding-right-1{padding-right: 1em;}
 .padding-left-1{padding-left: 1em;}
@@ -546,6 +394,9 @@ ul.link-list {
 
 /* Typography
 ================================= */
+h1, h2, h3, h4, h5, h6 {color: #384047;display: block;font-weight: 700;margin: 0;text-rendering: optimizeLegibility;}
+ul {list-style: none;}
+ul.link-list {padding-left: 0;margin-top: 10px;line-height: 24px;}
 
 .heading-large{
   font-size:36px;
@@ -559,9 +410,6 @@ ul.link-list {
   font-size:24px;
   font-weight:700;
   line-height:1.25;
-  /*margin-bottom:.83333em;*/
-  /*margin-top:1.875em;*/
-  /*text-transform:none;*/
 }
 
 .jumbotron .promotional {
@@ -577,7 +425,6 @@ ul.link-list {
   font-weight: 400;
   line-height: 34px;
 }
-
 
 .subject-category-overline {
   font-size: 18px;
