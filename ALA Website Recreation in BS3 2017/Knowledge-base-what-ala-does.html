@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ALA Homepage</title>
+  <title>Article</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +13,6 @@
   <!-- FontAwesome -->
   <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -21,7 +20,7 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="background-lightgrey">
+<body class="background-white">
 
   <!-- Navbar start -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -123,7 +122,7 @@
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
-              <!-- <li><a href="/about-the-atlas/">About the ALA</a></li>
+              <li><a href="/about-the-atlas/">About the ALA</a></li>
               <li><a href="http://www.ala.org.au/education-resources/">Learning resources</a></li>
               <li class="divider"></li>
               <li class="dropdown-header">How the ALA works</li>
@@ -139,16 +138,6 @@
               <li><a href="/how-you-can/#record-sighting">How you can record a sighting</a></li>
               <li><a href="/how-you-can/#use-our-api">How you can use our API</a></li>
               <li class="divider"></li>
-              <li><a href="http://www.ala.org.au/about-the-atlas/contact-us/">Contact us</a></li> -->
-
-              <li><a href="/about-the-atlas/">About the ALA</a></li>
-              <li class="divider"></li>
-              <li><a href="/what-ala-does/#">What the ALA does</a></li>
-              <li><a href="/how-we/#">How the ALA works</a></li>
-              <li><a href="/how-you-can/#">How you can work with the ALA</a></li>
-              <li class="divider"></li>
-              <li><a href="http://www.ala.org.au/education-resources/">Learning resources</a></li>
-              <li class="divider"></li>
               <li><a href="http://www.ala.org.au/about-the-atlas/contact-us/">Contact us</a></li>
             </ul>
           </li>
@@ -161,153 +150,123 @@
   </nav>
   <!-- End Navbar -->
 
-  <div class="jumbotron ala-header hidden-print" id="ala-jumbotron">
+  <!-- Breadcrumb -->
+  <section id="breadcrumb">
     <div class="container">
-      <div class="col-lg-6 col-md-8 col-sm-12 promotional">The <strong>Atlas of Living Australia</strong> is a collaborative, national project that aggregates biodiversity data from multiple sources and makes it freely available and usable online</div>
+      <div class="row">
+        <ul class="breadcrumb-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html"><span class="glyphicon glyphicon-menu-right"></span>Knowledge base</a></li>
+          <li active"><span class="glyphicon glyphicon-menu-right"></span>What the ALA does</li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </section>
+  <!-- End breadcrumb -->
 
-  <!-- Promotional alert -->
-  <!-- <div class="alert alert-promotional alert-dismissible hidden-print" role="alert">
-    <div class="container">
-      <div class="row-fluid">
-        <div class="col-md-12">
-          <button type="button" class="close alert-dismissable-button" data-dismiss="alert" aria-label="Close" title="Close"><span aria-hidden="true">&times;</span></button>
-          <p class="alert-text">
-            We will be updating our website over the next couple of months. <a href="#">Read about our Continuous Delivery methodology</a> and you can also <a href="#">read our release notes</a> for our test site.
+  <!-- <div class="jumbotron info-hub-banner hidden-print"></div> -->
+
+  <div class="container">
+    <section class="content-container">
+      <div class="row">
+
+        <!-- Structure reference
+        <div class="test-layout col-md-12">.col-md-12</div>
+        <div class="test-layout col-md-3 col-md-push-9">.col-md-3 .col-md-pull-8</div>
+        <div class="test-layout col-md-8 col-md-pull-3">.col-md-8 .col-md-push-3</div>
+        End structure reference -->
+
+        <article class="col-md-12 header-wrap margin-bottom-half-1">
+          <!-- <div class="row-fluid margin-bottom-2">
+            <ol class="breadcrumb hidden-print">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">Article</a></li>
+              <li active">ALA and IEK</li>
+            </ol>
+          </div> -->
+
+          <h5 class="subject-category-overline">Knowledge base</h5>
+          <h2 class="subject-title">How the ALA enables communities</h2>
+          <h3 class="subject-subtitle">
+            The ALA is all about sharing knowledge to shape Australia’s future.  We’re opening up research possibilities, improving knowledge of Australia’s biodiversity, and changing the way environmental management occurs in Australia. Our world leading biodiversity information management infrastructure enables us to work with the communities we support to deliver impact across a range of different areas.
+          </h3>
+          <p class="subject-byline">April 24, 2017</p>
+        </article>
+
+        <article class="col-md-3 col-md-push-9 sidebar-col">
+          <div class="toc-floating-menu">
+            <!-- Navigation right column -->
+            <h4>Page contents:</h4>
+            <div class="profile-usermenu margin-bottom-2">
+              <ul class="nav">
+                <!-- <li><a href="#overview">Overview</a></li> -->
+                <li><a href="#outcome-1">Indigenous Ecological Knowledge (IEK)</a></li>
+                <li><a href="#outcome-2">Outcome area 2</a></li>
+                <li><a href="#outcome-3">Outcome area 3</a></li>
+                <li><a href="#about-ala">About the ALA</a></li>
+                <!-- <li><a href="#relevance">Improving the relevance of the ALA website and software for Indigenous people</a></li>
+                <li><a href="#ip">Indigenous Cultural and Intellectual Property</a></li>
+                <li><a href="#about">About Indigenous Ecological Knowledge (IEK)</a></li> -->
+              </ul>
+            </div>
+          </div>
+          <!-- End navigation right column -->
+        </article>
+
+        <article class="col-md-8 col-md-pull-3">
+          <!-- <h3>Section title</h3> -->
+          <!-- <h4>Overview</h4>
+          <p>
+            The ALA is all about sharing knowledge to shape Australia’s future.  We’re opening up research possibilities, improving knowledge of Australia’s biodiversity, and changing the way environmental management occurs in Australia.
           </p>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- End promotional alert -->
+          <p>
+            Our world leading biodiversity information management infrastructure enables us to work with the communities we support to deliver impact across a range of different areas.
+          </p> -->
 
-  <!-- Container -->
-  <div class="container" id="main">
+          <h4 id="outcome-1">Indigenous Ecological Knowledge (IEK)</h4>
+          <p>
+            In partnership with Indigenous communities working on country, we’re exploring the role of information management platforms in bridging the boundaries between traditional Indigenous ecological knowledge and western science, as well as empowering two-way participation in the sharing of biodiversity knowledge.
+          </p>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">How the ALA partners with IEK</a>
+            <!-- <a class="btn btn-default btn-lg" href="#">This is another call to action</a> -->
+          </p>
 
-    <div class="col-md-8 col-md-offset-2 hidden">
-      <h1 class="heading-large margin-bottom-quarter-1">Atlas of Living Australia</h1>
-      <h2 class="promotional">
-        The Atlas of Living Australia is a collaborative, national project that aggregates biodiversity data from multiple sources and makes it freely available and usable online
-      </h2>
-    </div>
+          <h4 id="outcome-2">Outcome area 2</h4>
+          <p>
+            The Olkola People of Cape York, CSIRO researchers, and the Tropical Indigenous Ethnobotany Centre (TIEC) are working together; using the ALA and its Profiles tool to explore ways to share and utilise knowledge to help care for country. The project builds on past and current efforts of the Olkola people to record and secure their cultural resources, and understand the complex social, cultural and legal (especially Indigenous cultural and intellectual property) issues and risks to ensure robust decisions can be made about sharing their knowledge on public platforms such as the ALA. The aim is for Olkola to share these learnings with other communities.
+          </p>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">This is a call to action</a>
+            <a class="btn btn-default btn-lg" href="#">This is another call to action</a>
+          </p>
 
-    <!-- Main stats -->
-    <div class="col-md-12">
-      <div class="main-stats row">
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Occurrence Records</h4>
-          <div class="stat-number" id="allRecords">
-            68,000,000
-          </div>
-        </div>
+          <h4 id="outcome-3">Outcome area 3</h4>
+          <p>
+            Banbai nation people at Wattleridge Indigenous Protected Area in northern New South Wales, are working with Michelle McKemey at the University of New England to develop fire and season calendars. The calendars represent annual seasonal changes as well as biocultural indicators that indicate the right, and wrong, time to burn. They are developed using results of ecological experiments, literature reviews, observations and cultural knowledge gathered through interviews.
+          </p>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">This is a call to action</a>
+            <a class="btn btn-default btn-lg" href="#">This is another call to action</a>
+          </p>
 
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Species</h4>
-          <div class="stat-number" id="allSpecies">
-            472,000
-          </div>
-        </div>
+          <hr>
 
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Data downloads</h4>
-          <div class="stat-number" id="allDownloads">
-            914,000
-          </div>
-        </div>
+          <h4 id="about-ala">About the Atlas of Living Australia</h4>
+          <p>
+            The Atlas of Living Australia (ALA) is Australia’s national biodiversity database. It provides free, online access to a vast repository of information about Australia’s amazing biodiversity. It’s a collaborative, open infrastructure that pulls together biodiversity data from multiple sources, and focuses on making biodiversity information accessible and usable.
+          </p>
 
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Registered users</h4>
-          <div class="stat-number" id="allUsers">
-            34,000
-          </div>
-        </div>
-      </div><!-- End main stats -->
-    </div>
+        </article>
 
-
-    <!-- Main col -->
-    <div class="col-md-12">
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/australias-species/"><img class="img-responsive" src="img/homepage-channel-image-koala.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/australias-species/">Australian species</a></h3>
-            <p class="help-block">
-              Search for Australian flora and fauna species by common, scientific name or search by category.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/species-by-location/"><img class="img-responsive" src="img/homepage-channel-image-lionfish.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/species-by-location/">Species by location</a></h3>
-            <p class="help-block">
-              Use the Atlas of Living Australia to browse species by pre-defined region or by location to find species nearby.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/occurrence-records/"><img class="img-responsive" src="img/homepage-channel-image-rainbow-lorikeet.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/occurrence-records/">Occurrence records</a></h3>
-            <p class="help-block">
-              Use the Atlas to Explore species occurrence records using the Spatial Portal or Search Records for species occurrences.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Col -->
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/get-involved/"><img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-get-involved-icon.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/get-involved/">Contribute to the ALA</a></h3>
-            <p class="help-block">
-              Learn about the ALA and discover the many different ways in which we can help you achieve your goals.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/blogs-news/">
-            <img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-how-you-can-icon.jpg">
-          </a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/blogs-news/">Browse ALA news</a></h3>
-            <p class="help-block">
-              Learn about the ALA and discover the many different ways in which we can help you achieve your goals.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/atlas-information-hub/">
-            <img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-education-icon.jpg">
-          </a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/atlas-information-hub/">ALA knowledge base</a></h3>
-            <p class="help-block">
-              Did you see something? Photograph something? Contribute your sighting to the Atlas of Living Australia. Log your sighting at our Record a Sighting page.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Col -->
-    </div><!-- End main col -->
-
+      </div><!-- End row -->
+    </section>
   </div>
 
   <footer>
     <!-- Container -->
     <div class="container footer-container ">
-      <!-- <hr class="footer-border"> -->
+      <hr class="footer-border">
       <div class="row footer-nav">
 
         <div class="col-md-12 margin-bottom-2">
@@ -354,10 +313,9 @@
           <h5 class="footer-second-row">Learn about the ALA</h5>
           <ul class="link-list">
             <li><a href="/about-the-atlas/">About the ALA</a></li>
-            <li><a href="/what-ala-does/#">What the ALA does</a></li>
+            <li><a href="http://www.ala.org.au/education-resources/">Learning resources</a></li>
             <li><a href="/how-we/#">How the ALA works</a></li>
             <li><a href="/how-you-can/#">How you can work with the ALA</a></li>
-            <li><a href="http://www.ala.org.au/education-resources/">Learning resources</a></li>
             <li><a href="http://www.ala.org.au/about-the-atlas/contact-us/">Contact us</a></li>
           </ul>
         </div>
@@ -433,7 +391,7 @@
         <div class="col-md-12">
           <button type="button" class="close alert-dismissable-button" data-dismiss="alert" aria-label="Close" title="Close"><span aria-hidden="true">&times;</span></button>
           <p class="alert-text text-creativecommons">
-            This work is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/au/" target="_blank">Creative Commons Attribution 3.0 Australia License</a>&ensp;<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
+            This work is licensed under a <a href="#">Creative Commons Attribution 3.0 Australia License</a>&ensp;<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
           </p>
         </div>
       </div>

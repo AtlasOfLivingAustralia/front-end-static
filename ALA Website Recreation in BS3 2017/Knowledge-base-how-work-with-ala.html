@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ALA Homepage</title>
+  <title>Article</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +13,6 @@
   <!-- FontAwesome -->
   <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -21,7 +20,7 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="background-lightgrey">
+<body class="background-white">
 
   <!-- Navbar start -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -123,7 +122,7 @@
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
-              <!-- <li><a href="/about-the-atlas/">About the ALA</a></li>
+              <li><a href="/about-the-atlas/">About the ALA</a></li>
               <li><a href="http://www.ala.org.au/education-resources/">Learning resources</a></li>
               <li class="divider"></li>
               <li class="dropdown-header">How the ALA works</li>
@@ -139,16 +138,6 @@
               <li><a href="/how-you-can/#record-sighting">How you can record a sighting</a></li>
               <li><a href="/how-you-can/#use-our-api">How you can use our API</a></li>
               <li class="divider"></li>
-              <li><a href="http://www.ala.org.au/about-the-atlas/contact-us/">Contact us</a></li> -->
-
-              <li><a href="/about-the-atlas/">About the ALA</a></li>
-              <li class="divider"></li>
-              <li><a href="/what-ala-does/#">What the ALA does</a></li>
-              <li><a href="/how-we/#">How the ALA works</a></li>
-              <li><a href="/how-you-can/#">How you can work with the ALA</a></li>
-              <li class="divider"></li>
-              <li><a href="http://www.ala.org.au/education-resources/">Learning resources</a></li>
-              <li class="divider"></li>
               <li><a href="http://www.ala.org.au/about-the-atlas/contact-us/">Contact us</a></li>
             </ul>
           </li>
@@ -161,153 +150,164 @@
   </nav>
   <!-- End Navbar -->
 
-  <div class="jumbotron ala-header hidden-print" id="ala-jumbotron">
+  <!-- Breadcrumb -->
+  <section id="breadcrumb">
     <div class="container">
-      <div class="col-lg-6 col-md-8 col-sm-12 promotional">The <strong>Atlas of Living Australia</strong> is a collaborative, national project that aggregates biodiversity data from multiple sources and makes it freely available and usable online</div>
+      <div class="row">
+        <ul class="breadcrumb-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html"><span class="glyphicon glyphicon-menu-right"></span>Knowledge base</a></li>
+          <li active"><span class="glyphicon glyphicon-menu-right"></span>How you can work with the ALA</li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </section>
+  <!-- End breadcrumb -->
 
-  <!-- Promotional alert -->
-  <!-- <div class="alert alert-promotional alert-dismissible hidden-print" role="alert">
-    <div class="container">
-      <div class="row-fluid">
-        <div class="col-md-12">
-          <button type="button" class="close alert-dismissable-button" data-dismiss="alert" aria-label="Close" title="Close"><span aria-hidden="true">&times;</span></button>
-          <p class="alert-text">
-            We will be updating our website over the next couple of months. <a href="#">Read about our Continuous Delivery methodology</a> and you can also <a href="#">read our release notes</a> for our test site.
+  <!-- <div class="jumbotron info-hub-banner hidden-print"></div> -->
+
+  <div class="container">
+    <section class="content-container">
+      <div class="row">
+
+        <!-- Structure reference
+        <div class="test-layout col-md-12">.col-md-12</div>
+        <div class="test-layout col-md-3 col-md-push-9">.col-md-3 .col-md-pull-8</div>
+        <div class="test-layout col-md-8 col-md-pull-3">.col-md-8 .col-md-push-3</div>
+        End structure reference -->
+
+        <article class="col-md-12 header-wrap margin-bottom-half-1">
+          <!-- <div class="row-fluid margin-bottom-2">
+            <ol class="breadcrumb hidden-print">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">Article</a></li>
+              <li active">ALA and IEK</li>
+            </ol>
+          </div> -->
+
+          <h5 class="subject-category-overline">Knowledge base</h5>
+          <h2 class="subject-title">How you can work with the ALA</h2>
+          <h3 class="subject-subtitle">
+            Atlas of Living Australia is home to 60 million records of Australian species. Here you can learn how to explore this wealth of information and how you can contribute to Australia’s most comprehensive biodiversity atlas.
+          </h3>
+          <p class="subject-byline">April 24, 2017</p>
+        </article>
+
+        <article class="col-md-3 col-md-push-9 sidebar-col">
+          <div class="toc-floating-menu">
+            <!-- Navigation right column -->
+            <h4>Page contents:</h4>
+            <div class="profile-usermenu margin-bottom-2">
+              <ul class="nav">
+                <li><a href="#overview">How you can Find species information</a></li>
+                <li><a href="#rangers">How you can explore your area</a></li>
+                <li><a href="#olkola">How you can download data</a></li>
+                <li><a href="#calendars">How you can record a sighting</a></li>
+                <li><a href="#relevance">How you can submit a data set</a></li>
+                <li><a href="#ip">How you can join a Citizen Science project</a></li>
+                <li><a href="#about">How you can digitise museum collections</a></li>
+                <li><a href="#use-our-api">Use our API</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End navigation right column -->
+        </article>
+
+        <article class="col-md-8 col-md-pull-3">
+          <!-- <h3>Section title</h3> -->
+          <h4>How you can Find species information</h4>
+          <p>The ALA species pages display text descriptions, images, location information, taxonomic details and links to academic literature for every species in our database.</p>
+          <h5>Download our user guides:</h5>
+          <ul>
+            <li><a href="#">Download Species information</a> <code>.PDF</code></li>
+            <li><a href="#">Download Finding species in your area</a> <code>.PDF</code></li>
+          </ul>
+
+          <h4>How you can explore your area</h4>
+          <p>By bringing together species information alongside location information, the ALA enables you to explore the biodiversity in your own area or region.</p>
+
+          <h5>Download our user guides:</h5>
+          <ul>
+            <li><a href="#">Does a species occur in my area</a> <code>.PDF</code></li>
+            <li><a href="#">Finding the species in your area</a> <code>.PDF</code></li>
+          </ul>
+
+          <h4>How you can download data</h4>
+          <p>Data available on the ALA is used for many different purposes ranging from environmental impact assessments, urban development applications, field guides and school projects.</p>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">Download data sets</a>
           </p>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- End promotional alert -->
 
-  <!-- Container -->
-  <div class="container" id="main">
+          <h4>How you can record a sighting</h4>
+          <p>If you have seen an interesting plant, animal or fungus in your area, why not record your sighting? You will need the date, the location, and the name of the species (If you don’t know the name, the Species Selection Tool can help). The more information you can provide, the more useful the record of your sighting will be.</p>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">Record a sighting</a>
+          </p>
 
-    <div class="col-md-8 col-md-offset-2 hidden">
-      <h1 class="heading-large margin-bottom-quarter-1">Atlas of Living Australia</h1>
-      <h2 class="promotional">
-        The Atlas of Living Australia is a collaborative, national project that aggregates biodiversity data from multiple sources and makes it freely available and usable online
-      </h2>
-    </div>
+          <h5>Download our user guides:</h5>
+          <ul>
+            <li><a href="#">How to log a sighting</a> <code>.PDF</code></li>
+          </ul>
 
-    <!-- Main stats -->
-    <div class="col-md-12">
-      <div class="main-stats row">
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Occurrence Records</h4>
-          <div class="stat-number" id="allRecords">
-            68,000,000
-          </div>
-        </div>
+          <h4>How you can submit a data set</h4>
+          <p>If you already have a collection of species sightings, they can be submitted to the ALA as a data set rather than one at a time.</p>
+          <p>To submit a data set, your data needs to be in a structured format suitable for loading into the ALA. The ALA uses the Darwin Core data standard.</p>
+          <p>If your data is in a spreadsheet, create a file with Darwin Core column headings or use one of our templates. If your data is in a database, you will need to export a data file (e.g. spreadsheet). When your data is in a suitable file format, test it in Sandbox, our data check tool. Sandbox will run a trial upload of your data to test whether it displays correctly. If you are happy with how Sandbox displays the data, you can submit your data set to the ALA.</p>
+          <p>If you have a large or complex data set please contact the ALA Data Management Team.</p>
 
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Species</h4>
-          <div class="stat-number" id="allSpecies">
-            472,000
-          </div>
-        </div>
+          <h5>Download a template:</h5>
+          <ul>
+            <li><a href="#">ALA occurrence data template – simple</a> <code>.XLS</code></li>
+            <li><a href="#">ALA occurrence data template – high quality</a> <code>.XLS</code></li>
+            <li><a href="#">ALA species list template</a> <code>.XLS</code></li>
+            <li><a href="#">ALA multimedia template</a> <code>.XLS</code></li>
+            <li><a href="#">ALA species profile template</a> <code>.XLS</code></li>
+          </ul>
 
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Data downloads</h4>
-          <div class="stat-number" id="allDownloads">
-            914,000
-          </div>
-        </div>
+          <h5>Test data in the sandbox</h5>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">Sandbox – Occurrence data</a>
+            <a class="btn btn-default btn-lg" href="#">Species list upload</a>
+          </p>
 
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Registered users</h4>
-          <div class="stat-number" id="allUsers">
-            34,000
-          </div>
-        </div>
-      </div><!-- End main stats -->
-    </div>
+          <h5>Get in touch</h5>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">Contact Data Management</a>
+          </p>
 
+          <h4>How you can join a Citizen Science project</h4>
+          <p>BioCollect is the ALA’s citizen science portal. Our citizen science project finder lets you search biodiversity related citizen projects across Australia and directs you to the host organisation.</p>
+          <p>If you are a scientist (or citizen scientist) wanting to harness the power of the citizen science community, BioCollect enables you to set up a citizen science project, facilitates data collection and helps manage your data.</p>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">Join a citizen science project</a>
+            <a class="btn btn-default btn-lg" href="#">Create a BioCollect project</a>
+          </p>
 
-    <!-- Main col -->
-    <div class="col-md-12">
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/australias-species/"><img class="img-responsive" src="img/homepage-channel-image-koala.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/australias-species/">Australian species</a></h3>
-            <p class="help-block">
-              Search for Australian flora and fauna species by common, scientific name or search by category.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/species-by-location/"><img class="img-responsive" src="img/homepage-channel-image-lionfish.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/species-by-location/">Species by location</a></h3>
-            <p class="help-block">
-              Use the Atlas of Living Australia to browse species by pre-defined region or by location to find species nearby.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/occurrence-records/"><img class="img-responsive" src="img/homepage-channel-image-rainbow-lorikeet.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/occurrence-records/">Occurrence records</a></h3>
-            <p class="help-block">
-              Use the Atlas to Explore species occurrence records using the Spatial Portal or Search Records for species occurrences.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Col -->
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/get-involved/"><img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-get-involved-icon.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/get-involved/">Contribute to the ALA</a></h3>
-            <p class="help-block">
-              Learn about the ALA and discover the many different ways in which we can help you achieve your goals.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/blogs-news/">
-            <img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-how-you-can-icon.jpg">
-          </a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/blogs-news/">Browse ALA news</a></h3>
-            <p class="help-block">
-              Learn about the ALA and discover the many different ways in which we can help you achieve your goals.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/atlas-information-hub/">
-            <img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-education-icon.jpg">
-          </a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/atlas-information-hub/">ALA knowledge base</a></h3>
-            <p class="help-block">
-              Did you see something? Photograph something? Contribute your sighting to the Atlas of Living Australia. Log your sighting at our Record a Sighting page.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Col -->
-    </div><!-- End main col -->
+          <h4>How you can digitise museum collections</h4>
+          <p>DigiVol is a crowdsourcing platform that enables volunteers to digitise museum collection records. Anyone can become a DigiVol volunteer, all you need is a computer, internet access and an email address.</p>
+          <p>Digivol was developed by the Australian Museum in collaboration with the ALA.</p>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">Find out how to become a DigiVol volunteer</a>
+            <a class="btn btn-default btn-lg" href="#">Find out more About DigiVol</a>
+          </p>
 
+          <h4>Use our API</h4>
+          <p>The ALA Application Programming Interface (API) allows third party websites and developers to access many of the features of the ALA site.</p>
+          <p>The API is a collection of web services that provide HTTP access to JSON, XML, CSV and WMS data types.</p>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">Visit our API page</a>
+          </p>
+
+        </article>
+
+      </div><!-- End row -->
+    </section>
   </div>
 
   <footer>
     <!-- Container -->
     <div class="container footer-container ">
-      <!-- <hr class="footer-border"> -->
+      <hr class="footer-border">
       <div class="row footer-nav">
 
         <div class="col-md-12 margin-bottom-2">
@@ -354,10 +354,9 @@
           <h5 class="footer-second-row">Learn about the ALA</h5>
           <ul class="link-list">
             <li><a href="/about-the-atlas/">About the ALA</a></li>
-            <li><a href="/what-ala-does/#">What the ALA does</a></li>
+            <li><a href="http://www.ala.org.au/education-resources/">Learning resources</a></li>
             <li><a href="/how-we/#">How the ALA works</a></li>
             <li><a href="/how-you-can/#">How you can work with the ALA</a></li>
-            <li><a href="http://www.ala.org.au/education-resources/">Learning resources</a></li>
             <li><a href="http://www.ala.org.au/about-the-atlas/contact-us/">Contact us</a></li>
           </ul>
         </div>
@@ -433,7 +432,7 @@
         <div class="col-md-12">
           <button type="button" class="close alert-dismissable-button" data-dismiss="alert" aria-label="Close" title="Close"><span aria-hidden="true">&times;</span></button>
           <p class="alert-text text-creativecommons">
-            This work is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/au/" target="_blank">Creative Commons Attribution 3.0 Australia License</a>&ensp;<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
+            This work is licensed under a <a href="#">Creative Commons Attribution 3.0 Australia License</a>&ensp;<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
           </p>
         </div>
       </div>
