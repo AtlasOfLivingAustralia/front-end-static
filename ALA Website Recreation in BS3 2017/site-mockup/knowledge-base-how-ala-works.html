@@ -4,16 +4,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ALA Homepage</title>
+  <title>Article</title>
 
   <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/ala-styles.css" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/ala-styles.css" rel="stylesheet">
 
   <!-- FontAwesome -->
   <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -21,7 +20,7 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="background-lightgrey">
+<body class="background-white">
 
   <!-- Navbar start -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -129,147 +128,124 @@
   </nav>
   <!-- End Navbar -->
 
-  <div class="jumbotron ala-header hidden-print" id="ala-jumbotron">
+  <!-- Breadcrumb -->
+  <section id="breadcrumb">
     <div class="container">
-      <div class="col-lg-6 col-md-8 col-sm-12 promotional">The <strong>Atlas of Living Australia</strong> is a collaborative, national project that aggregates biodiversity data from multiple sources and makes it freely available and usable online</div>
+      <div class="row">
+        <ul class="breadcrumb-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html"><span class="glyphicon glyphicon-menu-right"></span>Knowledge base</a></li>
+          <li active"><span class="glyphicon glyphicon-menu-right"></span>How the ALA works</li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </section>
+  <!-- End breadcrumb -->
 
-  <!-- Promotional alert -->
-  <!-- <div class="alert alert-promotional alert-dismissible hidden-print" role="alert">
-    <div class="container">
-      <div class="row-fluid">
-        <div class="col-md-12">
-          <button type="button" class="close alert-dismissable-button" data-dismiss="alert" aria-label="Close" title="Close"><span aria-hidden="true">&times;</span></button>
-          <p class="alert-text">
-            We will be updating our website over the next couple of months. <a href="#">Read about our Continuous Delivery methodology</a> and you can also <a href="#">read our release notes</a> for our test site.
+  <!-- <div class="jumbotron info-hub-banner hidden-print"></div> -->
+
+  <div class="container">
+    <section class="content-container">
+      <div class="row">
+
+        <!-- Structure reference
+        <div class="test-layout col-md-12">.col-md-12</div>
+        <div class="test-layout col-md-3 col-md-push-9">.col-md-3 .col-md-pull-8</div>
+        <div class="test-layout col-md-8 col-md-pull-3">.col-md-8 .col-md-push-3</div>
+        End structure reference -->
+
+        <article class="col-md-12 header-wrap margin-bottom-half-1">
+          <!-- <div class="row-fluid margin-bottom-2">
+            <ol class="breadcrumb hidden-print">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">Article</a></li>
+              <li active">ALA and IEK</li>
+            </ol>
+          </div> -->
+
+          <h5 class="subject-category-overline">Knowledge base</h5>
+          <h2 class="subject-title">How the ALA works</h2>
+          <h3 class="subject-subtitle">
+            Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+          </h3>
+          <p class="subject-byline">March 21, 2017</p>
+        </article>
+
+        <article class="col-md-3 col-md-push-9 sidebar-col">
+          <div class="toc-floating-menu">
+            <!-- Navigation right column -->
+            <h4>Page contents:</h4>
+            <div class="profile-usermenu margin-bottom-2">
+              <ul class="nav">
+                <li><a href="#overview">How we upload data sets</a></li>
+                <li><a href="#rangers">How to submit a data set</a></li>
+                <li><a href="#olkola">How we integrate data</a></li>
+                <li><a href="#calendars">How we handle sensitive data</a></li>
+                <!-- <li><a href="#relevance">Improving the relevance of the ALA website and software for Indigenous people</a></li>
+                <li><a href="#ip">Indigenous Cultural and Intellectual Property</a></li>
+                <li><a href="#about">About Indigenous Ecological Knowledge (IEK)</a></li> -->
+              </ul>
+            </div>
+          </div>
+          <!-- End navigation right column -->
+        </article>
+
+        <article class="col-md-8 col-md-pull-3">
+          <!-- <h3>Section title</h3> -->
+          <h4>How we upload data sets</h4>
+          <p>If you already have a collection of species sightings they can be submitted as a data set rather than one at a time using the record a sighting form. A data set needs to be in a structured data format (spreadsheet or database) with an identifier for each record and the information about the sightings in individual columns. There are some example templates below. For more information on the data standard used by the ALA the full Darwin Core schema can also be found below. When records are submitted as a data set they will be given an information page describing the data and it’s terms of use as well as displaying the usage via the ALA.</p>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">View full Darwin Core schema</a>
           </p>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- End promotional alert -->
 
-  <!-- Container -->
-  <div class="container" id="main">
+          <h4>How to submit a data set</h4>
+          <p>The first stage in submitting a data set is to produce a file suitable for loading into the ALA. If you manage your data in a spreadsheet you can create copy with Darwin Core column headings or copy your data into one of the templates below.</p>
+          <p>If you manage your data in a data base you’ll need to produce and export a file. Once you have a suitably formatted file, the sandbox (link below) is a tool to run a trial load of your data (without it being loaded to the main ALA) to test if it displays correctly.</p>
+          <p>If you have a large or complex dataset please contact the ALA Data Management Team below.</p>
 
-    <div class="col-md-8 col-md-offset-2 hidden">
-      <h1 class="heading-large margin-bottom-quarter-1">Atlas of Living Australia</h1>
-      <h2 class="promotional">
-        The Atlas of Living Australia is a collaborative, national project that aggregates biodiversity data from multiple sources and makes it freely available and usable online
-      </h2>
-    </div>
+          <h5>Download a template:</h5>
+          <ul>
+            <li>ALA occurrence data template – simple .XLS</li>
+            <li>ALA occurrence data template – high quality .XLS</li>
+            <li>ALA species list template .XLS</li>
+            <li>ALA multimedia template .XLS</li>
+            <li>ALA species profile template</li>
+          </ul>
 
-    <!-- Main stats -->
-    <div class="col-md-12">
-      <div class="main-stats row">
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Occurrence Records</h4>
-          <div class="stat-number" id="allRecords">
-            68,000,000
-          </div>
-        </div>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">Test data in the sandbox</a>
+            <a class="btn btn-default btn-lg" href="#">Contact Data Management</a>
+          </p>
 
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Species</h4>
-          <div class="stat-number" id="allSpecies">
-            472,000
-          </div>
-        </div>
+          <h4>How we integrate data</h4>
+          <p>Integrating data is the process of bringing multiple, disparate datasets together and combining them into a single data structure. Combining and standardising the different data sets allows them to be searched as a single unit using common terms. The ALA brings together thousands of data sets and makes them available through a common interface. The ALA uses Darwin Core, an internationally developed biodiversity data interchange standard, as it’s core data model.</p>
 
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Data downloads</h4>
-          <div class="stat-number" id="allDownloads">
-            914,000
-          </div>
-        </div>
+          <h5>How we do it</h5>
+          <p>Data sets submitted for loading into the ALA are reviewed by the Data Management Team for the type of content and ability to be mapped to Darwin core. Then in communication with owner/custodian the data is processed to a format suitable for loading using data transformation software. If there is going to be an ongoing load schedule the processing saved for future repeat use.</p>
+          <p>Contact the Data Management team below if you have questions about the ALA data integration process.</p>
 
-        <div class="main-stats col-lg-3 col-md-3 col-sm-6">
-          <h4>Registered users</h4>
-          <div class="stat-number" id="allUsers">
-            34,000
-          </div>
-        </div>
-      </div><!-- End main stats -->
-    </div>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">Submit a data set</a>
+            <a class="btn btn-default btn-lg" href="#">Contact Data Management</a>
+          </p>
 
+          <h4>How we handle sensitive data</h4>
+          <p>A small proportion of species in the ALA are considered sensitive. There are many reasons a species might be considered sensitive such as being highly endangered or on a controlled pests list. The data associated with these sensitive species is also considered sensitive meaning that if the exact location of the species was known, individuals of that species might be at risk. To protect these species, the ALA has a sensitive data service to lessen the accuracy of location data for sensitive species records.</p>
 
-    <!-- Main col -->
-    <div class="col-md-12">
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/australias-species/"><img class="img-responsive" src="img/homepage-channel-image-koala.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/australias-species/">Australian species</a></h3>
-            <p class="help-block">
-              Search for Australian flora and fauna species by common, scientific name or search by category.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/species-by-location/"><img class="img-responsive" src="img/homepage-channel-image-lionfish.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/species-by-location/">Species by location</a></h3>
-            <p class="help-block">
-              Use the Atlas of Living Australia to browse species by pre-defined region or by location to find species nearby.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/occurrence-records/"><img class="img-responsive" src="img/homepage-channel-image-rainbow-lorikeet.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/occurrence-records/">Occurrence records</a></h3>
-            <p class="help-block">
-              Use the Atlas to Explore species occurrence records using the Spatial Portal or Search Records for species occurrences.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Col -->
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/get-involved/"><img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-get-involved-icon.jpg"></a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/get-involved/">Work with the ALA</a></h3>
-            <p class="help-block">
-              Learn about the ALA and discover the many different ways in which we can help you achieve your goals.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/blogs-news/">
-            <img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-how-you-can-icon.jpg">
-          </a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/blogs-news/">Browse ALA news</a></h3>
-            <p class="help-block">
-              Learn about the ALA and discover the many different ways in which we can help you achieve your goals.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="panel panel-default">
-          <a href="https://wptest.ala.org.au/atlas-information-hub/">
-            <img class="img-responsive" src="https://wptest.ala.org.au/wp-content/themes/ala-wordpress-theme/img/ala-info-hub-education-icon.jpg">
-          </a>
-          <div class="panel-body">
-            <h3><a href="https://wptest.ala.org.au/atlas-information-hub/">ALA knowledge base</a></h3>
-            <p class="help-block">
-              Did you see something? Photograph something? Contribute your sighting to the Atlas of Living Australia. Log your sighting at our Record a Sighting page.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- End Col -->
-    </div><!-- End main col -->
+          <h5>How we do it</h5>
+          <p>Each state and territory supplies the ALA with a list of sensitive species in their jurisdiction and the rules for processing records of those species.</p>
+          <p>When a species record from a sensitive species list is uploaded via Record a Sighting, the location of the record is modified according to the relevant rules. The location may be completely withheld or the accuracy of location coordinates may be adjusted. The ALA’s data integration tool, Sandbox (http://sandbox.ala.org.au/datacheck/), also runs sensitive data processing software.</p>
 
+          <p>To discuss the inclusion or removal of species on a sensitive species list, please contact the list owner specified on the sensitive species lists.</p>
+          <p class="margin-bottom-2">
+            <a class="btn btn-default btn-lg" href="#">Contact Data Management</a>
+            <a class="btn btn-default btn-lg" href="#">View the Sensitive Species Lists</a>
+          </p>
+
+        </article>
+
+      </div><!-- End row -->
+    </section>
   </div>
 
   <footer>
@@ -325,7 +301,7 @@
             <li><a href="/about-the-atlas/">About the ALA</a></li>
             <li><a href="/what-ala-does/#">What the ALA does</a></li>
             <li><a href="/how-we/#">How the ALA works</a></li>
-            <li><a href="/how-you-can/#">How to work with the ALA</a></li>
+            <li><a href="/how-you-can/#">How to use the ALA</a></li>
             <li><a href="/about-the-atlas/terms-of-use/citing-the-atlas/">How to cite the ALA</a></li>
             <li><a href="/education-resources/">Learning resources</a></li>
             <li><a href="/blogs-news/">ALA News</a></li>
@@ -403,7 +379,7 @@
         <div class="col-md-12">
           <button type="button" class="close alert-dismissable-button" data-dismiss="alert" aria-label="Close" title="Close"><span aria-hidden="true">&times;</span></button>
           <p class="alert-text text-creativecommons">
-            This work is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/au/" target="_blank">Creative Commons Attribution 3.0 Australia License</a>&ensp;<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
+            This work is licensed under a <a href="#">Creative Commons Attribution 3.0 Australia License</a>&ensp;<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a>
           </p>
         </div>
       </div>
@@ -413,7 +389,7 @@
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/ala-wp-common.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/ala-wp-common.js"></script>
 </body>
 </html>
