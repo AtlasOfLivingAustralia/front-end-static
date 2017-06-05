@@ -230,7 +230,7 @@ section#breadcrumb {padding: 130px 0 15px 0;border-bottom: 1px solid #E7E7E7;bac
 .panel-danger > .panel-heading {color: #b94a48;background-color: #f2dede;border-color: #eed3d7;}
 .panel-danger > .panel-heading + .panel-collapse .panel-body {border-top-color: #eed3d7;}
 .panel-danger > .panel-footer + .panel-collapse .panel-body {border-bottom-color: #eed3d7;}
-.panel-blog {height: inherit !important;}
+.panel-height-inherit {height: inherit !important;}
 
 /* Pagination
 ================================= */
@@ -413,6 +413,27 @@ article ul {list-style-type: disc;}
 article h3 {font-size: 30px;font-weight: 700;margin-bottom: .4em;}
 article h4 {font-size: 24px;font-weight: 700;margin-bottom: .2em;}
 article h5 {font-size: 18px;font-weight: 700;margin-bottom: .2em;}
+
+/* Attachments (document attachments)
+================================= */
+p.attachment {font-size: 15px;margin-bottom: 0;}
+.attachment-icon {
+  float: left;
+  margin-left: -15px;
+  padding-right: 12px;
+  /*height: auto;*/
+}
+
+.panel-attachment {
+  background-color: #f7f7f7;
+  border-color: #dddddd;
+  margin-bottom: 5px;
+}
+.panel-attachment-body {
+  padding: 8px;
+  /*background-color: #f7f7f7;*/
+}
+
 
 /* Links
 ================================= */
